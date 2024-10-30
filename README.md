@@ -1,1 +1,1 @@
-請前往此專案的 wiki 查看 ([連結](https://gitlab.td.nchc.org.tw/genai-project/docs/-/wikis/home))
+請前往此專案的 wiki 查看 ([連結](https://gitlab.td.nchc.org.tw/genai-project/docs-dev/-/wikis/home))
