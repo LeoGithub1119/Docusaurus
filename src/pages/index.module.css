@@ -1,0 +1,46 @@
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--ifm-color-primary);
+  color: var(--ifm-color-text-light);
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 中間區塊樣式 */
+.homepageSections {
+  display: flex;
+  justify-content: center; /* 將區塊集中在中間 */
+  gap: 1rem;
+  padding: 2rem 0;
+  max-width: 80%; /* 設定容器最大寬度 */
+  margin: 0 auto; /* 自動邊距，讓容器水平居中 */
+}
+
+.homepageSection {
+  flex: 1;
+  padding: 1rem;
+  background-color: var(--ifm-color-primary-light);
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  color: var(--ifm-color-text);
+  max-width: 400px; /* 限制每個區塊的最大寬度 */
+  text-align: center; /* 文字居中對齊 */
+}
+
+[data-theme='dark'] .homepageSection {
+  background-color: var(--ifm-color-primary-dark);
+  color: var(--ifm-color-text-light);
+}
