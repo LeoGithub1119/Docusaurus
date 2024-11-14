@@ -46,6 +46,11 @@ const config: Config = {
           customCss: require.resolve('./src/css/custom.css'),
         },
       },
+      '@docusaurus/preset-classic',
+      {
+        sitemap: false, // 禁用內建的 sitemap 插件
+        // 其他 preset 設置
+      },
     ],
   ],
   themeConfig: {
@@ -101,8 +106,14 @@ const config: Config = {
     // },
   } satisfies Preset.ThemeConfig,
   plugins: [
-    // '@docusaurus/plugin-sitemap', // 新增 sitemap 插件
-    // path.resolve(__dirname, 'plugins/monitoring-plugin'),
+    [
+      '@docusaurus/plugin-sitemap', // 新增 sitemap 插件
+      {
+        id: 'sitemap-instance-1', // 第一個 sitemap 插件的唯一 ID
+        // 其他設置
+      },
+    ]
+    path.resolve(__dirname, 'plugins/monitoring-plugin'),
   ],
 };
 
