@@ -7,7 +7,7 @@ const config: Config = {
   title: 'NCHC RHAP',
   tagline: '大型語言模型高效能 AI 平台',
   favicon: 'img/favicons.ico',
-  url: 'http://genai-project.pages.td.nchc.org.tw/',
+  url: 'https://llm-taskforce.pages.td.nchc.org.tw/docs/',
   baseUrl: '/docs-dev/',
   organizationName: 'NCHC',
   projectName: 'docs-dev',
