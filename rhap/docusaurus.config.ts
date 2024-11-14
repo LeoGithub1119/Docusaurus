@@ -112,7 +112,7 @@ const config: Config = {
         id: 'sitemap-instance-1', // 第一個 sitemap 插件的唯一 ID
         // 其他設置
       },
-    ]
+    ],
     path.resolve(__dirname, 'plugins/monitoring-plugin'),
   ],
 };
