@@ -1,0 +1,17 @@
+image: node:23.1.0-alpine3.20
+
+stages:
+  - deploy
+
+pages:
+  stage: deploy
+  script:
+  - cd rhap
+  - yarn install
+  - yarn build
+  - mv ./build ../public
+  artifacts:
+    paths:
+    - public
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH

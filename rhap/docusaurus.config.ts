@@ -7,10 +7,10 @@ const config: Config = {
   title: 'NCHC RHAP',
   tagline: '大型語言模型高效能 AI 平台',
   favicon: 'img/favicons.ico',
-  url: 'http://103.124.74.43:3000',
-  baseUrl: '/',
-  organizationName: 'facebook',
-  projectName: 'docusaurus',
+  url: 'http://genai-project.pages.td.nchc.org.tw/',
+  baseUrl: '/docs-dev/',
+  organizationName: 'NCHC',
+  projectName: 'docs-dev',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   i18n: {
@@ -27,7 +27,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.ts'),
-          editUrl: 'https://gitlab.td.nchc.org.tw/westleft80935/docusaurus',
+          editUrl: 'https://gitlab.td.nchc.org.tw/genai-project/docs-dev/',
           showLastUpdateAuthor: false, // 顯示最近更新的作者
           showLastUpdateTime: false,   // 顯示最近更新的時間
         },
@@ -37,7 +37,7 @@ const config: Config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          editUrl: 'https://gitlab.td.nchc.org.tw/westleft80935/docusaurus',
+          editUrl: 'https://gitlab.td.nchc.org.tw/genai-project/docs-dev/',
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
@@ -60,7 +60,7 @@ const config: Config = {
         { type: 'docSidebar', sidebarId: 'Sidebar', position: 'left', label: '說明文件' },
         { to: '/blog', label: '日誌', position: 'left' },
         { to: '/docs/faq/technical-issue', label: '常見問題', position: 'left' }, // 新增常見問題按鈕
-        { href: 'https://gitlab.td.nchc.org.tw/westleft80935/docusaurus', label: 'GitHub', position: 'right' },
+        { href: 'https://gitlab.td.nchc.org.tw/genai-project/docs-dev/', label: 'GitHub', position: 'right' },
         { type: 'localeDropdown', position: 'right' },
       ],
     },
