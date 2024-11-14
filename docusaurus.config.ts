@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 import path from 'path';
 
 const config: Config = {
-  title: 'RHAP',
+  title: 'NCHC RHAP',
   tagline: '大型語言模型高效能 AI 平台',
   favicon: 'img/favicons.ico',
   url: 'http://103.124.74.43:3000',

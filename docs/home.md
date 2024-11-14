@@ -4,7 +4,7 @@ title: "國網中心大型語言模型推論服務"
 import Head from '@docusaurus/Head';
 
 <Head>
-  <title>自定義 | NCHC RHAP</title>
+  <title>Home | NCHC RHAP</title>
 </Head>
 
 國家實驗研究院國家高速網路與計算中心(簡稱國網中心，NCHC)的大型語言模型服務平台：RHAP 大型語言模型高效能 AI 平台 – RHAP (Resilient High-Performance AI Platform)，所提供的大型語言模型：TAIDE 可信任 AI 對話引擎 – TAIDE (Trustworthy AI Dialogue Engine)，具有 RAG 高效能檢索增強生成技術，支援生成更準確的語意回應，或對獨特需求進行優化。所推出的生成式 AI 推論應用服務方案：LlaMAS 大型語言模型應用服務(語模大師) – LlaMAS (LlaM Application Service)，包含：All-In-One 一站式集成推論服務、LLM 推論 API Server 服務、輕量化推論前端服務。 
@@ -13,7 +13,6 @@ import Head from '@docusaurus/Head';
 
 國網中心的大型語言模型服務，結合核心基礎設施 AIHPC 算力及獨立的機敏資料庫，建構  RHAP 大型語言模型高效能 AI 平台，以 TAIDE 可信任AI對話引擎 (TAIDE) 為基礎，發展出 LlaMAS 大型語言模型應用服務。目標是建構一個以台灣主體性為主，可提供繁體中文客製優化之大型語言模型 (LLM) 推論服務。推論服務模型聚焦政府各部門的資料庫、各式文件與公文檔案等，建立在五大功能 (自動摘要、寫文章 、寫公文、中翻英、英翻中) 的 TAIDE 基礎模型之上，後續會提供預訓練、微調等專屬領域資料的客製化服務。在知識管理與服務、產品研發管理、自動生成文案內容、文獻檢索與分析等各種應用情境下，能輔助新創、企業和政府單位、學研機構，更快速、精準開發和佈署客製化模型的能力，提升工作效率和服務品質。
 
-[TOC]
 
 
 ## 服務類型介紹

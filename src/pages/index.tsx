@@ -31,7 +31,7 @@ export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`RHAP ${siteConfig.title}`}
+      title={` ${siteConfig.title}`}
       description="這是 RHAP 網站的首頁，提供大型語言模型的高效能 AI 平台服務。">
       <HomepageHeader />
       <main>
