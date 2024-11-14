@@ -45,11 +45,7 @@ const config: Config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-      },
-      '@docusaurus/preset-classic',
-      {
         sitemap: false, // 禁用內建的 sitemap 插件
-        // 其他 preset 設置
       },
     ],
   ],
