@@ -101,8 +101,8 @@ const config: Config = {
     // },
   } satisfies Preset.ThemeConfig,
   plugins: [
-    '@docusaurus/plugin-sitemap', // 新增 sitemap 插件
-    path.resolve(__dirname, 'plugins/monitoring-plugin'),
+    // '@docusaurus/plugin-sitemap', // 新增 sitemap 插件
+    // path.resolve(__dirname, 'plugins/monitoring-plugin'),
   ],
 };
 
