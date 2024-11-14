@@ -19,41 +19,48 @@ import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
 // };
 
 const sidebars: SidebarsConfig = {
-  // 手動定義側邊欄
-  tutorialSidebar: [
+  Sidebar: [
     {
       type: 'doc',
-      id: 'home', // 指向 docs/home.md
+      id: 'home',
       label: 'RHAP 大型語言模型高效能 AI 平台',
     },
     {
       type: 'doc',
-      id: 'quick-start', // 指向 docs/quick-start.md
+      id: 'quick-start',
       label: '快速上手',
     },
     {
       type: 'category',
       label: '服務介紹',
       items: [
-        'services/hydra', // 指向 docs/services/hydra.md
-        'services/medusa', // 指向 docs/services/medusa.md
-        'services/hummingbird', // 指向 docs/services/hummingbird.md
-        'services/Lightweight', // 指向 docs/services/Lightweight.md
-        'services/technical-issue', // 指向 docs/services/technical-issue.md
+        'services/hydra',
+        'services/medusa',
+        'services/hummingbird',
+        'services/Lightweight',
       ],
     },
     {
       type: 'category',
       label: '工具使用說明',
       items: [
-        'tools/AnythingLLM', // 指向 docs/tools/AnythingLLM.md
-        'tools/OpenWebUI', // 指向 docs/tools/OpenWebUI.md
-        'tools/LiteLLM', // 指向 docs/tools/LiteLLM.md
-        'tools/Lightweight-api', // 指向 docs/tools/Lightweight-api.md
+        'tools/AnythingLLM',
+        'tools/OpenWebUI',
+        'tools/LiteLLM',
+        'tools/Lightweight-api',
+      ],
+    },
+    {
+      type: 'category',
+      label: '常見問題',
+      items: [
+        'faq/technical-issue',
       ],
     },
   ],
 };
+
+export default sidebars;
 
 // 你也可以手動創建一個側邊欄
 /*

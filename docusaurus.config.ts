@@ -57,8 +57,9 @@ const config: Config = {
         src: 'img/company_logo.jpg',
       },
       items: [
-        { type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Docs' },
-        { to: '/blog', label: 'Blog', position: 'left' },
+        { type: 'docSidebar', sidebarId: 'Sidebar', position: 'left', label: '說明文件' },
+        { to: '/blog', label: '日誌', position: 'left' },
+        { to: '/docs/faq/technical-issue', label: '常見問題', position: 'left' }, // 新增常見問題按鈕
         { href: 'https://gitlab.td.nchc.org.tw/westleft80935/docusaurus', label: 'GitHub', position: 'right' },
         { type: 'localeDropdown', position: 'right' },
       ],
@@ -73,13 +74,13 @@ const config: Config = {
         {
           title: 'Community',
           items: [
-            { label: '待補', href: 'https://gitlab.td.nchc.org.tw/genai-project/docs-dev/-/wikis/home' },
+            { label: '國研院', href: 'https://www.narlabs.org.tw/' },
           ],
         },
         {
           title: 'More',
           items: [
-            { label: 'Blog', to: '/blog' },
+            { label: '日誌', to: '/blog' },
           ],
         },
       ],

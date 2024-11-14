@@ -1,3 +1,7 @@
+---
+id: technical-issue
+title: 常見問題分類
+---
 
 
 # 常見問題分類
