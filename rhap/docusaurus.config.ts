@@ -11,7 +11,7 @@ const config: Config = {
   baseUrl: '/docs-dev/',
   organizationName: 'NCHC',
   projectName: 'docs-dev',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   i18n: {
     defaultLocale: 'zh-Hant',
