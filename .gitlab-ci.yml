@@ -16,11 +16,11 @@
 # This specific template is located at:
 # https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Getting-Started.gitlab-ci.yml
 
-stages:          # List of stages for jobs, and their order of execution
+stages:
   - deploy
-
-deploy-job:      # This job runs in the deploy stage.
-  stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
+deploy-job:
+  stage: deploy
   script:
     - ls -la
-    - scp docusaurus.config.ts ubuntu@103.124.74.43:/home/ubuntu/docusaurus/123config.ts
+    - echo "niaho China!" > sample.config.ts
+    - scp sample.config.ts ubuntu@103.124.74.43:/home/ubuntu/docusaurus/sample.config.ts
