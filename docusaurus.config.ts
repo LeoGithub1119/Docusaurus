@@ -17,10 +17,6 @@ const config: Config = {
     defaultLocale: 'zh-Hant',
     locales: ['zh-Hant'],
   },
-  // i18n: {
-  //   defaultLocale: 'zh-Hant',
-  //   locales: ['zh-Hant', 'en'],
-  // },
   presets: [
     [
       'classic',
@@ -28,8 +24,8 @@ const config: Config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.ts'),
           editUrl: 'https://gitlab.td.nchc.org.tw/westleft80935/docusaurus',
-          showLastUpdateAuthor: false, // 顯示最近更新的作者
-          showLastUpdateTime: false,   // 顯示最近更新的時間
+          showLastUpdateAuthor: false,
+          showLastUpdateTime: false,
         },
         blog: {
           showReadingTime: true,
@@ -59,7 +55,7 @@ const config: Config = {
       items: [
         { type: 'docSidebar', sidebarId: 'Sidebar', position: 'left', label: '說明文件' },
         { to: '/blog', label: '日誌', position: 'left' },
-        { to: '/docs/faq/technical-issue', label: '常見問題', position: 'left' }, // 新增常見問題按鈕
+        { to: '/docs/faq/technical-issue', label: '常見問題', position: 'left' },
         { href: 'https://gitlab.td.nchc.org.tw/westleft80935/docusaurus', label: 'GitHub', position: 'right' },
         { type: 'localeDropdown', position: 'right' },
       ],
@@ -74,7 +70,7 @@ const config: Config = {
         {
           title: 'Community',
           items: [
-            { label: '國研院', href: 'https://www.narlabs.org.tw/' },
+            { label: '國網中心', href: 'https://www.nchc.org.tw/' },
           ],
         },
         {
@@ -90,6 +86,21 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+    docs: {
+      sidebar: {
+        autoCollapseCategories: false, // 停用自動折疊
+      },
+    },
+  } satisfies Preset.ThemeConfig,
+  plugins: [
+    '@docusaurus/plugin-sitemap',
+    path.resolve(__dirname, 'plugins/monitoring-plugin'),
+  ],
+};
+
+export default config;
+
+  
     // algolia 搜索插件設置（可選）
     // algolia: {
     //   apiKey: 'YOUR_ALGOLIA_API_KEY',
@@ -99,11 +110,3 @@ const config: Config = {
     //   searchParameters: {},
     //   placeholder: '搜尋文件...',
     // },
-  } satisfies Preset.ThemeConfig,
-  plugins: [
-    '@docusaurus/plugin-sitemap', // 新增 sitemap 插件
-    path.resolve(__dirname, 'plugins/monitoring-plugin'),
-  ],
-};
-
-export default config;

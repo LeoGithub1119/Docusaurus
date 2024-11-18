@@ -33,34 +33,37 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: '服務介紹',
+      collapsed: false, // 停用折疊
       items: [
-        'services/hydra',
-        'services/medusa',
-        'services/hummingbird',
-        'services/Lightweight',
+        'services/All-In-One一站式集成推論服務',
+        'services/LLM推論API Server微服務',
+        'services/輕量化推論前端服務',
+        'services/Lightweight API Portal',
       ],
     },
     {
       type: 'category',
       label: '工具使用說明',
+      collapsed: false, // 停用折疊
       items: [
-        'tools/AnythingLLM',
-        'tools/OpenWebUI',
-        'tools/LiteLLM',
-        'tools/Lightweight-api',
+        'tools/AnythingLLM 使用說明',
+        'tools/OpenWebUI 使用說明',
+        'tools/LiteLLM 使用說明',
+        'tools/Lightweight API 使用說明',
       ],
     },
     {
       type: 'category',
       label: '常見問題',
+      collapsed: false, // 停用折疊
       items: [
         'faq/technical-issue',
       ],
     },
   ],
 };
-
 export default sidebars;
+
 
 // 你也可以手動創建一個側邊欄
 /*
@@ -74,5 +77,3 @@ tutorialSidebar: [
   },
 ],
 */
-
-export default sidebars;
