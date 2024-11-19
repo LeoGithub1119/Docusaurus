@@ -31,6 +31,16 @@ const sidebars: SidebarsConfig = {
       label: '快速上手',
     },
     {
+      type: 'doc',
+      id: 'OpenAI API 教學',
+      label: 'OpenAI API 教學',
+    },
+    {
+      type: 'doc',
+      id: '推論服務架設',
+      label: '推論服務架設',
+    },
+    {
       type: 'category',
       label: '服務介紹',
       collapsed: false, // 停用折疊

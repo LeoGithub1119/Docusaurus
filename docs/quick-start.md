@@ -14,11 +14,11 @@
    - 完成註冊後，您可登入 TWCC 並選擇合適的資源類型（如 GPU、CPU）進行申請。這些資源將用於支援 RHAP 平台的推論需求。
    - 若對資源選擇有疑問，請參考 [TWCC 資源申請指南](https://man.twcc.ai/@twccdocs/By1rH2oaV?type=view#%E8%A8%88%E7%95%AB%E7%94%B3%E8%AB%8B)。
 3. API 金鑰設定：
-   - 在 TWCC 取得 API 金鑰，並將其設定於 RHAP 平台的環境變數中。請遵循 [API 金鑰設定教學](Lightweight) 完成設定。
+   - 在 TWCC 取得 API 金鑰，並將其設定於 RHAP 平台的環境變數中。請遵循 [API 金鑰設定教學](/docs/services/Lightweight%20API%20Portal.md) 完成設定。
  
 # 安裝虛擬機教學
 完成 TWCC 資源申請後，若需要在 TWCC 上安裝虛擬機來支援 RHAP 平台的運行，請參考以下安裝教學：
-   - TWCC 虛擬機安裝教學：在 [TWCC 上安裝虛擬機的詳細步驟](llm-service-build)。
+   - TWCC 虛擬機安裝教學：在 [TWCC 上安裝虛擬機的詳細步驟](/docs/推論服務架設.md)。
        - **注意**：如果虛擬機的映象檔為`hydra`、`medusa`或 `hummingbird`，則已預載所需的程式碼，因此無需從 GitLab 下載。然而，若想要更新至最新版本，仍可依需求前往 GitLab 查看最新更新方法。
 
 
@@ -46,26 +46,26 @@
 # 工具使用說明
  1. AnythingLLM
       - AnythingLLM 提供簡單易用的 API 和服務，讓開發者能夠快速部署和運行大型語言模型。它支援多種模型，並且具備彈性的設定選項，適合初次接觸 LLM 的開發者。
-      - [詳細說明與使用方式](AnythingLLM)
+      - [詳細說明與使用方式](/docs/tools/AnythingLLM%20使用說明.md)
 
  2. Open WebUI
       - Open WebUI 是一款直觀的網頁介面工具，方便使用者直接操作並測試各種語言模型。Open WebUI視覺化操作友好，讓使用者輕鬆地進行文本輸入並檢視生成結果，非常適合模型的測試與展示。
-      - [詳細說明與使用方式](OpenWebUI)
+      - [詳細說明與使用方式](/docs/tools/OpenWebUI%20使用說明.md)
 
  3. LiteLLM
       - LiteLLM 是一款針對低資源消耗設計的輕量化推論框架，適合需要快速、高效運行語言模型的應用場景。它簡化了 API 介面，易於集成，適合追求輕量化推論的使用者。
-      - [詳細說明與使用方式](LiteLLM)
+      - [詳細說明與使用方式](/docs/tools/LiteLLM%20使用說明.md)
 # 常用 API 與操作指南
 
 
  - Lightweight API Portal
     - API Portal 提供輕量化的 API 入口，支援常見的推論請求（如文本生成、嵌入等），並在使用 RHAP 平台時，當需依賴 TWCC 的運算資源時為必要介面。
     - 確保您具備有效的 API 金鑰並完成 API Portal 基本設定，這將使您能夠順利利用 RHAP 與 TWCC 整合提供的計算能力。
-    - [詳細說明與使用方式](Lightweight)
+    - [詳細說明與使用方式](/docs/services/Lightweight%20API%20Portal.md)
  - OpenAI API
     - OpenAI API 提供多樣化的模型呼叫方式，允許使用者存取 OpenAI 的各種模型資源（如 GPT-4、DALL-E 等），並執行各種推論任務。
     - 若您需要使用 OpenAI 的高效推論服務，請先申請並設定 OpenAI API 的金鑰，並確保環境變數設定正確。
-    - [詳細說明與使用方式](OpenAI-Api)
+    - [詳細說明與使用方式](/docs/OpenAI%20API%20教學.md)
 
 
 
@@ -74,9 +74,9 @@
 
 若您有需要修改一些參數或進行更進階的設定，可參考以下各組件的說明：
 
- - AnythingLLM：請參考 AnythingLLM 頁面中的[進階功能與設定](AnythingLLM#進階功能與設定) ，了解如何對 AnythingLLM 進行自定義設定。
- - LiteLLM：請參考 LiteLLM 頁面中的[進階功能與設定](LiteLLM#進階功能與設定)，以探索 LiteLLM 的進階功能與可調整參數。
- - OpenWebUI：請參考 OpenWebUI 頁面中的[進階功能與設定](OpenWebUI#進階功能與設定)，進行 OpenWebUI 的進階設定。
+ - AnythingLLM：請參考 AnythingLLM 頁面中的[進階設定](/docs/tools/AnythingLLM%20使用說明#進階設定) ，了解如何對 AnythingLLM 進行自定義設定。
+ - LiteLLM：請參考 LiteLLM 頁面中的[進階功能與設定](/docs/tools/LiteLLM%20使用說明#進階功能與設定)，以探索 LiteLLM 的進階功能與可調整參數。
+ - OpenWebUI：請參考 OpenWebUI 頁面中的[進階功能與設定](/docs/tools/OpenWebUI%20使用說明#進階功能與設定)，進行 OpenWebUI 的進階設定。
 
 其他參數的詳細設定方法，請參閱 GitLab 專案頁面上的 [Hydra README 文件](https://gitlab.td.nchc.org.tw/genai-project/hydra/-/blob/main/README.md?ref_type=heads)，以進行進一步的設定和修改。
 
