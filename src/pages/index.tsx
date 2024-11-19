@@ -35,21 +35,26 @@ export default function Home(): JSX.Element {
       description="這是 RHAP 網站的首頁，提供大型語言模型的高效能 AI 平台服務。">
       <HomepageHeader />
       <main>
-        <div className={styles.homepageSections}>
-          <section className={styles.homepageSection}>
-            <h2>特點 1</h2>
-            <p>這是 RHAP 的主要特點之一。</p>
-          </section>
-          <section className={styles.homepageSection}>
-            <h2>特點 2</h2>
-            <p>這是 RHAP 的第二個主要特點。</p>
-          </section>
-          <section className={styles.homepageSection}>
-            <h2>特點 3</h2>
-            <p>這是 RHAP 的第三個主要特點。</p>
-          </section>
-        </div>
-      </main>
+    <div className={styles.homepageSections}>
+        <section className={styles.homepageSection}>
+            <h2>靈活擴展</h2>
+            <p>私有、獨立、專用 : 助力百工百業輕鬆開啟AI應用新大門。</p>
+            {/* <img src="/img/flexibility.png" alt="靈活擴展" /> */}
+        </section>
+        <section className={styles.homepageSection}>
+            <h2>高效能 AI 平台</h2>
+            <p>結合國家級運算設施與安全機制，提供穩定生成式 AI 解決方案。</p>
+            {/* <img src="/img/high-performance.png" alt="高效能 AI 平台" /> */}
+        </section>
+        <section className={styles.homepageSection}>
+            <h2>多層架構支持</h2>
+            <p>整合前端網頁、API 代理及推論加速器，滿足多樣需求。</p>
+            {/* <img src="/img/multi-layer.png" alt="多層架構支持" /> */}
+        </section>
+    </div>
+</main>
+
+
     </Layout>
   );
 }

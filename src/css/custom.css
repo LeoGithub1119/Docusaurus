@@ -1,81 +1,48 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
-/* You can override the default Infima variables here. */
-
-.navbar {
-  background-color: #ffffff; /* 新的頂部欄顏色 */
-  color: #FFFFFF;
-}
-
-[data-theme='dark'] .navbar {
-  background-color: #000000; /* 深色模式的頂部欄顏色 */
-  color: #FFFFFF;
-}
-
+/* 淺色模式 */
 :root {
-  /* 主綠色 */
-  --ifm-color-primary: #0A7F7C; /* 更深的綠色 */
-  --ifm-color-primary-dark: #065A58;
-  --ifm-color-primary-darker: #2E4740; 
-  --ifm-color-primary-darkest: #21342F; 
-  --ifm-color-primary-light: #33A5A3;
-  --ifm-color-primary-lighter: #66C6C4;
-  --ifm-color-primary-lightest: #99E0DF;
-
-  /* 輔助顏色 */
-  --ifm-color-secondary: #ffffff; 
-  --ifm-color-secondary-dark: #ffffff;
-  --ifm-color-secondary-light: #ffffff;
-
-  /* 文字顏色 */
-  --ifm-color-text: #000000; 
-  --ifm-color-text-dark: #222222; 
-  --ifm-color-text-light: #FFFFFF;
-  --ifm-color-background: #FFFFFF; 
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --ifm-code-font-size: 95%;
+  --ifm-color-primary: #60B3BA;
+  --ifm-color-primary-light: #85BEBD;
+  --ifm-color-text: #000000; /* 黑色文字 */
 }
 
-/* 暗色主題 */
+/* 深色模式 */
 [data-theme='dark'] {
-  /* 主綠色的淺色變體 */
-  --ifm-color-primary: #00B8B2; /* 更淺的綠色 */
-  --ifm-color-primary-dark: #006A68;
-  --ifm-color-primary-darker: #21342F;
-  --ifm-color-primary-darkest: #1A2B24;
-  --ifm-color-primary-light: #5D8A7A;
-  --ifm-color-primary-lighter: #AAB7A5;
-  --ifm-color-primary-lightest: #C1D1C1;
-
-  /* 輔助顏色 */
-  --ifm-color-secondary: #ffffff; 
-  --ifm-color-secondary-dark: #ffffff;
-  --ifm-color-secondary-light: #ffffff;
-
-  /* 文字顏色 */
-  --ifm-color-text: #FFFFFF; /* 默認文字為白色 */
-  --ifm-color-text-light: #C1D1C1; /* 用更亮的灰綠色作為淺色文字 */
-  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+  --ifm-color-primary: #5F6175; /* 深灰色背景 */
+  --ifm-color-text: #FFFFFF; /* 白色文字 */
 }
 
-
-/* 全局設定 */
-:root {
-  --ifm-color-primary: #0A7F7C;
-  --ifm-color-text: #000000;
+/* 按鈕樣式統一 */
+.button {
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
 }
 
-/* 暗色主題設定 */
-[data-theme='dark'] {
-  --ifm-color-primary: #00B8B2;
-  --ifm-color-text: #ffffff; /* 默認文字為白色 */
+/* 淺色模式按鈕 */
+:root .button {
+  background: var(--ifm-color-primary);
+  color: var(--ifm-color-text);
+}
 
-  /* 首頁特定標題設定 */
-  .hero__title, .hero__subtitle {
-    color: #000000 !important; /* 深色模式首頁文字顯示黑色 */
-  }
+/* 深色模式按鈕 */
+[data-theme='dark'] .button {
+  background: #355D9E; /* 深藍色背景 */
+  color: #FFFFFF; /* 白色文字 */
+}
+
+/* 中間區塊的背景調整 */
+.hero__title {
+  font-weight: bold;
+  color: var(--ifm-color-text);
+}
+
+.hero__subtitle {
+  color: var(--ifm-color-text);
+}
+
+/* 主內容區域 */
+.main-section {
+  background: var(--ifm-color-primary);
+  padding: 2rem;
+  border-radius: 10px;
 }

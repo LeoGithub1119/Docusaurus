@@ -1,8 +1,4 @@
 
-> 當前 LiteLLM 版本：
-
-
-
 ## 如何連線到 LiteLLM 並登入使用
 ### 如何連線到 LiteLLM
 

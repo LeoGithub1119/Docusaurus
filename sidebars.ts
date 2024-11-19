@@ -26,28 +26,22 @@ const sidebars: SidebarsConfig = {
       label: 'RHAP 大型語言模型高效能 AI 平台',
     },
     {
-      type: 'doc',
-      id: 'quick-start',
+      type: 'category',
       label: '快速上手',
-    },
-    {
-      type: 'doc',
-      id: 'OpenAI API 教學',
-      label: 'OpenAI API 教學',
-    },
-    {
-      type: 'doc',
-      id: '推論服務架設',
-      label: '推論服務架設',
+      collapsed: false, // 停用折疊
+      items: [
+        '快速上手/使用 TWCC 服務',
+        '快速上手/推論服務架設'
+      ],
     },
     {
       type: 'category',
       label: '服務介紹',
       collapsed: false, // 停用折疊
       items: [
-        'services/All-In-One一站式集成推論服務',
-        'services/LLM推論API Server微服務',
-        'services/輕量化推論前端服務',
+        'services/All-in-one集合式服務',
+        'services/API Server服務',
+        'services/輕量化前端服務',
         'services/Lightweight API Portal',
       ],
     },
@@ -68,6 +62,7 @@ const sidebars: SidebarsConfig = {
       collapsed: false, // 停用折疊
       items: [
         'faq/technical-issue',
+        'faq/OpenAI API 教學',
       ],
     },
   ],

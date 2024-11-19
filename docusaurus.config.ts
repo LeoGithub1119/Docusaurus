@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 import path from 'path';
 
 const config: Config = {
-  title: 'NCHC RHAP',
+  title: 'NCHC Resilient High-Performance AI Platform',
   tagline: '大型語言模型高效能 AI 平台',
   favicon: 'img/favicons.ico',
   url: 'http://103.124.74.43:3000',
@@ -34,9 +34,6 @@ const config: Config = {
             xslt: true,
           },
           editUrl: 'https://gitlab.td.nchc.org.tw/westleft80935/docusaurus',
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -93,12 +90,13 @@ const config: Config = {
     },
   } satisfies Preset.ThemeConfig,
   plugins: [
-    '@docusaurus/plugin-sitemap',
+    '@docusaurus/plugin-sitemap', // 自動生成網站地圖
     path.resolve(__dirname, 'plugins/monitoring-plugin'),
   ],
 };
 
 export default config;
+
 
   
     // algolia 搜索插件設置（可選）
