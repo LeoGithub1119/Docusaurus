@@ -30,8 +30,8 @@ const sidebars: SidebarsConfig = {
       label: '快速上手',
       collapsed: false, // 停用折疊
       items: [
-        '快速上手/使用 TWCC 服務',
-        '快速上手/推論服務架設'
+        '快速上手/簡易安裝',
+        '快速上手/服務架設'
       ],
     },
     {

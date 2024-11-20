@@ -49,7 +49,7 @@ export default function Home(): JSX.Element {
         <section className={styles.homepageSection}>
             <h2>多層架構支持</h2>
             <p>整合前端網頁、API 代理及推論加速器，滿足多樣需求。</p>
-            {/* <img src="/img/multi-layer.png" alt="多層架構支持" /> */}
+            {/* <img src="/img/company_logo.jpg" alt="多層架構支持" /> */}
         </section>
     </div>
 </main>
