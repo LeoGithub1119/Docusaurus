@@ -63,6 +63,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'faq/technical-issue',
         'faq/OpenAI API 教學',
+        'faq/RAG',
       ],
     },
   ],
