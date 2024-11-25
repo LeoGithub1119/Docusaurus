@@ -9,10 +9,10 @@ const config: Config = {
   favicon: 'img/favicons.ico',
   url: 'http://103.124.74.43:3000',
   baseUrl: '/',
-  organizationName: 'facebook',
-  projectName: 'docusaurus',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  // organizationName: 'facebook',
+  // projectName: 'docusaurus',
+  // onBrokenLinks: 'throw',
+  // onBrokenMarkdownLinks: 'warn',
   i18n: {
     defaultLocale: 'zh-Hant',
     locales: ['zh-Hant'],
@@ -50,13 +50,18 @@ const config: Config = {
         src: 'img/company_logo.jpg',
       },
       items: [
-        { type: 'docSidebar', sidebarId: 'Sidebar', position: 'left', label: '說明文件' },
+        { type: 'docSidebar', sidebarId: 'service_intro_sidebar', position: 'left', label: '服務介紹' },
+        { type: 'docSidebar', sidebarId: 'sw_intro_sidebar', position: 'left', label: '軟體介紹' },
+        { type: 'docSidebar', sidebarId: 'faq_intro_sidebar', position: 'left', label: '常見問題' },
+        // { type: 'docSidebar', sidebarId: 'Sidebar', position: 'left', label: '說明文件' },
         { to: '/blog', label: '日誌', position: 'left' },
-        { to: '/docs/faq/technical-issue', label: '常見問題', position: 'left' },
+        // { to: '/docs/faq/technical-issue', label: '常見問題', position: 'left' },
         { href: 'https://gitlab.td.nchc.org.tw/westleft80935/docusaurus', label: 'GitHub', position: 'right' },
         { type: 'localeDropdown', position: 'right' },
       ],
     },
+    
+    
     footer: {
       style: 'dark',
       links: [
