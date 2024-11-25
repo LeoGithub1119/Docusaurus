@@ -79,3 +79,7 @@
     color: #000000 !important; /* 深色模式首頁文字顯示黑色 */
   }
 }
+
+html[data-navbar='false'] .navbar {
+  display: none;
+}
