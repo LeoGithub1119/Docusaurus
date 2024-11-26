@@ -13,6 +13,19 @@ const sidebars: SidebarsConfig = {
         'sw_intro/快速上手/服務架設',
       ],
     },
+
+    {
+      type: 'category',
+      label: '軟體介紹',
+      collapsed: false,
+      items: [
+        'sw_intro/sw_intro/All-in-one集合式服務',
+        'sw_intro/sw_intro/API Server服務',
+        'sw_intro/sw_intro/輕量化前端服務',
+        'sw_intro/sw_intro/Lightweight API Portal',
+      ],
+    },
+
     {
       type: 'category',
       label: '工具使用說明',
@@ -38,7 +51,6 @@ const sidebars: SidebarsConfig = {
       items: [
         'service_intro/services/All-in-one集合式服務',
         'service_intro/services/API Server服務',
-        'service_intro/services/Lightweight API Portal',
         'service_intro/services/輕量化前端服務',
       ],
     },

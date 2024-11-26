@@ -46,3 +46,15 @@
   padding: 2rem;
   border-radius: 10px;
 }
+
+
+.custom-navbar-logo {
+  display: inline-block;
+  background-image: url(/img/fox__2_.png); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px; 
+  height: 40px; 
+  text-indent: -9999px; 
+}

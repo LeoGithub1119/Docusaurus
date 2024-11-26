@@ -12,7 +12,7 @@ title: 如何在 OpenWebUI 上建立知識庫並取用
 # 快速知識庫建立與取用指南
 
 本指南將協助您完成 Open WebUI Knowledge Base 的管理與取用，並通過導入自定義知識庫文件來搭建 RAG（Retrieval-Augmented Generation）服務。您將學習如何準備、管理與使用知識庫，並快速針對知識庫內容做詰問。
-
+*
 ---
 
 ## 前置作業

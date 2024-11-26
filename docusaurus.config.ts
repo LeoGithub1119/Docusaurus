@@ -56,7 +56,7 @@ const config: Config = {
         // { type: 'docSidebar', sidebarId: 'Sidebar', position: 'left', label: '說明文件' },
         { to: '/blog', label: '日誌', position: 'left' },
         // { to: '/docs/faq/technical-issue', label: '常見問題', position: 'left' },
-        { href: 'https://gitlab.td.nchc.org.tw/westleft80935/docusaurus', label: 'GitHub', position: 'right' },
+        { href: 'https://gitlab.td.nchc.org.tw/westleft80935/docusaurus', label: '', position: 'right',className: 'custom-navbar-logo' },
         { type: 'localeDropdown', position: 'right' },
       ],
     },
