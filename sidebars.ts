@@ -19,9 +19,9 @@ const sidebars: SidebarsConfig = {
       label: '軟體介紹',
       collapsed: false,
       items: [
-        'sw_intro/sw_intro/All-in-one集合式服務',
-        'sw_intro/sw_intro/API Server服務',
-        'sw_intro/sw_intro/輕量化前端服務',
+        'sw_intro/sw_intro/Hydra',
+        'sw_intro/sw_intro/Medusa',
+        'sw_intro/sw_intro/Hummingbird',
         'sw_intro/sw_intro/Lightweight API Portal',
       ],
     },

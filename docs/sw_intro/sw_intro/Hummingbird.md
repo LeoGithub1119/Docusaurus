@@ -1,8 +1,13 @@
 
 
-![Hummingbird Home](https://gitlab.td.nchc.org.tw/genai-project/docs-dev/-/wikis/img/Hummingbird.PNG)
+<!-- ![Hummingbird Home](https://gitlab.td.nchc.org.tw/genai-project/docs-dev/-/wikis/img/Hummingbird.PNG) -->
 
 
+
+![Hummingbird](/img/Hummingbird.png)
+
+
+<!--
 # 服務簡介
 
 輕量化推論前端服務僅包含前端平台（積木1），主要提供基礎平台供用戶自行選擇和串接不同的 API 來滿足推論需求。此服務的設計旨在提供靈活的前端推論環境，並通過簡單配置完成推論工作。
@@ -25,13 +30,17 @@
 
 * 可解決政府或企業 IT 人員技術量能需求與無硬體資源不足的問題
 
-# 前端平台
+-->
+
+
+
+## 前端平台
 
 
 AnythingLLM 和 OpenWebUI 是 RHAP 平台的前端推論解決方案組，位於前端平台，負責處理使用者的請求並提供直觀的圖形化界面。簡單操作，便於新手使用。
 
 
-## AnythingLLM 
+### AnythingLLM 
 
 AnythingLLM 是最容易使用的多合一 AI 應用程式，它可以執行 RAG、AI Agents 以及更多的功能，而且不需要任何程式碼或基礎架構。
 
@@ -44,7 +53,7 @@ AnythingLLM 是最容易使用的多合一 AI 應用程式，它可以執行 RAG
 如果想了解 AnythingLLM 的操作，可以參考 [AnythingLLM  使用說明](/docs/tools/AnythingLLM%20使用說明.md)
 
 
-## OpenWebUI
+### OpenWebUI
 OpenWebUI 是一個可擴充、功能豐富且易於使用的 AI 介面，設計為完全離線運行。它支持多種大型語言模型（LLM），包括 Ollama 和相容 OpenAI 的 API。其主要特點包括：
 
 - 完全離線運行：無需連線網路即可使用，確保數據的隱私和安全。
@@ -55,7 +64,7 @@ OpenWebUI 是一個可擴充、功能豐富且易於使用的 AI 介面，設計
 如果想了解 OpenWebUI 的操作，可以參考 [Open WebUI 使用說明](/docs/tools/OpenWebUI%20使用說明.md)
 
 
-# 模型設定
+## 模型設定
 
 對於AnythingLLM 跟 OpenWebUI 安裝後要如何將模型正確導入有不同的設定
 <br />

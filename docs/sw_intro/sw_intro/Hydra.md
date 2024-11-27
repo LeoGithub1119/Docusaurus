@@ -1,6 +1,9 @@
-![hydra home](https://gitlab.td.nchc.org.tw/genai-project/docs-dev/-/wikis/img/Hummingbird.PNG)
+<!-- ![hydra home](https://gitlab.td.nchc.org.tw/genai-project/docs-dev/-/wikis/img/Hummingbird.PNG) -->
+
+![Hydra](/img/Hydra.jpg)
 
 
+<!--
 
 # 服務介紹
 
@@ -25,18 +28,18 @@ All-In-One 一站式集成推論服務是 RHAP 平台的一體化解決方案，
 -  易於客戶管理，減少不同系統間整合和管理成本
 
 
+-->
 
 
 
 
-
-# 前端平台
+## 前端平台
 
 
 AnythingLLM 和 OpenWebUI 是 RHAP 平台的前端推論解決方案組，位於前端平台，負責處理使用者的請求並提供直觀的圖形化界面。簡單操作，便於新手使用。
 
 
-## AnythingLLM 
+### AnythingLLM 
 
 AnythingLLM 是最容易使用的多合一 AI 應用程式，它可以執行 RAG、AI Agents 以及更多的功能，而且不需要任何程式碼或基礎架構。
 
@@ -49,7 +52,7 @@ AnythingLLM 是最容易使用的多合一 AI 應用程式，它可以執行 RAG
 如果想了解 AnythingLLM 的操作，可以參考 [AnythingLLM  使用說明](/docs/tools/AnythingLLM%20使用說明.md)
 
 
-## OpenWebUI
+### OpenWebUI
 OpenWebUI 是一個可擴充、功能豐富且易於使用的 AI 介面，設計為完全離線運行。它支持多種大型語言模型（LLM），包括 Ollama 和相容 OpenAI 的 API。其主要特點包括：
 
 - 完全離線運行：無需連線網路即可使用，確保數據的隱私和安全。
@@ -60,20 +63,20 @@ OpenWebUI 是一個可擴充、功能豐富且易於使用的 AI 介面，設計
 如果想了解 OpenWebUI 的操作，可以參考 [Open WebUI 使用說明](/docs/tools/OpenWebUI%20使用說明.md)
 
 
-# API代理伺服器
+## API代理伺服器
 
-## LiteLLM
+### LiteLLM
 
 LiteLLM 是一款用來簡化多種大型語言模型（LLM）整合和管理的高效工具。作為開源專案，它提供了一個統一的接口，使開發人員可以方便地存取來自 OpenAI、Azure、Anthropic、Cohere 等多個平台的 LLM。透過 LiteLLM，開發者可以輕鬆地在這些模型間進行互動，無需處理各個 API 的複雜差異，因為它已經將不同模型轉換為一致的 OpenAI 相容格式。
 
-### 什麼是 LiteLLM Proxy？
+#### 什麼是 LiteLLM Proxy？
 LiteLLM Proxy 是 LiteLLM 模型輸入/輸出庫中的關鍵元件，充當用戶端應用程式與各種語言模型 API 服務之間的中介軟體。其主要目的是：
 
 - 標準化 API ：為 Azure、Anthropic、OpenAI 等多個服務提供統一的 API 格式。
 - 簡化複雜性：抽象化不同 API 的細節，提供一致的輸入/輸出格式，減少開發者處理不同模型特性的負擔。
 - 附加功能：提供快取、錯誤處理、日誌記錄等附加功能，提升應用的穩定性和可維護性。
 
-### LiteLLM Proxy 的核心功能
+#### LiteLLM Proxy 的核心功能
 1. 多模型支持
 - 廣泛的模型相容性：支持超過 50 種 LLM 模型，包括 Azure、OpenAI、Replicate、Anthropic 等。
 - 統一接口：通過單一的接口與多個模型互動，無需為每個模型編寫獨立的呼叫程式碼。
@@ -84,27 +87,27 @@ LiteLLM Proxy 是 LiteLLM 模型輸入/輸出庫中的關鍵元件，充當用�
 
 
 
-# LLM推論加速器
+## LLM推論加速器
 
 VLLM 和 OLLAMA 位於後端推理引擎層，負責核心推理計算，提供強大的語言生成和語意檢索能力，適合需要高效能和精確推理的應用場景。
 
-## VLLM
+### VLLM
 
-### 什麼是 vLLM？
+#### 什麼是 vLLM？
 vLLM 是一個開源的大型語言模型（LLM）推理和服務引擎，採用了名為 PagedAttention 的新型記憶體分配演算法。這使得 vLLM 能夠以極高的效率運行模型
 
-### VLLM 的優點
+#### VLLM 的優點
 - 卓越的吞吐量：相較於 HuggingFace Transformers（HF），vLLM 的吞吐量提升了 24 倍；相較於 HuggingFace Text Generation Inference（TGI），提升了 3.5 倍。
 - 最佳化記憶體使用：傳統系統在 KV-Cache（LLM 記憶體）上會浪費 60%-80%，而 vLLM 將這一浪費降低到 不到 4%，實現了近乎最佳的記憶體利用率。
 - 資源節省：由於更高的記憶體效率，vLLM 需要更少的 GPU 就能達到相同的性能，大幅提高了推理速度和成本效益。
 
 
-## Ollama
+### Ollama
 
-### 什麼是 Ollama？
+#### 什麼是 Ollama？
 Ollama 是一個旨在簡化在本地電腦上運行開源 LLM 的軟體平台。它消除了管理模型權重、設定和依賴關係的複雜性，使您能夠專注於與 LLM 的互動和探索其功能。
 
-### Ollama 的主要特點
+#### Ollama 的主要特點
 
 - 本地部署：允許您直接在自己的機器上運行 LLM，提供了對資源的更大控制和資料隱私的保障。
 
@@ -116,7 +119,7 @@ Ollama 是一個旨在簡化在本地電腦上運行開源 LLM 的軟體平台�
 
 
 
-# 模型調整
+## 模型調整
 
 如果想要更換 AnythingLLM 或 OpenWebUI 上的對話的模型
 <br />
