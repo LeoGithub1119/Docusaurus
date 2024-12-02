@@ -6,13 +6,9 @@ import path from 'path';
 const config: Config = {
   title: 'NCHC Resilient High-Performance AI Platform',
   tagline: '大型語言模型高效能 AI 平台',
-  favicon: 'img/favicons.ico',
+  favicon: 'img/NCHC_LOGO.png',
   url: 'http://103.124.74.43:3000',
   baseUrl: '/',
-  // organizationName: 'facebook',
-  // projectName: 'docusaurus',
-  // onBrokenLinks: 'throw',
-  // onBrokenMarkdownLinks: 'warn',
   i18n: {
     defaultLocale: 'zh-Hant',
     locales: ['zh-Hant'],
@@ -47,21 +43,18 @@ const config: Config = {
       title: 'RHAP 大型語言模型高效能 AI 平台',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/company_logo.jpg',
+        src: 'img/NCHC_LOGO.png', // 預設為淺色模式的 Logo
+        className: 'navbar__logo', // 使用 CSS 定義深淺模式切換
       },
       items: [
         { type: 'docSidebar', sidebarId: 'service_intro_sidebar', position: 'left', label: '服務介紹' },
         { type: 'docSidebar', sidebarId: 'sw_intro_sidebar', position: 'left', label: '軟體介紹' },
         { type: 'docSidebar', sidebarId: 'faq_intro_sidebar', position: 'left', label: '常見問題' },
-        // { type: 'docSidebar', sidebarId: 'Sidebar', position: 'left', label: '說明文件' },
         { to: '/blog', label: '日誌', position: 'left' },
-        // { to: '/docs/faq/technical-issue', label: '常見問題', position: 'left' },
-        { href: 'https://gitlab.td.nchc.org.tw/westleft80935/docusaurus', label: '', position: 'right',className: 'custom-navbar-logo' },
+        { href: 'https://gitlab.td.nchc.org.tw/westleft80935/docusaurus', label:'', position: 'right',className: 'custom-navbar-logo' },
         { type: 'localeDropdown', position: 'right' },
       ],
     },
-    
-    
     footer: {
       style: 'dark',
       links: [
@@ -71,15 +64,11 @@ const config: Config = {
         },
         {
           title: 'Community',
-          items: [
-            { label: '國網中心', href: 'https://www.nchc.org.tw/' },
-          ],
+          items: [{ label: '國網中心', href: 'https://www.nchc.org.tw/' }],
         },
         {
           title: 'More',
-          items: [
-            { label: '日誌', to: '/blog' },
-          ],
+          items: [{ label: '日誌', to: '/blog' }],
         },
       ],
       copyright: `版權所有 © ${new Date().getFullYear()} NCHC All Rights Reserved`,
@@ -101,15 +90,3 @@ const config: Config = {
 };
 
 export default config;
-
-
-  
-    // algolia 搜索插件設置（可選）
-    // algolia: {
-    //   apiKey: 'YOUR_ALGOLIA_API_KEY',
-    //   indexName: 'YOUR_INDEX_NAME',
-    //   appId: 'YOUR_APP_ID',
-    //   contextualSearch: true,
-    //   searchParameters: {},
-    //   placeholder: '搜尋文件...',
-    // },

@@ -1,51 +1,122 @@
+/* 定義顏色變數，可調整網站主要顏色 */
+
+
 /* 淺色模式 */
 :root {
-  --ifm-color-primary: #60B3BA;
-  --ifm-color-primary-light: #85BEBD;
-  --ifm-color-text: #000000; /* 黑色文字 */
+  --ifm-color-primary: #f3f8f5; /* 主背景+文字連結顏色 */
+  --ifm-color-secondary: #FFFFFF; /* 次要文字顏色 (中間) */
+  --ifm-color-accent: #54A8C7; /* 按鈕顏色 (藍綠) */
+  --ifm-color-text: #000000; /* 主要文字顏色 (上下) */
+  --ifm-color-highlight: #5F6175; /* 強調色彩 (藍綠) */
 }
+
 
 /* 深色模式 */
 [data-theme='dark'] {
-  --ifm-color-primary: #5F6175; /* 深灰色背景 */
-  --ifm-color-text: #FFFFFF; /* 白色文字 */
+  --ifm-color-primary: #f3f8f5; /* 主背景+文字連結顏色 */
+  --ifm-color-secondary: #FFFFFF; /* 次要文字顏色 (中間) */
+  --ifm-color-accent: #408787; /* 按鈕顏色 (深綠藍) */
+  --ifm-color-text: #FFFFFF; /* 主要文字顏色 (上下) */
+  --ifm-color-highlight: #5F6175; /* 強調色彩 (深灰藍) */
 }
 
-/* 按鈕樣式統一 */
+
+/* 按鈕樣式 (統一樣式，支援淺色與深色模式切換) */
 .button {
   border-radius: 5px;
   padding: 0.5rem 1rem;
   font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease; /* 過渡效果 */
 }
+
 
 /* 淺色模式按鈕 */
 :root .button {
-  background: var(--ifm-color-primary);
+  background: var(--ifm-color-accent);
   color: var(--ifm-color-text);
 }
 
+
 /* 深色模式按鈕 */
 [data-theme='dark'] .button {
-  background: #355D9E; /* 深藍色背景 */
-  color: #FFFFFF; /* 白色文字 */
+  background: var(--ifm-color-accent);
+  color: var(--ifm-color-text);
 }
 
-/* 中間區塊的背景調整 */
+
+/* 中間區塊標題樣式 */
 .hero__title {
   font-weight: bold;
   color: var(--ifm-color-text);
 }
 
+
 .hero__subtitle {
   color: var(--ifm-color-text);
 }
 
-/* 主內容區域 */
+
+/* 中間區塊樣式 */
 .main-section {
-  background: var(--ifm-color-primary);
+  background: var(--ifm-color-secondary);
   padding: 2rem;
   border-radius: 10px;
 }
+
+
+/* 導航欄 Logo (支援深淺模式切換) */
+.navbar__logo {
+  background-image: url('/img/NCHC_LOGO.png'); /* 淺色模式圖片 */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px;
+  height: 30px;
+}
+
+
+[data-theme='dark'] .navbar__logo {
+  background-image: url('/img/NCHC_singlelogo_white.svg'); /* 深色模式圖片 */
+}
+
+
+/* 淺色模式導航欄 */
+.navbar__inner {
+  background-color: #FFFFFF; /* 導航欄背景顏色 (白色) */
+  color: #000000; /* 導航欄文字顏色 (黑色) */
+  border-bottom: 1px solid var(--ifm-color-secondary); /* 下邊框 */
+}
+
+
+/* 深色模式導航欄 */
+[data-theme='dark'] .navbar__inner {
+  background-color: #242527; /* 導航欄背景顏色 (深灰色) */
+  color: #FFFFFF; /* 導航欄文字顏色 (白色) */
+  border-bottom: 1px solid #242527; /* 下邊框 */
+}
+
+
+/* Footer 樣式 */
+.footer {
+  background: #303845; /* Footer 背景顏色 */
+  color: #FFFFFF; /* Footer 文字顏色 */
+}
+
+
+/* 內容區塊邊框調整 */
+.content-wrapper {
+  border: 1px solid var(--ifm-color-secondary); /* 淺灰綠邊框 */
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+
+/* 文字強調樣式 */
+.text-highlight {
+  color: var(--ifm-color-highlight); /* 強調文字顏色 */
+  font-weight: bold;
+}
+
 
 
 .custom-navbar-logo {
