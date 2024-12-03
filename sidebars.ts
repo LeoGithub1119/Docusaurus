@@ -49,9 +49,9 @@ const sidebars: SidebarsConfig = {
       label: '服務介紹',
       collapsed: false,
       items: [
-        'service_intro/services/All-in-one集合式服務',
-        'service_intro/services/API Server服務',
-        'service_intro/services/輕量化前端服務',
+        'service_intro/services/三合一集成服務',
+        'service_intro/services/API服務',
+        'service_intro/services/輕量化前端',
       ],
     },
   ],

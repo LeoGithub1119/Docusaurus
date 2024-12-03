@@ -18,7 +18,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/home">
+            to="/docs/service_intro/home">
             了解更多有關 RHAP 大型語言模型的資訊
           </Link>
         </div>
