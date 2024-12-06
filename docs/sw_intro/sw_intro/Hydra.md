@@ -49,7 +49,7 @@ AnythingLLM 是最容易使用的多合一 AI 應用程式，它可以執行 RAG
 - 完全可客製化：適用於企業或組織，提供與 ChatGPT 相當的完整功能，並具備權限控制，支持任何 LLM、嵌入模型或向量數據庫。
 - 無程式碼或基礎架構負擔：使用者無需編寫程式碼或處理複雜的基礎設施，即可享受強大的 AI 功能。
 
-如果想了解 AnythingLLM 的操作，可以參考 [AnythingLLM  使用說明](/docs/tools/AnythingLLM%20使用說明.md)
+如果想了解 AnythingLLM 的操作，可以參考 [AnythingLLM  使用說明](/docs/sw_intro/tools/AnythingLLM%20使用說明.md)
 
 
 ### OpenWebUI
@@ -60,7 +60,7 @@ OpenWebUI 是一個可擴充、功能豐富且易於使用的 AI 介面，設計
 - 可擴充性：設計為可擴充的架構，允許開發者添加新的功能和擴充軟體，滿足不同的需求。
 - 使用者友好：提供直觀的界面和豐富的功能，使得無論是初學者還是專業人士都能輕鬆使用。
 
-如果想了解 OpenWebUI 的操作，可以參考 [Open WebUI 使用說明](/docs/tools/OpenWebUI%20使用說明.md)
+如果想了解 OpenWebUI 的操作，可以參考 [Open WebUI 使用說明](/docs/sw_intro/tools/OpenWebUI%20使用說明.md)
 
 
 ## API代理伺服器
@@ -124,4 +124,4 @@ Ollama 是一個旨在簡化在本地電腦上運行開源 LLM 的軟體平台�
 如果想要更換 AnythingLLM 或 OpenWebUI 上的對話的模型
 <br />
 
-可以參考 [AnythingLLM 的模型設定](/docs/tools/AnythingLLM%20使用說明.md#模型設定) 跟 [OpenWebUI 的模型設定](/docs/tools/OpenWebUI%20使用說明.md)
+可以參考 [AnythingLLM 的模型設定](/docs/sw_intro/tools/AnythingLLM%20使用說明.md#模型設定) 跟 [OpenWebUI 的模型設定](/docs/sw_intro/tools/OpenWebUI%20使用說明.md#模型設定)
