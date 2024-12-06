@@ -75,47 +75,6 @@ const sidebars: SidebarsConfig = {
     
   ],
 
-  Sidebar: [
-    {
-      type: 'doc',
-      id: 'home',
-      label: 'RHAP 大型語言模型高效能 AI 平台',
-    },
-    {
-      type: 'category',
-      label: '快速上手',
-      collapsed: false,
-      items: ['快速上手/簡易安裝', '快速上手/服務架設'],
-    },
-    {
-      type: 'category',
-      label: '服務介紹',
-      collapsed: false,
-      items: [
-        'services/All-in-one集合式服務',
-        'services/API Server服務',
-        'services/輕量化前端服務',
-        'services/Lightweight API Portal',
-      ],
-    },
-    {
-      type: 'category',
-      label: '工具使用說明',
-      collapsed: false,
-      items: [
-        'tools/AnythingLLM 使用說明',
-        'tools/OpenWebUI 使用說明',
-        'tools/LiteLLM 使用說明',
-        'tools/Lightweight API 使用說明',
-      ],
-    },
-    {
-      type: 'category',
-      label: '常見問題',
-      collapsed: false,
-      items: ['faq/technical-issue', 'faq/OpenAI API 教學', 'faq/RAG'],
-    },
-  ],
-};
+}
 
 export default sidebars;

@@ -14,7 +14,7 @@
   --ifm-color-primary: #5C6560; /* 主背景顏色 */
   --ifm-color-link: #17a4a4; /* 文字連結顏色 */
   --ifm-color-link-active: #17a4a4; /* 當前頁面連結顏色 */
-  --ifm-color-secondary: #303030; /* 次要文字顏色 (中間) */
+  --ifm-color-secondary: #FFFFFF; /* 次要文字顏色 (中間) */
   --ifm-color-accent: #408787; /* 按鈕顏色 (深綠藍) */
   --ifm-color-text: #FFFFFF; /* 主要文字顏色 (上下) */
   --ifm-color-highlight: #5F6175; /* 強調色彩 (深灰藍) */
