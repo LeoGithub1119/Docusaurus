@@ -1,10 +1,10 @@
 /* 淺色模式 */
 :root {
-  --ifm-color-primary: #f3f8f5; /* 主背景顏色 */
+  --ifm-color-primary: #5C6560; /* 主背景顏色 */
   --ifm-color-link: #17a4a4; /* 文字連結顏色 */
   --ifm-color-link-active: #17a4a4; /* 當前頁面連結顏色 */
   --ifm-color-secondary: #FFFFFF; /* 次要文字顏色 (中間) */
-  --ifm-color-accent: #54A6C7; /* 按鈕顏色 (藍綠) */
+  --ifm-color-accent: #54a8c7; /* 按鈕顏色 (藍綠) */
   --ifm-color-text: #000000; /* 主要文字顏色 (上下) */
   --ifm-color-highlight: #5F6175; /* 強調色彩 (藍綠) */
 }
@@ -31,22 +31,16 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Sidebar 當前頁面連結樣式 */
-.sidebar__link--active {
+.sidebar__link--active,
+.navbar__link--active {
   color: var(--ifm-color-link-active) !important;
   font-weight: bold;
   background-color: rgba(23, 164, 164, 0.1); /* 增強辨識度的背景色 */
+  border-bottom: 2px solid var(--ifm-color-link-active); /* 增強樣式一致性 */
   padding: 0.3rem 0.5rem;
   border-radius: 5px; /* 添加圓角效果 */
 }
 
-/* Top Bar 當前頁面連結樣式 */
-.navbar__link--active {
-  color: var(--ifm-color-link-active) !important;
-  font-weight: bold;
-  border-bottom: 2px solid var(--ifm-color-link-active); /* 底部高亮 */
-  text-decoration: none;
-}
 
 /* 未選中鏈接樣式 */
 .sidebar__link,

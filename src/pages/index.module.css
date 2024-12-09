@@ -1,10 +1,24 @@
+/* HeroBanner 淺色模式 */
 .heroBanner {
   padding: 4rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
-  background-color: var(--ifm-color-primary);
+  background-color: #f3f8f5; /* 自定義淺色模式背景顏色 */
   color: var(--ifm-color-text-light);
+}
+
+/* HeroBanner 深色模式 */
+[data-theme='dark'] .heroBanner {
+  background-color: #37474f; /* 自定義深色模式背景顏色 */
+  color: var(--ifm-color-text-light);
+}
+
+/* HeroBanner 響應式調整 */
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
 }
 
 @media screen and (max-width: 996px) {
