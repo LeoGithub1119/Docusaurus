@@ -1,8 +1,6 @@
+<div className="Medusa"></div>
 
-<!-- ![image](https://gitlab.td.nchc.org.tw/genai-project/docs-dev/-/wikis/img/Medusa_home.PNG) -->
-
-![Medusa](/img/Medusa.png)
-
+# Medusa
 
 <!--
 

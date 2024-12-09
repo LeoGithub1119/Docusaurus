@@ -1,11 +1,6 @@
+<div className="Hummingbird"></div>
 
-
-<!-- ![Hummingbird Home](https://gitlab.td.nchc.org.tw/genai-project/docs-dev/-/wikis/img/Hummingbird.PNG) -->
-
-
-
-![Hummingbird](/img/Hummingbird.png)
-
+# Hummingbird
 
 <!--
 # 服務簡介

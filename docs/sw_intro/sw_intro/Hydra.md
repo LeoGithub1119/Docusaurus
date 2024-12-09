@@ -1,7 +1,6 @@
-<!-- ![hydra home](https://gitlab.td.nchc.org.tw/genai-project/docs-dev/-/wikis/img/Hummingbird.PNG) -->
+<div className="Hydra"></div>
 
-![Hydra](/img/Hydra.jpg)
-
+# Hydra
 
 <!--
 

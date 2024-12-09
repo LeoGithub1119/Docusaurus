@@ -119,3 +119,43 @@ a:hover {
   height: 40px;
   text-indent: -9999px;
 }
+
+
+.Hydra {
+  display: block; /* 顯示為區塊元素 */
+  background-image: url(/img/Hydra.jpg); 
+  background-size: contain; /* 圖片完整顯示 */
+  background-repeat: no-repeat; /* 不重複 */
+  background-position: center; /* 圖片居中 */
+  width: 200px; /* 設定寬度 */
+  height: 200px; /* 設定高度 */
+}
+
+.Medusa {
+  display: block; /* 顯示為區塊元素 */
+  background-image: url(/img/Medusa.png); 
+  background-size: contain; /* 圖片完整顯示 */
+  background-repeat: no-repeat; /* 不重複 */
+  background-position: center; /* 圖片居中 */
+  width: 200px; /* 設定寬度 */
+  height: 200px; /* 設定高度 */
+}
+
+.Hummingbird {
+  display: block; /* 顯示為區塊元素 */
+  background-image: url(/img/Hummingbird.png); 
+  background-size: contain; /* 圖片完整顯示 */
+  background-repeat: no-repeat; /* 不重複 */
+  background-position: center; /* 圖片居中 */
+  width: 200px; /* 設定寬度 */
+  height: 200px; /* 設定高度 */
+}
+
+
+
+h1 {
+  font-size: 3rem; /* 調整字體大小 */
+  line-height: 2.5; /* 調整行高 */
+}
+
+
