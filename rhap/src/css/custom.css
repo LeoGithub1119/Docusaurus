@@ -1,85 +1,161 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
+/* 淺色模式 */
+:root {
+  --ifm-color-primary: #5C6560; /* 主背景顏色 */
+  --ifm-color-link: #17a4a4; /* 文字連結顏色 */
+  --ifm-color-link-active: #17a4a4; /* 當前頁面連結顏色 */
+  --ifm-color-secondary: #FFFFFF; /* 次要文字顏色 (中間) */
+  --ifm-color-accent: #54a8c7; /* 按鈕顏色 (藍綠) */
+  --ifm-color-text: #000000; /* 主要文字顏色 (上下) */
+  --ifm-color-highlight: #5F6175; /* 強調色彩 (藍綠) */
+}
 
-/* You can override the default Infima variables here. */
+/* 深色模式 */
+[data-theme='dark'] {
+  --ifm-color-primary: #5C6560; /* 主背景顏色 */
+  --ifm-color-link: #17a4a4; /* 文字連結顏色 */
+  --ifm-color-link-active: #17a4a4; /* 當前頁面連結顏色 */
+  --ifm-color-secondary: #FFFFFF; /* 次要文字顏色 (中間) */
+  --ifm-color-accent: #408787; /* 按鈕顏色 (深綠藍) */
+  --ifm-color-text: #FFFFFF; /* 主要文字顏色 (上下) */
+  --ifm-color-highlight: #5F6175; /* 強調色彩 (深灰藍) */
+}
 
-.navbar {
-  background-color: #ffffff; /* 新的頂部欄顏色 */
+/* 通用文字連結樣式 */
+a {
+  color: var(--ifm-color-link);
+  text-decoration: none;
+}
+
+a:hover {
+  color: darken(var(--ifm-color-link), 10%);
+  text-decoration: underline;
+}
+
+.sidebar__link--active,
+.navbar__link--active {
+  color: var(--ifm-color-link-active) !important;
+  font-weight: bold;
+  background-color: rgba(23, 164, 164, 0.1); /* 增強辨識度的背景色 */
+  border-bottom: 2px solid var(--ifm-color-link-active); /* 增強樣式一致性 */
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px; /* 添加圓角效果 */
+}
+
+
+/* 未選中鏈接樣式 */
+.sidebar__link,
+.navbar__link {
+  color: var(--ifm-color-text);
+}
+
+.sidebar__link:hover,
+.navbar__link:hover {
+  color: var(--ifm-color-link);
+  text-decoration: underline;
+}
+
+/* 按鈕樣式 */
+.button {
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+:root .button {
+  background: var(--ifm-color-accent);
+  color: var(--ifm-color-text);
+}
+
+[data-theme='dark'] .button {
+  background: var(--ifm-color-accent);
+  color: var(--ifm-color-text);
+}
+
+/* 中間區塊標題樣式 */
+.hero__title {
+  font-weight: bold;
+  color: var(--ifm-color-text);
+}
+
+.hero__subtitle {
+  color: var(--ifm-color-text);
+}
+
+/* 中間區塊樣式 */
+.main-section {
+  background: var(--ifm-color-secondary);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+/* Footer 樣式 */
+.footer {
+  background: #303845;
   color: #FFFFFF;
 }
 
-[data-theme='dark'] .navbar {
-  background-color: #000000; /* 深色模式的頂部欄顏色 */
-  color: #FFFFFF;
+/* 內容區塊邊框調整 */
+.content-wrapper {
+  border: 1px solid var(--ifm-color-secondary);
+  padding: 1rem;
+  border-radius: 10px;
 }
 
-:root {
-  /* 主綠色 */
-  --ifm-color-primary: #0A7F7C; /* 更深的綠色 */
-  --ifm-color-primary-dark: #065A58;
-  --ifm-color-primary-darker: #2E4740; 
-  --ifm-color-primary-darkest: #21342F; 
-  --ifm-color-primary-light: #33A5A3;
-  --ifm-color-primary-lighter: #66C6C4;
-  --ifm-color-primary-lightest: #99E0DF;
-
-  /* 輔助顏色 */
-  --ifm-color-secondary: #ffffff; 
-  --ifm-color-secondary-dark: #ffffff;
-  --ifm-color-secondary-light: #ffffff;
-
-  /* 文字顏色 */
-  --ifm-color-text: #000000; 
-  --ifm-color-text-dark: #222222; 
-  --ifm-color-text-light: #FFFFFF;
-  --ifm-color-background: #FFFFFF; 
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --ifm-code-font-size: 95%;
+/* 強調文字樣式 */
+.text-highlight {
+  color: var(--ifm-color-highlight);
+  font-weight: bold;
 }
 
-/* 暗色主題 */
-[data-theme='dark'] {
-  /* 主綠色的淺色變體 */
-  --ifm-color-primary: #00B8B2; /* 更淺的綠色 */
-  --ifm-color-primary-dark: #006A68;
-  --ifm-color-primary-darker: #21342F;
-  --ifm-color-primary-darkest: #1A2B24;
-  --ifm-color-primary-light: #5D8A7A;
-  --ifm-color-primary-lighter: #AAB7A5;
-  --ifm-color-primary-lightest: #C1D1C1;
-
-  /* 輔助顏色 */
-  --ifm-color-secondary: #ffffff; 
-  --ifm-color-secondary-dark: #ffffff;
-  --ifm-color-secondary-light: #ffffff;
-
-  /* 文字顏色 */
-  --ifm-color-text: #FFFFFF; /* 默認文字為白色 */
-  --ifm-color-text-light: #C1D1C1; /* 用更亮的灰綠色作為淺色文字 */
-  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+/* Logo 樣式 */
+.custom-navbar-logo {
+  display: inline-block;
+  background-image: url(/img/fox__2_.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+  text-indent: -9999px;
 }
 
 
-/* 全局設定 */
-:root {
-  --ifm-color-primary: #0A7F7C;
-  --ifm-color-text: #000000;
+.Hydra {
+  display: block; /* 顯示為區塊元素 */
+  background-image: url(/img/Hydra.jpg); 
+  background-size: contain; /* 圖片完整顯示 */
+  background-repeat: no-repeat; /* 不重複 */
+  background-position: center; /* 圖片居中 */
+  width: 200px; /* 設定寬度 */
+  height: 200px; /* 設定高度 */
 }
 
-/* 暗色主題設定 */
-[data-theme='dark'] {
-  --ifm-color-primary: #00B8B2;
-  --ifm-color-text: #ffffff; /* 默認文字為白色 */
-
-  /* 首頁特定標題設定 */
-  .hero__title, .hero__subtitle {
-    color: #000000 !important; /* 深色模式首頁文字顯示黑色 */
-  }
+.Medusa {
+  display: block; /* 顯示為區塊元素 */
+  background-image: url(/img/Medusa.png); 
+  background-size: contain; /* 圖片完整顯示 */
+  background-repeat: no-repeat; /* 不重複 */
+  background-position: center; /* 圖片居中 */
+  width: 200px; /* 設定寬度 */
+  height: 200px; /* 設定高度 */
 }
 
-html[data-navbar='false'] .navbar {
-  display: none;
+.Hummingbird {
+  display: block; /* 顯示為區塊元素 */
+  background-image: url(/img/Hummingbird.png); 
+  background-size: contain; /* 圖片完整顯示 */
+  background-repeat: no-repeat; /* 不重複 */
+  background-position: center; /* 圖片居中 */
+  width: 200px; /* 設定寬度 */
+  height: 200px; /* 設定高度 */
 }
+
+
+
+h1 {
+  font-size: 3rem; /* 調整字體大小 */
+  line-height: 2.5; /* 調整行高 */
+}
+
+

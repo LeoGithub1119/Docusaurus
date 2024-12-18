@@ -9,7 +9,7 @@
 ## 如何連線到 Open WebUI
 
 用瀏覽器輸入虛擬運算的『公用 IP』連到入口網頁，並點選 Open WebUI，以 `All-In-One 一站式集成推論服務` 為例，如畫面所示： 
-> [如何取得『公用 IP』](/llm-service-build.md#瀏覽器連線)
+> [如何取得『公用 IP』](https://gitlab.td.nchc.org.tw/llm-taskforce/docs/docs-dev/-/wikis/llm-service-build.md#%E7%80%8F%E8%A6%BD%E5%99%A8%E9%80%A3%E7%B7%9A)
 
 ![首頁](https://gitlab.td.nchc.org.tw/genai-project/docs-dev/-/wikis/img/Hydra_openwebui.png)
 

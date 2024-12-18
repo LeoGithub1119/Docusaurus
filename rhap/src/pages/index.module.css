@@ -1,10 +1,24 @@
+/* HeroBanner 淺色模式 */
 .heroBanner {
   padding: 4rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
-  background-color: var(--ifm-color-primary);
+  background-color: #f3f8f5; /* 自定義淺色模式背景顏色 */
   color: var(--ifm-color-text-light);
+}
+
+/* HeroBanner 深色模式 */
+[data-theme='dark'] .heroBanner {
+  background-color: #37474f; /* 自定義深色模式背景顏色 */
+  color: var(--ifm-color-text-light);
+}
+
+/* HeroBanner 響應式調整 */
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
 }
 
 @media screen and (max-width: 996px) {
@@ -32,15 +46,15 @@
 .homepageSection {
   flex: 1;
   padding: 1rem;
-  background-color: var(--ifm-color-primary-light);
+  background-color: #D6D7CB;/* 3塊 */
   border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 8px #484944;
   color: var(--ifm-color-text);
   max-width: 400px; /* 限制每個區塊的最大寬度 */
   text-align: center; /* 文字居中對齊 */
 }
 
 [data-theme='dark'] .homepageSection {
-  background-color: var(--ifm-color-primary-dark);
+  background-color: #484944;/* 3塊 */
   color: var(--ifm-color-text-light);
 }

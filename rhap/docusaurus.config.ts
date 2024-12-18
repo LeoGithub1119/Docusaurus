@@ -4,9 +4,9 @@ import type * as Preset from '@docusaurus/preset-classic';
 import path from 'path';
 
 const config: Config = {
-  title: 'NCHC RHAP',
+  title: 'NCHC Resilient High-Performance AI Platform',
   tagline: '大型語言模型高效能 AI 平台',
-  favicon: 'img/favicons.ico',
+  favicon: 'img/NCHC_LOGO.png',
   url: 'https://llm-taskforce.pages.td.nchc.org.tw/',
   baseUrl: '/docs/docs-dev/',
   organizationName: 'NCHC',
@@ -17,10 +17,6 @@ const config: Config = {
     defaultLocale: 'zh-Hant',
     locales: ['zh-Hant'],
   },
-  // i18n: {
-  //   defaultLocale: 'zh-Hant',
-  //   locales: ['zh-Hant', 'en'],
-  // },
   presets: [
     [
       'classic',
@@ -38,9 +34,6 @@ const config: Config = {
             xslt: true,
           },
           editUrl: 'https://gitlab.td.nchc.org.tw/genai-project/docs-dev/',
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -55,13 +48,15 @@ const config: Config = {
       title: 'RHAP 大型語言模型高效能 AI 平台',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/company_logo.jpg',
+        src: 'img/NCHC_LOGO.png', // 預設為淺色模式的 Logo
+        className: 'navbar__logo', // 使用 CSS 定義深淺模式切換
       },
       items: [
-        { type: 'docSidebar', sidebarId: 'Sidebar', position: 'left', label: '說明文件' },
+        { type: 'docSidebar', sidebarId: 'service_intro_sidebar', position: 'left', label: '服務介紹' },
+        { type: 'docSidebar', sidebarId: 'sw_intro_sidebar', position: 'left', label: '軟體介紹' },
+        { type: 'docSidebar', sidebarId: 'faq_intro_sidebar', position: 'left', label: '常見問題' },
         { to: '/blog', label: '日誌', position: 'left' },
-        { to: '/docs/faq/technical-issue', label: '常見問題', position: 'left' }, // 新增常見問題按鈕
-        { href: 'https://gitlab.td.nchc.org.tw/genai-project/docs-dev/', label: 'GitHub', position: 'right' },
+        { href: 'https://gitlab.td.nchc.org.tw/genai-project/docs-dev/', label: ' ', position: 'right',className: 'custom-navbar-logo' },
         { type: 'localeDropdown', position: 'right' },
       ],
     },
@@ -74,15 +69,11 @@ const config: Config = {
         },
         {
           title: 'Community',
-          items: [
-            { label: '國研院', href: 'https://www.narlabs.org.tw/' },
-          ],
+          items: [{ label: '國網中心', href: 'https://www.nchc.org.tw/' }],
         },
         {
           title: 'More',
-          items: [
-            { label: '日誌', to: '/blog' },
-          ],
+          items: [{ label: '日誌', to: '/blog' }],
         },
       ],
       copyright: `版權所有 © ${new Date().getFullYear()} NCHC All Rights Reserved`,
@@ -91,24 +82,14 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
-    // algolia 搜索插件設置（可選）
-    // algolia: {
-    //   apiKey: 'YOUR_ALGOLIA_API_KEY',
-    //   indexName: 'YOUR_INDEX_NAME',
-    //   appId: 'YOUR_APP_ID',
-    //   contextualSearch: true,
-    //   searchParameters: {},
-    //   placeholder: '搜尋文件...',
-    // },
+    docs: {
+      sidebar: {
+        autoCollapseCategories: false, // 停用自動折疊
+      },
+    },
   } satisfies Preset.ThemeConfig,
   plugins: [
-    [
-      '@docusaurus/plugin-sitemap', // 新增 sitemap 插件
-      {
-        id: 'sitemap-instance-1', // 第一個 sitemap 插件的唯一 ID
-        // 其他設置
-      },
-    ],
+    '@docusaurus/plugin-sitemap', // 自動生成網站地圖
     path.resolve(__dirname, 'plugins/monitoring-plugin'),
   ],
 };
