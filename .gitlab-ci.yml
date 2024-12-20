@@ -1,9 +1,17 @@
+image: node:23.1.0-alpine3.20
 
 stages:
   - deploy
-deploy-job:
+
+pages:
   stage: deploy
   script:
-    - ls -la
-    - echo "niaho China!" > sample.config.ts
-    - scp sample.config.ts ubuntu@103.124.74.43:/home/ubuntu/docusaurus/sample.config.ts
+  - cd rhap
+  - yarn install
+  - yarn build
+  - mv ./build ../public
+  artifacts:
+    paths:
+    - public
+  only:
+    - main
