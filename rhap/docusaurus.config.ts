@@ -43,16 +43,17 @@ const config: Config = {
       title: 'RHAP 大型語言模型高效能 AI 平台',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/NCHC_LOGO.png', // 預設為淺色模式的 Logo
-        className: 'navbar__logo', // 使用 CSS 定義深淺模式切換
+        src: 'img/NCHC_LOGO.png',
+        className: 'navbar__logo',
       },
       items: [
         { type: 'docSidebar', sidebarId: 'service_intro_sidebar', position: 'left', label: '服務介紹' },
         { type: 'docSidebar', sidebarId: 'sw_intro_sidebar', position: 'left', label: '軟體介紹' },
         { type: 'docSidebar', sidebarId: 'faq_intro_sidebar', position: 'left', label: '常見問題' },
         { to: '/blog', label: '日誌', position: 'left' },
-        { href: 'https://gitlab.td.nchc.org.tw/westleft80935/docusaurus', label:' ', position: 'right',className: 'custom-navbar-logo' },
+        { href: 'https://gitlab.td.nchc.org.tw/westleft80935/docusaurus', label: ' ', position: 'right', className: 'custom-navbar-logo' },
         { type: 'localeDropdown', position: 'right' },
+        { href: '/login', label: ' ', position: 'right', className: 'custom-login-icon', 'aria-label': 'Login/Register' },
       ],
     },
     footer: {
@@ -79,12 +80,12 @@ const config: Config = {
     },
     docs: {
       sidebar: {
-        autoCollapseCategories: false, // 停用自動折疊
+        autoCollapseCategories: false,
       },
     },
   } satisfies Preset.ThemeConfig,
   plugins: [
-    '@docusaurus/plugin-sitemap', // 自動生成網站地圖
+    '@docusaurus/plugin-sitemap',
     path.resolve(__dirname, 'plugins/monitoring-plugin'),
   ],
 };

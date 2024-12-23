@@ -121,6 +121,34 @@ a:hover {
 }
 
 
+.custom-login-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url(/img/login.png); /* 替換為你的圖標路徑 */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.custom-login-icon:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+
+.navbar__item.custom-login-icon {
+  order: 3; 
+  margin-left: 15px; 
+}
+
+.navbar__item.theme-toggle {
+  order: 2; 
+}
+
+
+
+
 .Hydra {
   display: block; /* 顯示為區塊元素 */
   background-image: url(/img/Hydra.jpg); 
