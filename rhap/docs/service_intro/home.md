@@ -32,7 +32,8 @@ RHAP 平台提供了不同的服務模式，以滿足多樣化的應用需求：
    - 僅依[前端應用平台(積木1)](/docs/service_intro/home.md#架構介紹)提供的輕量化推論能力，能以快速且低資源的方式處理簡單的文本生成需求。
    - 輕量化前端服務適合需要快速回應、但不需要高級檢索和安全控制的場景。
 
-![](https://service.genai.nchc.org.tw/assets/img/hero.png)
+
+![image](/img/arch.png)
 
 ## 架構介紹
 

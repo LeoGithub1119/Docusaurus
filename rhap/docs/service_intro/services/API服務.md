@@ -1,5 +1,5 @@
 
-![image](https://gitlab.td.nchc.org.tw/genai-project/docs-dev/-/wikis/img/Medusa_home.PNG)
+![image](/img/Medusa_home.png)
 
 
 
