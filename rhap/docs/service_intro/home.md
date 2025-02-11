@@ -17,17 +17,17 @@ import Head from '@docusaurus/Head';
 
 RHAP 平台提供了不同的服務模式，以滿足多樣化的應用需求：
 
-### [三合一集成服務](/docs/service_intro#架構介紹)
+### [三合一集成服務](/docs/service_intro/services/三合一集成服務)
 
    - 結合[前端應用平台(積木1)](/docs/service_intro/home.md#架構介紹)、[API代理伺服器(積木2)](/docs/service_intro/home.md#架構介紹)和 [LLM推論加速器(積木3)](/docs/service_intro/home.md#架構介紹)三層的功能，提供全面的推論、檢索和安全控制，適合企業級應用。
    - 使用 All-In-One 模式可支援高並行和多樣化的應用場景，是需要高效能和全面功能的最佳選擇。
 
-### [API服務](/docs/service_intro#架構介紹)
+### [API服務](/docs/service_intro/services/API服務)
 
    - 主要整合了 [API代理伺服器(積木2)](/docs/service_intro/home.md#架構介紹)和 [LLM推論加速器(積木3)](/docs/service_intro/home.md#架構介紹)的功能，提供標準 API 介面，支援進階的推論和安全控制，適合需要 API 集成的應用。
    - 此模式下，系統能支援自動化和批量處理需求，適合大規模推論場景。
 
-### [輕量化前端](/docs/service_intro#架構介紹)
+### [輕量化前端](/docs/service_intro/services/輕量化前端)
 
    - 僅依[前端應用平台(積木1)](/docs/service_intro/home.md#架構介紹)提供的輕量化推論能力，能以快速且低資源的方式處理簡單的文本生成需求。
    - 輕量化前端服務適合需要快速回應、但不需要高級檢索和安全控制的場景。
