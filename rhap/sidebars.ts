@@ -49,9 +49,10 @@ const sidebars: SidebarsConfig = {
       label: '服務介紹',
       collapsed: false,
       items: [
-        'service_intro/services/三合一集成服務',
-        'service_intro/services/API服務',
-        'service_intro/services/輕量化前端',
+        // 'service_intro/home',
+        'service_intro/services/可客製化流程設計服務前台',
+        'service_intro/services/模型微調訓練與評估流程',
+        'service_intro/services/高效能多模型API服務',
       ],
     },
   ],
@@ -59,19 +60,15 @@ const sidebars: SidebarsConfig = {
   faq_intro_sidebar: [
     {
       type: 'doc',
-      id: 'faq_intro/faq/OpenAI API 教學', 
-      label: 'OpenAI API 教學',
+      id: 'faq_intro/faq/service_intro_faq', 
+      label: '服務概觀',
     },
     {
       type: 'doc',
-      id: 'faq_intro/faq/RAG', 
-      label: 'RAG',
+      id: 'faq_intro/faq/setting_faq', 
+      label: '部署與設定',
     },
-    {
-      type: 'doc',
-      id: 'faq_intro/faq/technical-issue',
-      label: 'technical-issue',
-    },
+    
     
   ],
 
