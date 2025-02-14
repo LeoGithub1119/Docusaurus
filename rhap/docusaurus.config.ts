@@ -51,7 +51,7 @@ const config: Config = {
         { type: 'docSidebar', sidebarId: 'sw_intro_sidebar', position: 'left', label: '軟體介紹' },
         { type: 'docSidebar', sidebarId: 'faq_intro_sidebar', position: 'left', label: '常見問題' },
         // { to: '/blog', label: '日誌', position: 'left' },
-        { href: 'https://gitlab.td.nchc.org.tw/genai-project/hydra', label: ' ', position: 'right', className: 'custom-navbar-logo-gitlab' },
+        { href: 'https://gitlab.com/nchc-genai/hydra', label: ' ', position: 'right', className: 'custom-navbar-logo-gitlab' },
         { type: 'localeDropdown', position: 'right' },
         // { href: '/login', label: ' ', position: 'right', className: 'custom-login-icon', 'aria-label': 'Login/Register' },
       ],

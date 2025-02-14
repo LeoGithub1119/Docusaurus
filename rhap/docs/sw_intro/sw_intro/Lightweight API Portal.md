@@ -7,7 +7,7 @@
 
 ## 登入服務
 
-1. 開啟入口網頁（https://portal.genai.nchc.org.tw/login）
+1. 開啟入口網頁（ https://portal.genai.nchc.org.tw/login ）
 2. 點選 `iService 登入`，並登入 iService 帳號。
     > *若無 iService 帳號，請先至 [iService 網站](https://iservice.nchc.org.tw/nchc_service/index.php) 申請帳號。*
 3. 自計畫列表選擇欲使用的計畫，點選`前往計畫`。
