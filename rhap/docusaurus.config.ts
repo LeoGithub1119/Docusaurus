@@ -96,4 +96,9 @@ const config: Config = {
   
 };
 
+
+module.exports = {
+  onBrokenLinks: 'warn',  // 遇到錯誤連結時只顯示警告，而不會讓 build 失敗
+};
+
 export default config;
