@@ -4,7 +4,6 @@ stages:
   - build
   - deploy
 
-
 build:
   stage: build
   script:
@@ -15,9 +14,13 @@ build:
   artifacts:
     paths:
       - rhap_build.tar.gz
+    expire_in: 1 hour  
   only:
+    - master
+    - main
     - dong_dev  
-
+  tags:
+    - docusaurus  
 
 deploy:
   stage: deploy
@@ -33,4 +36,8 @@ deploy:
         docker restart dev-cnt-0116
       EOF
   only:
+    - master
+    - main
     - dong_dev
+  tags:
+    - docusaurus  
