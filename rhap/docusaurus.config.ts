@@ -85,9 +85,15 @@ const config: Config = {
     },
   } satisfies Preset.ThemeConfig,
   plugins: [
-    '@docusaurus/plugin-sitemap',
+    [
+      '@docusaurus/plugin-sitemap',
+      {
+        id: 'sitemap-main', 
+      },
+    ],
     path.resolve(__dirname, 'plugins/monitoring-plugin'),
   ],
+  
 };
 
 export default config;
