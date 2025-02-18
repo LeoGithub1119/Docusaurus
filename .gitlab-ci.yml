@@ -1,17 +1,36 @@
 image: node:23.1.0-alpine3.20
 
 stages:
+  - build
   - deploy
 
-pages:
-  stage: deploy
+
+build:
+  stage: build
   script:
-  - cd rhap
-  - yarn install
-  - yarn build
-  - mv ./build ../public
+    - cd rhap
+    - yarn install
+    - yarn build
+    - tar -czf rhap_build.tar.gz -C build .
   artifacts:
     paths:
-    - public
+      - rhap_build.tar.gz
   only:
-    - main
+    - dong_dev  
+
+
+deploy:
+  stage: deploy
+  script:
+    - echo "正在將檔案傳輸到 VM..."
+    - scp -o StrictHostKeyChecking=no rhap_build.tar.gz ubuntu@103.124.74.43:/home/ubuntu/rhap_build.tar.gz
+    - ssh -o StrictHostKeyChecking=no ubuntu@103.124.74.43 << 'EOF'
+        cd /home/ubuntu
+        rm -rf rhap_build
+        mkdir rhap_build
+        tar -xzf rhap_build.tar.gz -C rhap_build
+        docker cp rhap_build/. dev-cnt-0116:/workspace/nchcwebsite/rhap/build
+        docker restart dev-cnt-0116
+      EOF
+  only:
+    - dong_dev
