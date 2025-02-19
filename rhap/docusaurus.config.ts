@@ -9,6 +9,11 @@ const config: Config = {
   favicon: 'img/NCHC_LOGO.png',
   url: 'http://103.124.74.43:3000',
   baseUrl: '/',
+  organizationName: 'NCHC',
+  projectName: 'docusaurus',
+  onBrokenLinks: 'warn',
+  onBrokenMarkdownLinks: 'warn',
+
   i18n: {
     defaultLocale: 'zh-Hant',
     locales: ['zh-Hant'],
