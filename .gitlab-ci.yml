@@ -1,42 +1,17 @@
-image: node:22.11.0
-
-stages:
-  - build
-  - deploy
-
-build:
-  stage: build
+# The Docker image that will be used to build your app
+image: node:23.1.0-alpine3.20
+# Functions that should be executed before the build script is run
+before_script:
+  - cd rhap
+  - yarn install
+pages:
   script:
-    - cd rhap
-    - yarn install
     - yarn build
-    - tar -czf rhap_build.tar.gz -C build .
   artifacts:
     paths:
-      - rhap_build.tar.gz
-    expire_in: 1 hour  
-  only:
-    - master
-    - main
-    - dong_dev  
-  tags:
-    - docusaurus  
-
-deploy:
-  stage: deploy
-  script:
-    - scp -o StrictHostKeyChecking=no rhap_build.tar.gz ubuntu@103.124.74.43:/home/ubuntu/rhap_build.tar.gz
-    - ssh -o StrictHostKeyChecking=no ubuntu@103.124.74.43 << 'EOF'
-        cd /home/ubuntu
-        rm -rf rhap_build
-        mkdir rhap_build
-        tar -xzf rhap_build.tar.gz -C rhap_build
-        docker cp rhap_build/. dev-cnt-0116:/workspace/nchcwebsite/rhap/build
-        docker restart dev-cnt-0116
-      EOF
-  only:
-    - master
-    - main
-    - dong_dev
-  tags:
-    - docusaurus  
+      # The folder that contains the files to be exposed at the Page URL
+      - public
+  rules:
+    # This ensures that only pushes to the default branch will trigger
+    # a pages deploy
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
