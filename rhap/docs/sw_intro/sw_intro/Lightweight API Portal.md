@@ -31,7 +31,7 @@
 
 ## API 使用說明
 
-取得 Lightweight-API 金鑰後，使用者便可利用 `Lightweight-API` 存取 iService 上的各類模型。詳細的 API 使用方法將會在[進階說明](/docs/tools/Lightweight%20API%20使用說明.md)中提供，包括使用範例、請求格式、回應結構等，方便使用者快速上手。
+取得 Lightweight-API 金鑰後，使用者便可利用 `Lightweight-API` 存取 iService 上的各類模型。詳細的 API 使用方法將會在[進階說明](/docs/sw_intro/tools/Lightweight%20API%20使用說明.md)中提供，包括使用範例、請求格式、回應結構等，方便使用者快速上手。
 
 ## 其他功能
 
