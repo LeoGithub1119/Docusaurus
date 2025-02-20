@@ -9,7 +9,7 @@ const config: Config = {
   favicon: 'img/NCHC_LOGO.png',
   // url: 'http://103.124.74.43:3000',
   url: 'https://llm-taskforce.pages.td.nchc.org.tw/',
-  baseUrl: '/dev/docusaurus',
+  baseUrl: '/devops-team/dev/docusaurus',
   organizationName: 'NCHC',
   projectName: 'docusaurus',
   onBrokenLinks: 'warn',
