@@ -201,9 +201,13 @@ h1 {
 }
 
 
-.navbar, .fotter {
+.footer {
+  display:none
+}
+
+
+/* .navbar {
   display:none
 
 
-}
-
+} */
