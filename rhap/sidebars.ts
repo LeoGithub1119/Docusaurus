@@ -50,9 +50,9 @@ const sidebars: SidebarsConfig = {
       collapsed: false,
       items: [
         // 'service_intro/home',
-        'service_intro/services/可客製化流程設計服務前台',
-        'service_intro/services/模型微調訓練與評估流程',
-        'service_intro/services/高效能多模型API服務',
+        'service_intro/services/客製化流程設計前台',
+        'service_intro/services/多模型API服務',
+        'service_intro/services/模型微調與評估',
       ],
     },
   ],
