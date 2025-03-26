@@ -50,7 +50,7 @@ const config: Config = {
         // { type: 'docSidebar', sidebarId: 'sw_intro_sidebar', position: 'left', label: '軟體介紹' },
         // { type: 'docSidebar', sidebarId: 'faq_intro_sidebar', position: 'left', label: '常見問題' },
         // { href: 'https://gitlab.com/nchc-genai/hydra', label: ' ', position: 'right', className: 'custom-navbar-logo-gitlab' },
-        { type: 'localeDropdown', position: 'right' },
+        // { type: 'localeDropdown', position: 'right' },
       ],
     },
     footer: {
@@ -65,6 +65,11 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+    },
+    colorMode: {
+      defaultMode: 'light',
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
     },
     docs: {
       sidebar: {
