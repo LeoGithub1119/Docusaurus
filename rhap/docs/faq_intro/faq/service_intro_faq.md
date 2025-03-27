@@ -5,7 +5,7 @@
    - 此服務採用分層架構，包含前端平台（Tier 1）、API代理伺服器（Tier 2）及LLM推論加速器（Tier 3）。
    - 結合AI工具與工作流程，提供直覺易用的開發環境。
    - 無需技術背景，即可靈活配置AI應用。
-   - 支援快速佈署與介面設計，加速應用落地。
+   - 支援快速佈署與介面設計，加速應用落地
 
 2. **國網中心提供哪些前端服務？**
    - 目前提供包括 AnythingLLM、Open WebUI、DIFY (Workflow Engine)、Streamlit (RAG Workflow)、Aqua(by UnieAI)等前端服務。
