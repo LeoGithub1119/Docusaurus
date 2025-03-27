@@ -5,10 +5,10 @@
    - 此服務採用分層架構，包含前端平台（Tier 1）、API代理伺服器（Tier 2）及LLM推論加速器（Tier 3）。
    - 結合AI工具與工作流程，提供直覺易用的開發環境。
    - 無需技術背景，即可靈活配置AI應用。
-   - 支援快速佈署與介面設計，加速應用落地。
+   - 支援快速佈署與介面設計，加速應用落地
 
 2. **國網中心提供哪些前端服務？**
-   - 目前提供包括 AnythingLLM、Open WebUI、DIFY (Workflow Engine)、Streamlit (RAG Workflow)、UnieAI LLM UI (OpenWebUI)、KUWA 等前端服務。
+   - 目前提供包括 AnythingLLM、Open WebUI、DIFY (Workflow Engine)、Streamlit (RAG Workflow)、Aqua(by UnieAI)等前端服務。
    - 未來將進一步整合更多選項。
 
 3. **如何申請客製化流程設計前台？**
@@ -20,7 +20,8 @@
    - 針對台灣繁體中文優化，提升語言理解與應用效果。
    - 幫助企業快速開發 AI 加值服務，增強競爭力。
 
-5. **請先申請 iService 帳號，並在服務平台網頁填寫申請資訊，取得 API 金鑰後即可開始使用。
+5. **如何申請多模型API服務？**
+   - 請先申請 iService 帳號，並在服務平台網頁填寫申請資訊，取得 API 金鑰後即可開始使用。
 
 6. **什麼是國網中心 API 服務金鑰（API Key）？**
    - 是存取國網中心多模型 API 服務的憑證，需通過此金鑰與 LiteLLM 模組來訪問大語言模型。
