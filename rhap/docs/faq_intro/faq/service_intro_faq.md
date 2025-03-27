@@ -8,7 +8,7 @@
    - 支援快速佈署與介面設計，加速應用落地。
 
 2. **國網中心提供哪些前端服務？**
-   - 目前提供包括 AnythingLLM、Open WebUI、DIFY (Workflow Engine)、Streamlit (RAG Workflow)、UnieAI LLM UI (OpenWebUI)、KUWA 等前端服務。
+   - 目前提供包括 AnythingLLM、Open WebUI、DIFY (Workflow Engine)、Streamlit (RAG Workflow)、Aqua(by UnieAI)等前端服務。
    - 未來將進一步整合更多選項。
 
 3. **如何申請客製化流程設計前台？**
