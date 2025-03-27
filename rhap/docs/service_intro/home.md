@@ -1,5 +1,5 @@
 ---
-title: "國網中心TAIWAN AI RHAP 生成式AI應用開發服務"
+title: "TAIWAN AI RHAP 生成式AI應用開發服務"
 ---
 import Head from '@docusaurus/Head';
 
@@ -37,7 +37,7 @@ TAIWAN AI RHAP致力於**資服業者**、**新創公司**、**中小企業**、
 
 ## **架構介紹**
 
-### **一、「客製化流程設計前台」、「多模型API服務」：鬆耦合架構**
+## **一、「客製化流程設計前台」、「多模型API服務」：鬆耦合架構**
 
 TAIWAN AI RHAP所提供的「客製化流程設計前台」及「多模型API服務」採用三層鬆耦合（Loosely Coupled）架構設計，透過開源軟體將不同功能模組分為三層，以滿足多樣化的推論需求，確保高效能與靈活性。
 
