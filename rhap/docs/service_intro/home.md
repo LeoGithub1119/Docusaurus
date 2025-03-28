@@ -76,7 +76,7 @@ TAIWAN AI RHAP所提供的「客製化流程設計前台」及「多模型API服
 
 TAIWAN AI RHAP提供多種服務模式，以滿足不同應用需求。
 
-### **1. [客製化流程設計前台](/docs/service_intro/services/可客製化流程設計服務前台)**
+### 1. 客製化流程設計前台
 
 - 整合並提供各式開源及合作企業開發之前端介面
 - 結合AI工具與工作流程，提供直覺易用的開發環境。
@@ -85,7 +85,7 @@ TAIWAN AI RHAP提供多種服務模式，以滿足不同應用需求。
   - 針對需要前端、API、推論框架、算力等全方面資源的用戶提供[前端應用平台（Tier 1）](/docs/service_intro/home.md#架構介紹)、[API代理伺服器（Tier 2）](/docs/service_intro/home.md#架構介紹)、[LLM推論加速器（Tier 3）](/docs/service_intro/home.md#架構介紹)，提供最完整的推論解決方案。
   - 針對僅需要前端介面，想自行串接各式API的用戶，提供僅包含[前端應用平台（Tier 1）](/docs/service_intro/home.md#架構介紹)的模式，用戶可自行串接 API，靈活開發AI應用。
 
-### **2. [多模型API服務](/docs/service_intro/services/高效能多模型API服務)**
+### 2. 多模型API服務
 
 - 整合API 代理伺服器（Tier 2）與LLM 推論加速器（Tier 3）
 - 提供標準化 API 介面及安全控制機制（Safety Guard），讓使用者可透過 API 租用方式快速建立 LLM 應用服務。
@@ -93,7 +93,7 @@ TAIWAN AI RHAP提供多種服務模式，以滿足不同應用需求。
 - 針對台灣繁體中文優化，提升語言理解與應用效果。
 - 幫助企業快速開發AI加值服務，增強競爭力。
 
-### **3. [模型微調與評估](/docs/service_intro/services/模型微調訓練與評估流程)**
+### 3. 模型微調與評估
 
 - 採用模型微調與評估架構。
 - 簡化AI訓練與數據處理流程，提高模型精準度。
@@ -102,5 +102,4 @@ TAIWAN AI RHAP提供多種服務模式，以滿足不同應用需求。
 - 用戶無須具備專業技術知識，即可完成專屬模型微調訓練流程。
 
 
----
 
