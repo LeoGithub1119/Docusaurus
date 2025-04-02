@@ -1,5 +1,5 @@
 ---
-title: "TAIWAN AI RHAP 生成式AI應用開發服務"
+title: "國網中心TAIWAN AI RAP 生成式AI應用開發服務"
 ---
 import Head from '@docusaurus/Head';
 
