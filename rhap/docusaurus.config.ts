@@ -6,11 +6,11 @@ import path from 'path';
 const isDev = process.env.NODE_ENV === 'development';
 
 const config: Config = {
-  title: 'NCHC Resilient High-Performance AI Platform',
+  title: 'NCHC Resilient AI Platform',
   tagline: '大型語言模型高效能 AI 平台',
   favicon: 'img/NCHC_LOGO.png',
-  url: isDev ? 'http://localhost:3000' : 'https://llm-taskforce.pages.td.nchc.org.tw/',
-  baseUrl: isDev ? '/' : '/devops-team/dev/docusaurus',
+  url: isDev ? 'http://localhost:3000' : 'https://westleft80935.pages.gennai.nhc.org.tw/',
+  baseUrl: isDev ? '/' : '/docusaurus/',
   organizationName: 'NCHC',
   projectName: 'docusaurus',
   onBrokenLinks: 'warn',
@@ -20,6 +20,7 @@ const config: Config = {
     defaultLocale: 'zh-Hant',
     locales: ['zh-Hant'],
   },
+
   presets: [
     [
       'classic',
@@ -42,13 +43,46 @@ const config: Config = {
       },
     ],
   ],
+
+  themes: [
+    [
+      'docusaurus-theme-openapi-docs',
+      {
+        id: 'openapi-theme',
+      },
+    ],
+  ],
+
+  plugins: [
+    [
+      'docusaurus-plugin-openapi-docs',
+      {
+        id: 'openapi',
+        docsPluginId: 'default',
+        config: {
+          dongApi: {
+            specPath: 'static/openapi/dong-api.yaml',
+            outputDir: 'docs/api',
+            sidebarOptions: {
+              groupPathsBy: 'tag',
+              categoryLinkSource: 'tag',
+            },
+          },
+        },
+      },
+    ],
+    ['@docusaurus/plugin-sitemap', { id: 'sitemap-main' }],
+    path.resolve(__dirname, 'plugins/monitoring-plugin'),
+  ],
+
   themeConfig: {
     navbar: {
-      hideOnScroll: false, 
+      hideOnScroll: false,
       items: [
         // { type: 'docSidebar', sidebarId: 'service_intro_sidebar', position: 'left', label: '服務介紹' },
         // { type: 'docSidebar', sidebarId: 'sw_intro_sidebar', position: 'left', label: '軟體介紹' },
         // { type: 'docSidebar', sidebarId: 'faq_intro_sidebar', position: 'left', label: '常見問題' },
+        // { type: 'docSidebar', sidebarId: 'api_sidebar', position: 'left', label: 'API 文件' },
         // { href: 'https://gitlab.com/nchc-genai/hydra', label: ' ', position: 'right', className: 'custom-navbar-logo-gitlab' },
         // { type: 'localeDropdown', position: 'right' },
       ],
@@ -79,14 +113,8 @@ const config: Config = {
     },
   } satisfies Preset.ThemeConfig,
 
-  plugins: [
-    ['@docusaurus/plugin-sitemap', { id: 'sitemap-main' }],
-    path.resolve(__dirname, 'plugins/monitoring-plugin'),
-  ],
-
-  
   scripts: [
-    isDev ? '/js/customScript.js' : '/devops-team/dev/docusaurus/js/customScript.js',
+    isDev ? '/js/customScript.js' : '/docusaurus/js/customScript.js',
   ],
 };
 
