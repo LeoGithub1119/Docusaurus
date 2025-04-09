@@ -45,7 +45,7 @@ TAIWAN AI RAP所提供的「客製化流程設計前台」及「多模型API服�
 ### **1. 前端應用平台（Tier 1）**
 
 - 整合開源與專有AI介面，提供完整的AI應用開發環境。
-- 支援多種前端介面，可用於AI應用開發，包含AnythingLLM、Open WebUI、DIFY (Workflow Engine)、Streamlit (RAG Workflow)、Aqua (新創企業UnieAI基於OpenWebUI開發之前端)等。
+- 支援多種前端介面，可用於AI應用開發，包含AnythingLLM、Open WebUI、DIFY (Workflow Engine)、Streamlit (RAG Workflow)、UnieAI Copilot (新創企業UnieAI基於OpenWebUI開發之前端)等。
 - 搭載Embedding Engine高效能分散式框架，支援嵌入計算與管理，無縫整合至AI工作流程，提升應用效能與可擴展性。
 
 ### **2. API 代理伺服器（Tier 2）**
@@ -60,7 +60,7 @@ TAIWAN AI RAP所提供的「客製化流程設計前台」及「多模型API服�
 
 - 提供Embedding Engine，專為開源文字嵌入模型的部署與應用設計，支援多模型架構，實現高效嵌入提取，強化生成式AI的準確性與運算效率。
 - 支援 vLLM 及 Ollama推論框架透過 GPU 密集運算處理複雜推論需求。
-- 未來將持續整合TGI、UnieInfra(by UnieAI)等更多推論框架，及本土non-GPU解決方案如Neuchips(API)、ITRI QiLai(TVM+LLMI)等，提供更多元推論加速選項。
+- 未來將持續整合TGI、Inference Engine(by UnieAI)等更多推論框架，及本土non-GPU解決方案如Neuchips(API)、ITRI QiLai(TVM+LLMI)等，提供更多元推論加速選項。
 - 提供TAIDE、Llama、Phi、Mistral、Ministral等開源模型API，並持續更新，確保技術與應用的前瞻性。
 
 ---
@@ -82,8 +82,8 @@ TAIWAN AI RAP提供多種服務模式，以滿足不同應用需求。
 - 結合AI工具與工作流程，提供直覺易用的開發環境。
 - 支援快速佈署，加速應用落地。
 - 支援兩種提供模式
-  - 針對需要前端、API、推論框架、算力等全方面資源的用戶提供[前端應用平台（Tier 1）](/docs/service_intro/home.md#架構介紹)、[API代理伺服器（Tier 2）](/docs/service_intro/home.md#架構介紹)、[LLM推論加速器（Tier 3）](/docs/service_intro/home.md#架構介紹)，提供最完整的推論解決方案。
-  - 針對僅需要前端介面，想自行串接各式API的用戶，提供僅包含[前端應用平台（Tier 1）](/docs/service_intro/home.md#架構介紹)的模式，用戶可自行串接 API，靈活開發AI應用。
+  - 針對需要前端、API、推論框架、算力等全方面資源的用戶提供前端應用平台（Tier 1）、API代理伺服器（Tier 2）、LLM推論加速器（Tier 3），提供最完整的推論解決方案。
+  - 針對僅需要前端介面，想自行串接各式API的用戶，提供僅包含前端應用平台（Tier 1）的模式，用戶可自行串接 API，靈活開發AI應用。
 
 ### 2. 多模型API服務
 
