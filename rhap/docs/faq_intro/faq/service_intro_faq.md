@@ -45,6 +45,6 @@
     - 內建模型評分機制，提供優化參考數據。
 
 12. **如何申請模型微調與評估？**
-    - 請先申請 iService 帳號，並在服務平台網頁填寫申請資訊。完成後請至TAIWAN AI RAP首頁登入
+    - 請在服務平台網頁填寫申請資訊，完成後請至請至[NCHC-LLM GitLab頁面](https://gitlab.genai.nchc.org.tw/users/sign_in)註冊帳號並等待審核。
 
 
