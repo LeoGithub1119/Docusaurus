@@ -15,59 +15,61 @@
 ### 對話基本設定
 
 1. 選取欲進行訊息對話的預設模型
-
-
+![](https://gitlab.td.nchc.org.tw/genai-project/docs/-/wikis/img/openwebui_model_list.PNG)
 2. 於同一對話內與多個模型聊天
 
     點選「`+`」按鈕新增模型，模型可以做多個新增，一次可跟多個模型聊天
-
+![](https://gitlab.td.nchc.org.tw/genai-project/docs/-/wikis/img/openwebui_add_model.PNG)
 
     對話輸入後，畫面會同時輸出各模型回答，方便比較模型差異
+![](https://gitlab.td.nchc.org.tw/genai-project/docs/-/wikis/img/openwebui_multi_model.PNG)
 
 3. 移除對話內模型
 
     點選「`－`」按鈕可隨時移除同一對話內的模型
-
+![](https://gitlab.td.nchc.org.tw/genai-project/docs/-/wikis/img/openwebui_del_model.PNG)
 
 4. 對話設定
 
     點選測欄中每個對話右方的`…`，可以執行**釘選**、**刪除**、**重新命名**、**複製**、**封存**、**分享**等操作。
 
     注意：刪除對話後將無法回復
-
+![](https://gitlab.td.nchc.org.tw/genai-project/docs/-/wikis/img/openwebui_dropdown.PNG)
 
 ## 進階功能與設定
 ### Open WebUI 介面設定 
 
 點選左下角或右上角的使用者圖像會出現選單 -> 按設定
 
-        ![設定](/img/openset.png)                                  
+![設定](https://gitlab.td.nchc.org.tw/genai-project/docs/-/wikis/img/openwebui_config.PNG)                                  
 
 
 1. 設定 -> 一般
 
     可設定主題、語言、系統提示詞等基本設定
-
+![](https://gitlab.td.nchc.org.tw/genai-project/docs/-/wikis/img/openwebui_config_general.PNG)
 
 
 2. 設定 -> 介面
 
     可設定預設使用的模型及其他網頁版面設定
-
+![](https://gitlab.td.nchc.org.tw/genai-project/docs/-/wikis/img/openwebui_interface.PNG)
 
 
 3. 設定 -> 個人化
 
     可新增`記憶`，使大語言模型能夠根據個人化的背景資訊來聊天
+![](https://gitlab.td.nchc.org.tw/genai-project/docs/-/wikis/img/openwebui_custom.PNG)
+![](https://gitlab.td.nchc.org.tw/genai-project/docs/-/wikis/img/openwebui_memory.PNG)
 
 4. 設定 -> 帳號 
 
     使用者可自行設定名稱、個人檔案圖片、修改密碼、API 金鑰 
-
+![](https://gitlab.td.nchc.org.tw/genai-project/docs/-/wikis/img/openwebui_account.PNG)
 
 ### 對話控制項
 點選右上角個人圖像左方 icon，可開啟對話控制項選單，設定系統提示詞（System Prompt）及其他進階參數
-
+![](https://gitlab.td.nchc.org.tw/genai-project/docs/-/wikis/img/openwebui_conversation_control.PNG)
 
 
 ### 自訂提示詞
