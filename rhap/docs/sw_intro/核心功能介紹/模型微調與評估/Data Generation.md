@@ -90,18 +90,13 @@
 如果你選擇執行**資料生成(工研院)**，那你僅會使用一個語言模型，用於資料生成 `GEN_MODEL`<br>
 如果你選擇執行**資料生成(國網中心)**，那你會使用到兩個語言模型：1. 資料生成模型 `GEN_MODEL` 2. 資料精煉模型 `DISTILLATION_MODEL`<br>
 <br>
-你可以使用以下2種 API 取得模型服務：
-
-1. **Medusa API**: 如果你尚未取得 Medusa API KEY，請填寫[文件](/docs/POC%20API服務申請表格資料填寫.docx)並寄至 `rhap.service@narlabs.org.tw` 完成申請。[Medusa 支援的模型列表](https://gitlab.genai.nchc.org.tw/swchen/rhap-press-demo/-/blob/main/medusa-models.md)
-2. **OpenAI compatible API**: 如欲使用其他生成式模型進行生成或評分，請參考各模型之文件說明並自行申請 API KEY
 
 </details>
 
 <details>
 <summary>資料品質評估</summary>
 
-**資料品質評估**僅會使用一個語言模型做錯別字偵測。僅限使用 **Medusa API** 取得模型服務
-- 如果你尚未取得 Medusa API KEY，請填寫[文件](/docs/POC%20API服務申請表格資料填寫.docx)並寄至 `rhap.service@narlabs.org.tw` 完成申請。[Medusa 支援的模型列表](https://gitlab.genai.nchc.org.tw/swchen/rhap-press-demo/-/blob/main/medusa-models.md)
+**資料品質評估**僅會使用一個語言模型做錯別字偵測。僅限使用 **國網中心API** 取得模型服務
 
 </details>
 
@@ -206,7 +201,7 @@
 </details>
 
 ## 使用步驟
-![alt text](https://gitlab.genai.nchc.org.tw/docs/rhap-press/data-automation/-/raw/main/docs/overall_flow_chart.png)
+![使用步驟流程圖](https://gitlab.genai.nchc.org.tw/docs/rhap-press/data-automation/-/raw/main/docs/overall_flow_chart.png)
 
 ## 常見問題
 **Q: 資料格式要求？**  <br>

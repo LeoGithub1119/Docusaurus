@@ -18,7 +18,7 @@
  
 # 安裝虛擬機教學
 完成 TWCC 資源申請後，若需要在 TWCC 上安裝虛擬機來支援 RAP 平台的運行，請參考以下安裝教學：
-   - TWCC 虛擬機安裝教學：在 [TWCC 上安裝虛擬機的詳細步驟](/docs/faq_intro/faq/setting_faq.md)。
+   - TWCC 虛擬機安裝教學：在 [TWCC 上安裝虛擬機的詳細步驟](\docusaurus\rhap\docs\sw_intro\開發者專區\RAP服務架設.md)。
        - **注意**：如果虛擬機的映象檔為`hydra`、`medusa`或 `hummingbird`，則已預載所需的程式碼，因此無需從 GitLab 下載。然而，若想要更新至最新版本，仍可依需求前往 GitLab 查看最新更新方法。
 
 
@@ -30,7 +30,6 @@
 
    - 乾淨映象安裝：若虛擬機使用的是如 Ubuntu 24.04 這類乾淨映象，則需手動安裝所有必要的檔案。安裝說明可在 GitLab 的 README 檔案中找到。
 
-      - GitLab 連結：[RAP 平台專案程式碼](https://gitlab.td.nchc.org.tw/genai-project/hydra)
    - 手動更新：若需要更新至最新版本，即使是已預載的映象檔，仍可從 GitLab 下載最新程式碼，並依據 README 中的指導進行設定。
  
 ## 開始使用服務
@@ -40,33 +39,31 @@
 - 預設平台網址：您可以透過以下網址直接訪問平台界面，開始進行推論和生成操作：
 `https://<您的對外連線IP位置>.sslip.io/`
 
-:::danger 請注意
-為確保服務順利啟用，請您在服務建立完成後，儘快完成帳號申請。
-:::
+請注意：為確保服務順利啟用，請您在服務建立完成後，儘快完成帳號申請。
 
 
- - 若在安裝和使用過程中遇到任何問題，請前往文件中的 [常見問題](/docs/sw_intro/快速上手/服務架設.md) 部分查詢相關解答，或參考技術文件中的故障排除指引，以確保您能順利解決問題並充分利用平台功能。
+ - 若在安裝和使用過程中遇到任何問題，請前往文件中的「常見問題」部分查詢相關解答，或參考技術文件中的故障排除指引，以確保您能順利解決問題並充分利用平台功能。
 
 
 # 工具使用說明
  1. AnythingLLM
       - AnythingLLM 提供簡單易用的 API 和服務，讓開發者能夠快速部署和運行大型語言模型。它支援多種模型，並且具備彈性的設定選項，適合初次接觸 LLM 的開發者。
-      - [詳細說明與使用方式](/docs/sw_intro/tools/AnythingLLM%20使用說明.md)
+      
 
  2. Open WebUI
       - Open WebUI 是一款直觀的網頁介面工具，方便使用者直接操作並測試各種語言模型。Open WebUI視覺化操作友好，讓使用者輕鬆地進行文本輸入並檢視生成結果，非常適合模型的測試與展示。
-      - [詳細說明與使用方式](/docs/sw_intro/tools/OpenWebUI%20使用說明.md)
+     
 
  3. LiteLLM
       - LiteLLM 是一款針對低資源消耗設計的輕量化推論框架，適合需要快速、高效運行語言模型的應用場景。它簡化了 API 介面，易於集成，適合追求輕量化推論的使用者。
-      - [詳細說明與使用方式](/docs/sw_intro/tools/LiteLLM%20使用說明.md)
+     
 # 常用 API 與操作指南
 
 
  - Lightweight API Portal
     - API Portal 提供輕量化的 API 入口，支援常見的推論請求（如文本生成、嵌入等），並在使用 RAP 平台時，當需依賴 TWCC 的運算資源時為必要介面。
     - 確保您具備有效的 API 金鑰並完成 API Portal 基本設定，這將使您能夠順利利用 RAP 與 TWCC 整合提供的計算能力。
-    - [詳細說明與使用方式](/docs/sw_intro/sw_intro/Lightweight%20API%20Portal.md)
+    
  - OpenAI API
     - OpenAI API 提供多樣化的模型呼叫方式，允許使用者存取 OpenAI 的各種模型資源（如 GPT-4、DALL-E 等），並執行各種推論任務。
     - 若您需要使用 OpenAI 的高效推論服務，請先申請並設定 OpenAI API 的金鑰，並確保環境變數設定正確。
