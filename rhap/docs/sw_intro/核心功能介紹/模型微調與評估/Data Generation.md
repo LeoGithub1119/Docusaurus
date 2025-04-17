@@ -6,7 +6,7 @@
 <details>
 <summary> 資料生成 </summary>
 
-根據使用者上傳的範例資料，利用語言模型生成更多的資料，隨後通過資料精煉與去重複等技術處理，最終產出一批高品質的資料供訓練使用。我們提供兩種資料精煉流程選擇——國網中心自行開發的資料精煉流程與工研院開發的資料精煉流程。<br><br>
+根據使用者上傳的範例資料，利用語言模型生成更多的資料，隨後通過資料精煉與去重複等技術處理，最終產出一批高品質的資料供訓練使用。我們提供兩種資料精煉流程選擇——國網中心自行開發的資料精煉流程與工研院開發的資料精煉流程。<br /><br />
 
 **資料生成(工研院)專案執行位置**： https://jenkins.genai.nchc.org.tw/job/data-automation/job/data-generation-ITRI/
 
@@ -16,7 +16,7 @@
 <details>
 <summary> 資料品質評估 </summary>
 
-針對使用者提供的訓練資料進行品質評估，評估面向包含：錯別字、混淆度、多樣性與重複性。<br><br>
+針對使用者提供的訓練資料進行品質評估，評估面向包含：錯別字、混淆度、多樣性與重複性。<br /><br />
 **資料品質評估專案執行位置**： https://jenkins.genai.nchc.org.tw/job/data-automation/job/data-evaluation/
 </details>
 
@@ -25,14 +25,14 @@
 使用者將藉由 Gitlab Repository 提供資料，請按照以下步驟完成前置準備：
 
 1. **請先自行建立專案**
-2. **申請存取令牌(Access tokens)**<br>
-  (1) 申請方式：進入欲使用的專案 -> Settings -> Access tokens -> Add new token<br>
-  (2) Scopes 選擇 read_repository, write_repository<br>
-  (3) Role 選擇 Maintainer 或 Owner<br>
-  (4) 存取令牌申請完成後，請務必存放在安全的地方，離開頁面後便無法再取得<br><br>
+2. **申請存取令牌(Access tokens)**<br />
+  (1) 申請方式：進入欲使用的專案 -> Settings -> Access tokens -> Add new token<br />
+  (2) Scopes 選擇 read_repository, write_repository<br />
+  (3) Role 選擇 Maintainer 或 Owner<br />
+  (4) 存取令牌申請完成後，請務必存放在安全的地方，離開頁面後便無法再取得<br /><br />
     ![alt text](https://gitlab.genai.nchc.org.tw/docs/rhap-press/data-automation/-/raw/main/docs/image.png)
 
-3. **取得專案 URL `GIT_REPO_URL`**<br><br>
+3. **取得專案 URL `GIT_REPO_URL`**<br /><br />
     ![alt text](https://gitlab.genai.nchc.org.tw/docs/rhap-press/data-automation/-/raw/main/docs/repo_url.png)
 
 4. **將你的資料放置到專案並上傳**
@@ -65,7 +65,7 @@
     ```
     
     *如果你的資料大於100MB，請使用 git LFS* 
-     [安裝頁面](https://github.com/git-lfs/git-lfs/wiki/Installation)<br>
+     [安裝頁面](https://github.com/git-lfs/git-lfs/wiki/Installation)<br />
     **Ubuntu 安裝 GIT LFS**
 
     ```shell
@@ -87,9 +87,9 @@
 <details>
 <summary>資料生成</summary>
 
-如果你選擇執行**資料生成(工研院)**，那你僅會使用一個語言模型，用於資料生成 `GEN_MODEL`<br>
-如果你選擇執行**資料生成(國網中心)**，那你會使用到兩個語言模型：1. 資料生成模型 `GEN_MODEL` 2. 資料精煉模型 `DISTILLATION_MODEL`<br>
-<br>
+如果你選擇執行**資料生成(工研院)**，那你僅會使用一個語言模型，用於資料生成 `GEN_MODEL`<br />
+如果你選擇執行**資料生成(國網中心)**，那你會使用到兩個語言模型：1. 資料生成模型 `GEN_MODEL` 2. 資料精煉模型 `DISTILLATION_MODEL`<br />
+<br />
 
 </details>
 
@@ -118,8 +118,8 @@
 
 | 名稱  | 類型    | 說明    |
 |-------------------|----------------|-------------------------------------------------------|
-| `GEN_MODEL`         | 字串           |『必填』生成資料的模型，預設`Llama-3.3-70B-Instruct`。可選 Medusa 或其他公開模型(gpt-4o-mini, gpt-4o)<br>Medusa 支援的模型列表 [medusa-models.md](https://gitlab.genai.nchc.org.tw/swchen/rhap-press-demo/-/blob/main/medusa-models.md)
-| `GEN_API_URL`       | 字串           | 『必填』提供 `GEN_MODEL` 模型服務的 URL<br>範例：Medusa: https://medusa-poc.genai.nchc.org.tw/v1 ； OpenAI: https://api.openai.com/v1
+| `GEN_MODEL`         | 字串           |『必填』生成資料的模型，預設`Llama-3.3-70B-Instruct`。可選 Medusa 或其他公開模型(gpt-4o-mini, gpt-4o)<br />Medusa 支援的模型列表 [medusa-models.md](https://gitlab.genai.nchc.org.tw/swchen/rhap-press-demo/-/blob/main/medusa-models.md)
+| `GEN_API_URL`       | 字串           | 『必填』提供 `GEN_MODEL` 模型服務的 URL<br />範例：Medusa: https://medusa-poc.genai.nchc.org.tw/v1 ； OpenAI: https://api.openai.com/v1
 | `GEN_API_KEY`       | 密碼           | 『必填』使用 `GEN_API_URL` 的 API KEY |
 
 #### 流程參數
@@ -138,9 +138,9 @@
 | 名稱  | 類型    | 說明    |
 |-------------------|----------------|-------------------------------------------------------|
 | `SYSTEM_MSG`  | 字串           | 系統提示詞。預設為不使用系統提示詞           |
-| `DO_DEDUP`    | 下拉式選單     | True/False，預設 False<br>是否執行資料去重複    |
-| `SIMILARITY_THRESHOLD`  | 數值 | ≤1 的數值，預設 0.99 <br>相似度門檻值，相似度高於該值視為重複資料      |
-| `DO_DISTILLATION` | 下拉選單   | True/False，預設 False<br>是否執行資料精煉  |
+| `DO_DEDUP`    | 下拉式選單     | True/False，預設 False<br />是否執行資料去重複    |
+| `SIMILARITY_THRESHOLD`  | 數值 | ≤1 的數值，預設 0.99 <br />相似度門檻值，相似度高於該值視為重複資料      |
+| `DO_DISTILLATION` | 下拉選單   | True/False，預設 False<br />是否執行資料精煉  |
 | `DEBATE_TIMES`    | 下拉選單   | `DO_DISTILLATION` 資料精煉時的辯論次數(1~5)              |
 </details>
 
@@ -151,11 +151,11 @@
 
 | 名稱  | 類型    | 說明    |
 |-------------------|----------------|-------------------------------------------------------|
-| `GEN_MODEL`         | 字串           |『必填』生成資料的模型，預設`Llama-3.3-70B-Instruct`。可選 Medusa 或其他公開模型(gpt-4o-mini, gpt-4o)<br>Medusa 支援的模型列表 [medusa-models.md](https://gitlab.genai.nchc.org.tw/swchen/rhap-press-demo/-/blob/main/medusa-models.md)
-| `GEN_API_URL`       | 字串           | 『必填』提供 `GEN_MODEL` 模型服務的 URL<br>範例：Medusa: https://medusa-poc.genai.nchc.org.tw/v1 ； OpenAI: https://api.openai.com/v1
+| `GEN_MODEL`         | 字串           |『必填』生成資料的模型，預設`Llama-3.3-70B-Instruct`。可選 Medusa 或其他公開模型(gpt-4o-mini, gpt-4o)<br />Medusa 支援的模型列表 [medusa-models.md](https://gitlab.genai.nchc.org.tw/swchen/rhap-press-demo/-/blob/main/medusa-models.md)
+| `GEN_API_URL`       | 字串           | 『必填』提供 `GEN_MODEL` 模型服務的 URL<br />範例：Medusa: https://medusa-poc.genai.nchc.org.tw/v1 ； OpenAI: https://api.openai.com/v1
 | `GEN_API_KEY`       | 密碼           | 『必填』使用 `GEN_API_URL` 的 API KEY |
-| `DISTILLATION_MODEL`         | 字串           | 資料精煉的模型，預設`Llama-3.3-70B-Instruct`。可選 Medusa 或其他公開模型(gpt-4o-mini, gpt-4o)<br>Medusa 支援的模型列表 [medusa-models.md](https://gitlab.genai.nchc.org.tw/swchen/rhap-press-demo/-/blob/main/medusa-models.md)
-| `DISTILLATION_API_URL`       | 字串           | 提供 `DISTILLATION_MODEL` 模型服務的 URL<br>範例：Medusa: https://medusa-poc.genai.nchc.org.tw/v1 ； OpenAI: https://api.openai.com/v1 |
+| `DISTILLATION_MODEL`         | 字串           | 資料精煉的模型，預設`Llama-3.3-70B-Instruct`。可選 Medusa 或其他公開模型(gpt-4o-mini, gpt-4o)<br />Medusa 支援的模型列表 [medusa-models.md](https://gitlab.genai.nchc.org.tw/swchen/rhap-press-demo/-/blob/main/medusa-models.md)
+| `DISTILLATION_API_URL`       | 字串           | 提供 `DISTILLATION_MODEL` 模型服務的 URL<br />範例：Medusa: https://medusa-poc.genai.nchc.org.tw/v1 ； OpenAI: https://api.openai.com/v1 |
 | `DISTILLATION_API_KEY`       | 密碼           | 使用 `DISTILLATION_API_URL` 的 API KEY |
 
 #### 流程參數
@@ -174,9 +174,9 @@
 | 名稱  | 類型    | 說明    |
 |-------------------|----------------|-------------------------------------------------------|
 | `SYSTEM_MSG`  | 字串           | 系統提示詞。預設為不使用系統提示詞           |
-| `DO_DEDUP`    | 下拉式選單     | True/False，預設 False<br>是否執行資料去重複    |
-| `SIMILARITY_THRESHOLD`  | 數值 | ≤1 的數值，預設 0.99 <br>相似度門檻值，相似度高於該值視為重複資料      |
-| `DO_DISTILLATION` | 下拉選單   | True/False，預設 False<br>是否執行資料精煉  |
+| `DO_DEDUP`    | 下拉式選單     | True/False，預設 False<br />是否執行資料去重複    |
+| `SIMILARITY_THRESHOLD`  | 數值 | ≤1 的數值，預設 0.99 <br />相似度門檻值，相似度高於該值視為重複資料      |
+| `DO_DISTILLATION` | 下拉選單   | True/False，預設 False<br />是否執行資料精煉  |
 </details>
 
 <details>
@@ -204,11 +204,11 @@
 ![使用步驟流程圖](https://gitlab.genai.nchc.org.tw/docs/rhap-press/data-automation/-/raw/main/docs/overall_flow_chart.png)
 
 ## 常見問題
-**Q: 資料格式要求？**  <br>
-**A**: **資料生成**服務支援：`.jsonl`, `.json`, `.xlsx`；**資料品質評估**支援：`.jsonl`<br>
+**Q: 資料格式要求？**  <br />
+**A**: **資料生成**服務支援：`.jsonl`, `.json`, `.xlsx`；**資料品質評估**支援：`.jsonl`<br />
 
-**Q: 資料品質評估的資料結構應該要是甚麼樣子？**<br>
-**A**: 範例結構：<br>
+**Q: 資料品質評估的資料結構應該要是甚麼樣子？**<br />
+**A**: 範例結構：<br />
 ```json
 {"messages": [{"role": "system", "content": ""}, {"role": "user", "content": "交通部函知各縣市政府辦理交通建設工作一案，我要寫一份簽陳核示後，以便簽全案陳請首長室參酌。請提供簽及便簽主旨及說明，交通部來函如下：\n\n主旨：檢送交通建設工作計畫一份，請查照。\n說明：\n一、依據交通部來函辦理。\n二、檢送交通建設工作計畫一份。"}, {"role": "assistant", "content": "<think>\n首先，我們需要了解指令的內容，即交通部函知各縣市政府辦理交通建設工作一案。接下來，我們需要根據交通部來函的內容，撰寫一份簽陳核示的公文。簽陳核示的公文需要包括主旨、說明等部分。在主旨部分，我們需要簡明扼要地表達公文的內容。在說明部分，我們需要根據交通部來函的內容，列出相關的依據和內容。另外，我們還需要撰寫便簽說明，包括相關的背景、內容和處理方式。最後，我們需要根據相關的法規和政策，確保公文的內容正確、完整。\n</think>\n\n簽內容擬稿如下：\n主旨：有關交通建設工作計畫一案，簽請核示。\n說明：\n一、依據交通部本（Ｏ）年Ｏ月Ｏ日Ｏ字第Ｏ號函辦理。                      \n二、來文內容如下：交通部為加強交通建設工作，特檢送交通建設工作計畫一份，請各縣市政府參酌辦理。\n三、旨揭更新版交通建設工作計畫陳送首長室保管使用。\n\n便簽說明如下：\n\n一、有關交通部製作之「交通建設工作計畫」，業經Ｏ年Ｏ月Ｏ日Ｏ號簽準在案，謹請鈞閱。\n二、另舊版交通建設工作計畫，敬請逕行銷毀。\n三、謹陳「交通建設工作計畫」暨原簽陳影本各１份。"}]}
 {"messages": [{"role": "system", "content": ""}, {"role": "user", "content": "內政部檢送「都市更新條例」修正草案，請財政部於110年6月30日前提出審查意見"}, {"role": "assistant", "content": "<think>\n首先，我們需要了解指令的內容，即內政部檢送「都市更新條例」修正草案，請財政部提出審查意見。接下來，我們需要根據相關法規和作業要點進行思考。在這個案例中，財政部需要根據「財政部審查都市更新事業財務計畫作業要點」進行審查。因此，我們需要思考如何根據這些規定提出審查意見。最後，我們需要根據思考結果撰寫公文內容，包括主旨、說明等部分。\n</think>\n\n函:\n主旨:有關「都市更新條例」修正草案審查意見\n說明:\n一、復貴部○○○年○月○○日內授都市字第1100000000號函。\n二、依「財政部審查都市更新事業財務計畫作業要點」規定，財政部應審查都市更新事業之財務計畫，確保其財務可行性。\n三、查修正草案中有關都市更新事業財務計畫之規定，財政部認為應加強財務審查機制，避免都市更新事業財務風險。"}]}
@@ -216,11 +216,11 @@
 {"messages": [{"role": "system", "content": ""}, {"role": "user", "content": "文化部來函申請文化藝術計畫經費，請擬1份回函給文化部，並提供回覆的書函主旨及說明。文化部來函主旨如下：\n○○○年度文化藝術計畫經費補助，核定編號○○○，請審核。"}, {"role": "assistant", "content": "<think>\n首先，我們需要了解文化部的來函內容，包括申請補助經費的目的和金額。接下來，我們需要根據相關法規和程式進行審核和核定。根據文化部的規定，文化藝術機構需要提交經費補助申請表，並提供詳細的經費明細。經過審核後，文化部將撥付補助款項至文化藝術基金專戶。因此，在回覆中，我們需要明確表示同意補助的金額和撥付方式。\n</think>\n\n回函主旨及說明如下：\n主旨：所送文化部申請○○○年度文化藝術計畫經費補助事，復如說明，請查照。\n說明：　\n一、復文化部○年○月○日○號函。\n二、本案（計畫編號：○）所送經費補助申請表經審核，同意補助新臺幣○元；款項將由文化部直接撥付至文化藝術基金專戶。"}]}
 ```
 
-**Q: 已經創建空的目錄，但 git 無法追縱空目錄**<br>
-**A**: 請在空白目錄裡建立一個佔位檔案 `.gitkeep`<br>
+**Q: 已經創建空的目錄，但 git 無法追縱空目錄**<br />
+**A**: 請在空白目錄裡建立一個佔位檔案 `.gitkeep`<br />
 
-**Q: 資料評分指標怎麼解讀？**<br>
-**A**: 資料品質評估執行完畢會計算出四項指標，各項分數代表含意請見下表：<br>
+**Q: 資料評分指標怎麼解讀？**<br />
+**A**: 資料品質評估執行完畢會計算出四項指標，各項分數代表含意請見下表：<br />
 | 欄位名稱| 說明（分數皆越高越好） |
 | ------ | ------ |
 |Typo-Free Score|檢測語句錯別字，錯別字越少分數越高|

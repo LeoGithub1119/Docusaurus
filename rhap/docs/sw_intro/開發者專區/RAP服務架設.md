@@ -85,8 +85,8 @@
 
 以上設定完成之後，可透過以下方式連線。
 
-1. 前往虛擬運算個體管理即可看到對應的『公用 IP』，`http://xxx.xxx.xxx.xxx`
+1. 前往虛擬運算個體管理即可看到對應的『公用 IP』，`http://xxx.xxx.xxx.xxx.sslip.io/`
 
     ![image](https://gitlab.td.nchc.org.tw/genai-project/docs/-/wikis/uploads/e80276b5909208d1e1fa4db151ec092a/image.png)
 
-2. 至瀏覽器輸入虛擬運算的『公用 IP』`http://xxx.xxx.xxx.xxx`，即可開始使用。
+2. 至瀏覽器輸入虛擬運算的『公用 IP』`http://xxx.xxx.xxx.xxx.sslip.io/`，即可開始使用。

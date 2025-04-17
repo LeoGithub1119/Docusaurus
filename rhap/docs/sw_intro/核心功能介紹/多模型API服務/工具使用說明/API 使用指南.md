@@ -25,9 +25,9 @@
 ## Lightweight-API 金鑰管理
 
 參照[登入服務](#登入服務)成功登入後，於登入後首頁點選`API入口`，即可進入 Lightweight-API 金鑰的管理頁面。
-![alt text](image-1.png)  
+![alt text](/img/keymodelmgnt.png)    
 在這個頁面中，您將會看到計劃中的 Lightweight-API 金鑰的詳情，其中包含名稱、使用的頻率限制、當前使用量、可用上限、有效時間及建立時間等資訊，並且可以針對各金鑰進行管理操作。
-![alt text](image.png)
+![alt text](/img/keyinfo.png)    
 
 ## API 使用說明
 

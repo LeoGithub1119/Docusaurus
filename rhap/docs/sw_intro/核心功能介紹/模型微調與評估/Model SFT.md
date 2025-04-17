@@ -10,13 +10,13 @@
 使用者將藉由 Gitlab Repository 提供微調訓練資料，請按照以下步驟完成前置準備：
 
 1. **請先自行建立專案**
-2. **申請存取令牌(Access tokens)**<br>
-  (1) 申請方式：進入欲使用的專案 -> Settings -> Access tokens -> Add new token<br>
-  (2) Scopes 選擇 read_repository, write_repository<br>
-  (3) Role 選擇 Maintainer 或 Owner<br>
-  (4) 存取令牌申請完成後，請務必存放在安全的地方，離開頁面後便無法再取得<br><br>
+2. **申請存取令牌(Access tokens)**<br />
+  (1) 申請方式：進入欲使用的專案 -> Settings -> Access tokens -> Add new token<br />
+  (2) Scopes 選擇 read_repository, write_repository<br />
+  (3) Role 選擇 Maintainer 或 Owner<br />
+  (4) 存取令牌申請完成後，請務必存放在安全的地方，離開頁面後便無法再取得<br /><br />
     ![alt text](https://gitlab.genai.nchc.org.tw/docs/rhap-press/model-sft/-/raw/main/docs/image.png)
-3. **取得專案 URL `GIT_REPO_URL`**<br><br>
+3. **取得專案 URL `GIT_REPO_URL`**<br /><br />
     ![alt text](https://gitlab.genai.nchc.org.tw/docs/rhap-press/model-sft/-/raw/main/docs/repo_url.png)
 4. **將你的資料放置到專案並上傳**
     
@@ -28,7 +28,7 @@
     git push origin main # 推回你的遠端專案
     ```
     *如果你的資料大於100MB，請使用 git LFS* 
-     [安裝頁面](https://github.com/git-lfs/git-lfs/wiki/Installation)<br>
+     [安裝頁面](https://github.com/git-lfs/git-lfs/wiki/Installation)<br />
     **Ubuntu 安裝 GIT LFS**
 
     ```shell
@@ -61,7 +61,7 @@
 #### 流程參數
 | 參數名稱 | 類型 | 說明 |
 |---------|------|------|
-| `DATA_FILES` | 字串 | 訓練資料**檔案路徑**，多檔案請用逗號分隔，如：data/train_set_1.jsonl, data/train_set_2.jsonl<br>僅接受 JSONL 格式檔案 |
+| `DATA_FILES` | 字串 | 訓練資料**檔案路徑**，多檔案請用逗號分隔，如：data/train_set_1.jsonl, data/train_set_2.jsonl<br />僅接受 JSONL 格式檔案 |
 | `MAX_EPOCHS` | 下拉選單 | 最大訓練週期數 (1~5)，預設 1 |
 
 ### 進階設定
@@ -107,11 +107,11 @@ trained_models/
 
 
 ## 常見問題
-**Q: 如何取得 DATA_REPO_TOKEN？**  <br>
-**A**: 請至 GitLab/Github → User Settings → Access Tokens 建立含 `read repository / write repository` 權限的權杖<br>
+**Q: 如何取得 DATA_REPO_TOKEN？**  <br />
+**A**: 請至 GitLab/Github → User Settings → Access Tokens 建立含 `read repository / write repository` 權限的權杖<br />
 
-**Q: 訓練資料格式要求？**<br>
-**A**: 需使用標準 JSONL 格式，範例結構：<br>
+**Q: 訓練資料格式要求？**<br />
+**A**: 需使用標準 JSONL 格式，範例結構：<br />
 ```json
 {"messages": [{"role": "system", "content": ""}, {"role": "user", "content": "交通部函知各縣市政府辦理交通建設工作一案，我要寫一份簽陳核示後，以便簽全案陳請首長室參酌。請提供簽及便簽主旨及說明，交通部來函如下：\n\n主旨：檢送交通建設工作計畫一份，請查照。\n說明：\n一、依據交通部來函辦理。\n二、檢送交通建設工作計畫一份。"}, {"role": "assistant", "content": "<think>\n首先，我們需要了解指令的內容，即交通部函知各縣市政府辦理交通建設工作一案。接下來，我們需要根據交通部來函的內容，撰寫一份簽陳核示的公文。簽陳核示的公文需要包括主旨、說明等部分。在主旨部分，我們需要簡明扼要地表達公文的內容。在說明部分，我們需要根據交通部來函的內容，列出相關的依據和內容。另外，我們還需要撰寫便簽說明，包括相關的背景、內容和處理方式。最後，我們需要根據相關的法規和政策，確保公文的內容正確、完整。\n</think>\n\n簽內容擬稿如下：\n主旨：有關交通建設工作計畫一案，簽請核示。\n說明：\n一、依據交通部本（Ｏ）年Ｏ月Ｏ日Ｏ字第Ｏ號函辦理。                      \n二、來文內容如下：交通部為加強交通建設工作，特檢送交通建設工作計畫一份，請各縣市政府參酌辦理。\n三、旨揭更新版交通建設工作計畫陳送首長室保管使用。\n\n便簽說明如下：\n\n一、有關交通部製作之「交通建設工作計畫」，業經Ｏ年Ｏ月Ｏ日Ｏ號簽準在案，謹請鈞閱。\n二、另舊版交通建設工作計畫，敬請逕行銷毀。\n三、謹陳「交通建設工作計畫」暨原簽陳影本各１份。"}]}
 {"messages": [{"role": "system", "content": ""}, {"role": "user", "content": "內政部檢送「都市更新條例」修正草案，請財政部於110年6月30日前提出審查意見"}, {"role": "assistant", "content": "<think>\n首先，我們需要了解指令的內容，即內政部檢送「都市更新條例」修正草案，請財政部提出審查意見。接下來，我們需要根據相關法規和作業要點進行思考。在這個案例中，財政部需要根據「財政部審查都市更新事業財務計畫作業要點」進行審查。因此，我們需要思考如何根據這些規定提出審查意見。最後，我們需要根據思考結果撰寫公文內容，包括主旨、說明等部分。\n</think>\n\n函:\n主旨:有關「都市更新條例」修正草案審查意見\n說明:\n一、復貴部○○○年○月○○日內授都市字第1100000000號函。\n二、依「財政部審查都市更新事業財務計畫作業要點」規定，財政部應審查都市更新事業之財務計畫，確保其財務可行性。\n三、查修正草案中有關都市更新事業財務計畫之規定，財政部認為應加強財務審查機制，避免都市更新事業財務風險。"}]}
@@ -119,13 +119,13 @@ trained_models/
 {"messages": [{"role": "system", "content": ""}, {"role": "user", "content": "文化部來函申請文化藝術計畫經費，請擬1份回函給文化部，並提供回覆的書函主旨及說明。文化部來函主旨如下：\n○○○年度文化藝術計畫經費補助，核定編號○○○，請審核。"}, {"role": "assistant", "content": "<think>\n首先，我們需要了解文化部的來函內容，包括申請補助經費的目的和金額。接下來，我們需要根據相關法規和程式進行審核和核定。根據文化部的規定，文化藝術機構需要提交經費補助申請表，並提供詳細的經費明細。經過審核後，文化部將撥付補助款項至文化藝術基金專戶。因此，在回覆中，我們需要明確表示同意補助的金額和撥付方式。\n</think>\n\n回函主旨及說明如下：\n主旨：所送文化部申請○○○年度文化藝術計畫經費補助事，復如說明，請查照。\n說明：　\n一、復文化部○年○月○日○號函。\n二、本案（計畫編號：○）所送經費補助申請表經審核，同意補助新臺幣○元；款項將由文化部直接撥付至文化藝術基金專戶。"}]}
 ```
 
-**Q: 如何監控訓練過程？**<br>
-**A**: 日誌目錄包含以下監控檔案：<br>
+**Q: 如何監控訓練過程？**<br />
+**A**: 日誌目錄包含以下監控檔案：<br />
 - `metrics.csv`：訓練指標記錄
 - `hparams.yaml`：訓練參數備份
 
-**Q: 我想知道 Pipeline 有哪些運作階段**<br>
-**A**: <br>
+**Q: 我想知道 Pipeline 有哪些運作階段**<br />
+**A**: <br />
    ```mermaid
    graph TD
      A[環境設置] --> B[並行下載]

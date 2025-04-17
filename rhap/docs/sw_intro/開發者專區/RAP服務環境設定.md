@@ -76,9 +76,9 @@
 
 若您有需要修改一些參數或進行更進階的設定，可參考以下各組件的說明：
 
- - AnythingLLM：請參考 AnythingLLM 頁面中的[進階設定](/docs/sw_intro/tools/AnythingLLM%20使用說明#進階設定) ，了解如何對 AnythingLLM 進行自定義設定。
- - LiteLLM：請參考 LiteLLM 頁面中的[進階功能與設定](/docs/sw_intro/tools/LiteLLM%20使用說明#進階功能與設定)，以探索 LiteLLM 的進階功能與可調整參數。
- - OpenWebUI：請參考 OpenWebUI 頁面中的[進階功能與設定](/docs/sw_intro/tools/OpenWebUI%20使用說明#進階功能與設定)，進行 OpenWebUI 的進階設定。
+ - AnythingLLM：請參考 AnythingLLM 頁面中的[進階設定](/docs/sw_intro/核心功能介紹/客製化流程設計前台/工具使用說明/AnythingLLM.md#進階設定) ，了解如何對 AnythingLLM 進行自定義設定。
+ - LiteLLM：請參考 LiteLLM 頁面中的[進階功能與設定](/docs/sw_intro/核心功能介紹/客製化流程設計前台/工具使用說明/LiteLLM#進階功能與設定)，以探索 LiteLLM 的進階功能與可調整參數。
+ - OpenWebUI：請參考 OpenWebUI 頁面中的[進階功能與設定](/docs/sw_intro/核心功能介紹/客製化流程設計前台/工具使用說明/OpenWebUI#進階功能與設定)，進行 OpenWebUI 的進階設定。
 
 其他參數的詳細設定方法，請參閱 GitLab 專案頁面上的 [Hydra README 文件](https://gitlab.td.nchc.org.tw/genai-project/hydra/-/blob/main/README.md?ref_type=heads)，以進行進一步的設定和修改。
 
