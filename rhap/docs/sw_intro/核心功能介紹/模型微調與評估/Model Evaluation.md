@@ -2,7 +2,7 @@
 
 ## 概述
 
-本專案流程為評估語言模型執行四大任務(公文、新聞稿、民眾陳情、模擬問答)的能力。評估方式為，使用另一語言模型作為裁判，針對模型生成的內容進行評分。專案執行位置: https://jenkins.genai.nchc.org.tw/job/model-evaluation/
+本專案流程為評估語言模型執行四大任務(公文、新聞稿、民眾陳情、模擬問答)的能力。評估方式為，使用另一語言模型作為裁判，針對模型生成的內容進行評分。專案執行位置: https://jenkins.genai.nchc.org.tw/job/03-model-evaluation/
 
 ## 前置需求
 
@@ -14,9 +14,9 @@
   (2) Scopes 選擇 read_repository, write_repository<br />
   (3) Role 選擇 Maintainer 或 Owner<br />
   (4) 存取令牌申請完成後，請務必存在安全的地方，離開頁面後便無法再取得<br /><br />
-    ![alt text](https://gitlab.genai.nchc.org.tw/docs/rhap-press/model-evaluation/-/raw/main/docs/image.png)
+    ![alt text](/img/token.png)
 3. **取得專案 URL** `GIT_REPO_URL`<br /><br />
-    ![alt text](https://gitlab.genai.nchc.org.tw/docs/rhap-press/model-evaluation/-/raw/main/docs/repo_url.png)
+    ![alt text](/img/repo_url.png)
 4. **建立儲存評估結果的目錄** `GIT_REPORT_DIR`
   
     ```bash
@@ -72,7 +72,7 @@
 
 ## 使用步驟
 ### 操作流程
-![alt text](https://gitlab.genai.nchc.org.tw/docs/rhap-press/model-evaluation/-/raw/main/docs/overall_flow_chart.png)
+![alt text](/img/overall_flow_chart.png)
 
 ### 輸出結果
 訓練完成後會自動上傳至指定倉庫，結構如下：

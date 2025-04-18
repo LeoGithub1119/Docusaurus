@@ -3,7 +3,7 @@
 ## 概述
 本專案流程提供模型微調訓練服務，使用者可自行選擇基礎模型(base model)，並且自行提供訓練資料，進行特定任務/能力微調。
 
-專案執行位置: https://jenkins.genai.nchc.org.tw/job/llm%20training/
+專案執行位置: https://jenkins.genai.nchc.org.tw/job/02-llm%20training/
 
 ## 前置需求
 ### GitLab 專案 (Repository)
@@ -15,9 +15,9 @@
   (2) Scopes 選擇 read_repository, write_repository<br />
   (3) Role 選擇 Maintainer 或 Owner<br />
   (4) 存取令牌申請完成後，請務必存放在安全的地方，離開頁面後便無法再取得<br /><br />
-    ![alt text](https://gitlab.genai.nchc.org.tw/docs/rhap-press/model-sft/-/raw/main/docs/image.png)
+    ![alt text](/img/token.png)
 3. **取得專案 URL `GIT_REPO_URL`**<br /><br />
-    ![alt text](https://gitlab.genai.nchc.org.tw/docs/rhap-press/model-sft/-/raw/main/docs/repo_url.png)
+    ![alt text](/img/repo_url.png)
 4. **將你的資料放置到專案並上傳**
     
     *如果你的資料小於100MB* 
@@ -80,7 +80,7 @@
 
 ## 使用步驟
 ### 操作流程
-![alt text](https://gitlab.genai.nchc.org.tw/docs/rhap-press/model-sft/-/raw/main/docs/overall_flow_chart_ft.png)
+![alt text](/img/overall_flow_chart.png)
 
 ### 輸出結果
 訓練完成後會自動上傳至指定倉庫，結構如下：
@@ -126,14 +126,4 @@ trained_models/
 
 **Q: 我想知道 Pipeline 有哪些運作階段**<br />
 **A**: <br />
-   ```mermaid
-   graph TD
-     A[環境設置] --> B[並行下載]
-     B --> C[模型下載]
-     B --> D[資料集下載]
-     C --> E[生成配置]
-     D --> E
-     E --> F[訓練執行]
-     F --> G[模型轉換]
-     G --> H[結果上傳]
-   ```
+   ![alt text](/img/workflow_sft.png)

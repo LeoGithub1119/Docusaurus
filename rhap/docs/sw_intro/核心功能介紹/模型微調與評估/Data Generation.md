@@ -8,16 +8,16 @@
 
 根據使用者上傳的範例資料，利用語言模型生成更多的資料，隨後通過資料精煉與去重複等技術處理，最終產出一批高品質的資料供訓練使用。我們提供兩種資料精煉流程選擇——國網中心自行開發的資料精煉流程與工研院開發的資料精煉流程。<br /><br />
 
-**資料生成(工研院)專案執行位置**： https://jenkins.genai.nchc.org.tw/job/data-automation/job/data-generation-ITRI/
+**資料生成(工研院)專案執行位置**： https://jenkins.genai.nchc.org.tw/job/01-data-automation/job/data-generation-ITRI/
 
-**資料生成(國網中心)專案執行位置**： https://jenkins.genai.nchc.org.tw/job/data-automation/job/data-generation-NCHC/
+**資料生成(國網中心)專案執行位置**： https://jenkins.genai.nchc.org.tw/job/01-data-automation/job/01-data-generation-NCHC/
 </details>
 
 <details>
 <summary> 資料品質評估 </summary>
 
 針對使用者提供的訓練資料進行品質評估，評估面向包含：錯別字、混淆度、多樣性與重複性。<br /><br />
-**資料品質評估專案執行位置**： https://jenkins.genai.nchc.org.tw/job/data-automation/job/data-evaluation/
+**資料品質評估專案執行位置**： https://jenkins.genai.nchc.org.tw/job/01-data-automation/job/02-data-evaluation/
 </details>
 
 ## 前置需求
@@ -30,10 +30,10 @@
   (2) Scopes 選擇 read_repository, write_repository<br />
   (3) Role 選擇 Maintainer 或 Owner<br />
   (4) 存取令牌申請完成後，請務必存放在安全的地方，離開頁面後便無法再取得<br /><br />
-    ![alt text](https://gitlab.genai.nchc.org.tw/docs/rhap-press/data-automation/-/raw/main/docs/image.png)
+    ![alt text](/img/token.png)
 
 3. **取得專案 URL `GIT_REPO_URL`**<br /><br />
-    ![alt text](https://gitlab.genai.nchc.org.tw/docs/rhap-press/data-automation/-/raw/main/docs/repo_url.png)
+    ![alt text](/img/repo_url.png)
 
 4. **將你的資料放置到專案並上傳**
    
@@ -201,7 +201,7 @@
 </details>
 
 ## 使用步驟
-![使用步驟流程圖](https://gitlab.genai.nchc.org.tw/docs/rhap-press/data-automation/-/raw/main/docs/overall_flow_chart.png)
+![使用步驟流程圖](/img/overall_flow_chart.png)
 
 ## 常見問題
 **Q: 資料格式要求？**  <br />
