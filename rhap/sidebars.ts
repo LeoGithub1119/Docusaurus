@@ -13,41 +13,62 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: '軟體介紹',
+      label: '核心功能介紹',
       collapsed: false,
       items: [
-        'sw_intro/核心功能介紹/客製化流程設計前台/Hydra',
-        'sw_intro/核心功能介紹/客製化流程設計前台/Hummingbird',
-      ],
-    },
-    {
-      type: 'category',
-      label: '工具使用說明',
-      collapsed: false,
-      items: [
-        'sw_intro/核心功能介紹/客製化流程設計前台/工具使用說明/AnythingLLM',
-        'sw_intro/核心功能介紹/客製化流程設計前台/工具使用說明/LiteLLM',
-        'sw_intro/核心功能介紹/客製化流程設計前台/工具使用說明/OpenWebUI',
-        'sw_intro/核心功能介紹/多模型API服務/工具使用說明/API 使用指南',
-      ],
-    },
-    {
-      type: 'category',
-      label: '模型微調與評估',
-      collapsed: false,
-      items: [
-        'sw_intro/核心功能介紹/模型微調與評估/Data Generation',
-        'sw_intro/核心功能介紹/模型微調與評估/Model Evaluation',
-        'sw_intro/核心功能介紹/模型微調與評估/Model SFT',
-      ],
-    },
-    {
-      type: 'category',
-      label: '開發者專區',
-      collapsed: false,
-      items: [
-        'sw_intro/開發者專區/RAP服務架設',
-        'sw_intro/開發者專區/RAP服務環境設定',
+        {
+          type: 'category',
+          label: '客製化流程設計前台',
+          collapsed: false,
+          items: [
+            'sw_intro/核心功能介紹/客製化流程設計前台/Hydra',
+            'sw_intro/核心功能介紹/客製化流程設計前台/Hummingbird',
+            {
+              type: 'category',
+              label: '工具使用說明',
+              collapsed: false,
+              items: [
+                'sw_intro/核心功能介紹/客製化流程設計前台/工具使用說明/AnythingLLM',
+                'sw_intro/核心功能介紹/客製化流程設計前台/工具使用說明/LiteLLM',
+                'sw_intro/核心功能介紹/客製化流程設計前台/工具使用說明/OpenWebUI',
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: '多模型API服務',
+          collapsed: false,
+          items: [
+            {
+              type: 'category',
+              label: '工具使用說明',
+              collapsed: false,
+              items: [
+                'sw_intro/核心功能介紹/多模型API服務/工具使用說明/API 使用指南',
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: '模型微調與評估',
+          collapsed: false,
+          items: [
+            'sw_intro/核心功能介紹/模型微調與評估/Data Generation',
+            'sw_intro/核心功能介紹/模型微調與評估/Model Evaluation',
+            'sw_intro/核心功能介紹/模型微調與評估/Model SFT',
+          ],
+        },
+        // {
+        //   type: 'category',
+        //   label: '開發者專區',
+        //   collapsed: false,
+        //   items: [
+        //     'sw_intro/開發者專區/RAP服務架設',
+        //     'sw_intro/開發者專區/RAP服務環境設定',
+        //   ],
+        // },
       ],
     },
   ],
