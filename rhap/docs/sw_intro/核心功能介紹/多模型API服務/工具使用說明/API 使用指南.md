@@ -1,5 +1,9 @@
 <div className="Medusa"></div>
 
+Medusa 為多模型 API 服務之工具，包含 API 中介層（Tier 2）和 LLM 推論加速器（Tier 3）。  
+此服務整合API 代理伺服器（Tier 2）與LLM 推論加速器（Tier 3），提供標準化 API 介面並串接多種開源模型，您可透過 API 租用方式快速建立 LLM 應用服務。  
+只需使用 Lightweight-API 介面，您便可以輕鬆管理您的 API 服務狀態與 API 金鑰。
+
 ## Lightweight-API基本介紹
 
 `Lightweight-API` 是一個與 OpenAI 相容的 API 服務，允許使用者透過`Lightweight-API Portal`訪問 多模型API服務 上的多種模型。
