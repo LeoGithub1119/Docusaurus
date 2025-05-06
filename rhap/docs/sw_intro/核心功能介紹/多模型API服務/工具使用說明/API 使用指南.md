@@ -1,12 +1,8 @@
 <div className="Medusa"></div>
 
-Medusa 為多模型 API 服務之工具，包含 API 中介層（Tier 2）和 LLM 推論加速器（Tier 3）。  
-此服務整合API 代理伺服器（Tier 2）與LLM 推論加速器（Tier 3），提供標準化 API 介面並串接多種開源模型，您可透過 API 租用方式快速建立 LLM 應用服務。  
-只需使用 Lightweight-API 介面，您便可以輕鬆管理您的 API 服務狀態與 API 金鑰。
+## 基本介紹
 
-## Lightweight-API基本介紹
-
-`Lightweight-API` 是一個與 OpenAI 相容的 API 服務，允許使用者透過`Lightweight-API Portal`訪問 多模型API服務 上的多種模型。
+多模型API服務是一個與 OpenAI 相容的 API 服務，允許使用者透過`Lightweight Portal`訪問 多模型API服務 上的多種模型。
 
 ## 登入服務
 
@@ -16,26 +12,26 @@ Medusa 為多模型 API 服務之工具，包含 API 中介層（Tier 2）和 LL
 3. 自計畫列表選擇欲使用的計畫，點選`前往計畫`。
    > *若無可用計畫，請參照 [iService 申請計畫/專案說明](https://iservice.nchc.org.tw/nchc_service/nchc_service_qa.php?target=16) 申請計畫。*  
    > *請確認計畫已開通使用本服務。*
-4. 成功登入後，即可看到該計畫中的可用額度、Lightweight-API 金鑰列表、模型列表等基本資訊。
+4. 成功登入後，即可看到該計畫中的可用額度、API入口 金鑰列表、模型列表等基本資訊。
 5. 欲登出本服務，請點選右上角之帳號圖像，呼叫下拉式選單後點選`登出`。
 
-## 功能與 Lightweight-API Portal 使用說明
+## 功能與 Lightweight Portal 使用說明
 
-在 Lightweight-API Portal 上，使用者可以查看 iService 上已擁有的計畫，包含每個計畫的使用餘額。每個計畫中提供 Lightweight-API 金鑰的管理功能，使用者可以在此新增、修改或查看 Lightweight-API 金鑰的狀況，以確保訪問權限的安全性和便利性。
+在 Lightweight Portal 上，使用者可以查看 iService 上已擁有的計畫，包含每個計畫的使用餘額。每個計畫中提供 API入口 金鑰的管理功能，使用者可以在此新增、修改或查看 API入口 金鑰的狀況，以確保訪問權限的安全性和便利性。
 
-- **查看計畫**：登入  Lightweight-API Portal 後，可以清楚查看自己在 iService 上擁有的計畫及各計畫的餘額狀態。
-- **Lightweight-API 金鑰管理**：每個計畫中提供 Lightweight-API 金鑰的管理功能，用戶可以生成新的 Lightweight-API 金鑰、修改現有的金鑰設定，或查看 Lightweight-API 金鑰的狀況，以便於管理和使用。
+- **查看計畫**：登入  Lightweight Portal 後，可以清楚查看自己在 iService 上擁有的計畫及各計畫的餘額狀態。
+- **API入口 金鑰管理**：每個計畫中提供 API入口 金鑰的管理功能，用戶可以生成新的 API入口 金鑰、修改現有的金鑰設定，或查看 API入口 金鑰的狀況，以便於管理和使用。
 
-## Lightweight-API 金鑰管理
+## API入口 金鑰管理
 
-參照[登入服務](#登入服務)成功登入後，於登入後首頁點選`API入口`，即可進入 Lightweight-API 金鑰的管理頁面。
+參照[登入服務](#登入服務)成功登入後，於登入後首頁點選`API入口`，即可進入 API入口 金鑰的管理頁面。
 ![alt text](/img/keymodelmgnt.png)    
-在這個頁面中，您將會看到計劃中的 Lightweight-API 金鑰的詳情，其中包含名稱、使用的頻率限制、當前使用量、可用上限、有效時間及建立時間等資訊，並且可以針對各金鑰進行管理操作。
+在這個頁面中，您將會看到計劃中的 API入口 金鑰的詳情，其中包含名稱、使用的頻率限制、當前使用量、可用上限、有效時間及建立時間等資訊，並且可以針對各金鑰進行管理操作。
 ![alt text](/img/keyinfo.png)    
 
 ## API 使用說明
 
-取得 Lightweight-API 金鑰後，使用者便可利用 `Lightweight-API` 存取「多模型API服務」提供的各類模型。詳細的 API 使用方法將會在[API功能介紹](#API功能介紹)中介紹，包括使用範例、請求格式、回應結構等，方便使用者快速上手。
+取得 API入口 金鑰後，使用者便可利用 `API入口` 存取「多模型API服務」提供的各類模型。詳細的 API 使用方法將會在[API功能介紹](#API功能介紹)中介紹，包括使用範例、請求格式、回應結構等，方便使用者快速上手。
 
 ## 其他功能
 
@@ -45,11 +41,11 @@ Medusa 為多模型 API 服務之工具，包含 API 中介層（Tier 2）和 LL
 
 ## 注意事項
 
-- **帳號安全**：請妥善保管 iService 登入資訊及 Lightweight-API 金鑰，確保帳號和 Lightweight-API 使用的安全性。
-- **使用規範**：請依照 Lightweight-API Portal 上的使用規範及說明文件，正確使用 Lightweight-API 資源。如有使用限制或流量規範，請參考相關說明。
+- **帳號安全**：請妥善保管 iService 登入資訊及 API入口 金鑰，確保帳號和 API入口 使用的安全性。
+- **使用規範**：請依照 Lightweight Portal 上的使用規範及說明文件，正確使用 API入口 資源。如有使用限制或流量規範，請參考相關說明。
 
 # API功能介紹
-本章節介紹 `Lightweight-api` 提供的四個主要 API 功能，包含`Models`、 `Completions`、`Chat Completions` 和 `Embeddings`，說明各 API 格式的基本結構和用途。
+本章節介紹四個主要 API 功能，包含`Models`、 `Completions`、`Chat Completions` 和 `Embeddings`，說明各 API 格式的基本結構和用途。
 
 ## 目錄
 - [Models](#models)
@@ -63,7 +59,7 @@ Medusa 為多模型 API 服務之工具，包含 API 中介層（Tier 2）和 LL
 ## Models
 
 ### 概述
-`Models` API 用於查看 Lightweight-api 提供的模型列表和其特性。此 API 允許使用者查詢可用模型的相關資訊，適合選擇不同應用需求的模型。
+`Models` API 用於查看 API入口 提供的模型列表和其特性。此 API 允許使用者查詢可用模型的相關資訊，適合選擇不同應用需求的模型。
 
 ### 請求格式
 **Endpoint**: `/v1/models`
