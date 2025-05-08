@@ -1,18 +1,19 @@
+import dotenv from 'dotenv';
 import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import path from 'path';
 
-const isDev = process.env.NODE_ENV === 'development';
+dotenv.config();
 
 const config: Config = {
   title: 'NCHC Resilient AI Platform',
   tagline: '大型語言模型高效能 AI 平台',
   favicon: 'img/NCHC_LOGO.png',
-  url: isDev ? 'http://localhost:3000' : 'https://westleft80935.pages.gennai.nhc.org.tw/',
-  baseUrl: isDev ? '/' : '/docusaurus/',
+  url: process.env.URL || 'http://localhost:3000',
+  baseUrl: process.env.BASE_URL || '/',
   organizationName: 'NCHC',
-  projectName: 'docusaurus',
+  projectName: process.env.PROJECT_NAME || 'rhap-docs',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
@@ -44,33 +45,7 @@ const config: Config = {
     ],
   ],
 
-  themes: [
-    [
-      'docusaurus-theme-openapi-docs',
-      {
-        id: 'openapi-theme',
-      },
-    ],
-  ],
-
   plugins: [
-    [
-      'docusaurus-plugin-openapi-docs',
-      {
-        id: 'openapi',
-        docsPluginId: 'default',
-        config: {
-          dongApi: {
-            specPath: 'static/openapi/dong-api.yaml',
-            outputDir: 'docs/api',
-            sidebarOptions: {
-              groupPathsBy: 'tag',
-              categoryLinkSource: 'tag',
-            },
-          },
-        },
-      },
-    ],
     ['@docusaurus/plugin-sitemap', { id: 'sitemap-main' }],
     path.resolve(__dirname, 'plugins/monitoring-plugin'),
   ],
@@ -113,9 +88,7 @@ const config: Config = {
     },
   } satisfies Preset.ThemeConfig,
 
-  scripts: [
-    isDev ? '/js/customScript.js' : '/docusaurus/js/customScript.js',
-  ],
+  
 };
 
 export default config;

@@ -1,18 +1,22 @@
 # 服務概觀
 
 ### 客製化流程設計前台
-1. **什麼是客製化流程設計前台？**
+- **什麼是客製化流程設計前台？**
    - 此服務採用分層架構，包含前端平台（Tier 1）、API代理伺服器（Tier 2）及LLM推論加速器（Tier 3）。
    - 結合AI工具與工作流程，提供直覺易用的開發環境。
    - 無需技術背景，即可靈活配置AI應用。
    - 支援快速佈署與介面設計，加速應用落地
 
 2. **國網中心提供哪些前端服務？**
-   - 目前提供包括 AnythingLLM、Open WebUI、DIFY (Workflow Engine)、Streamlit (RAG Workflow)、Aqua(by UnieAI)等前端服務。
-   - 未來將進一步整合更多選項。
+   - 我們提供OpenWebUI、AnythingLLM等開源前端服務，未來將進一步整合更多選項。
+   - 我們亦積極徵詢各單位開發的前端選項，整合進入客製化流程設計前台服務，創造本土AI聚落。
 
 3. **如何申請客製化流程設計前台？**
-   - 請先申請 iService 帳號，並於服務平台網頁填寫申請資訊。
+   -  請至[iService官方網站](https://iservice.nchc.org.tw/nchc_service/index.php)
+   -  點選「註冊」，依iService官方網站頁面指示申請  
+   ![iservice_signup](/img/iservice_sign_up.png)
+	   - 若發生註冊問題，請洽iService客服 
+   - 試營運期間請待通過徵選後，依服務啟用通知信件內之網址登入使用
 
 ### 多模型 API 服務
 4. **什麼是多模型 API 服務？**
@@ -21,7 +25,11 @@
    - 幫助企業快速開發 AI 加值服務，增強競爭力。
 
 5. **如何申請多模型API服務？**
-   - 請先申請 iService 帳號，並在服務平台網頁填寫申請資訊，取得 API 金鑰後即可開始使用。
+   -  請至[iService官方網站](https://iservice.nchc.org.tw/nchc_service/index.php)
+   -  點選「註冊」，依iService官方網站頁面指示申請  
+   ![iservice_signup](/img/iservice_sign_up.png)
+	   - 若發生註冊問題，請洽iService客服 
+   - 試營運期間請待通過徵選後，依服務啟用通知信件內之網址登入，申請 API 金鑰後即可開始使用。
 
 6. **什麼是國網中心 API 服務金鑰（API Key）？**
    - 是存取國網中心多模型 API 服務的憑證，需通過此金鑰與 LiteLLM 模組來訪問大語言模型。
@@ -36,7 +44,7 @@
    - 可以，但需由廠商負責管理 API Key 的使用，一旦異常使用，國網中心將停權處理。
 
 10. **申請 API Key 有數量限制嗎？**
-    - 沒有限制，根據需求申請，但若不再需要，請聯繫國網中心停權。
+    - 沒有限制，根據需求申請及管理。
 
 ### 模型微調與評估
 11. **什麼是模型微調與評估？**
@@ -45,6 +53,19 @@
     - 內建模型評分機制，提供優化參考數據。
 
 12. **如何申請模型微調與評估？**
-    - 請先申請 iService 帳號，並在服務平台網頁填寫申請資訊。完成後請至TAIWAN AI RAP首頁登入
+      -  請至[iService官方網站](https://iservice.nchc.org.tw/nchc_service/index.php)
+      -  點選「註冊」，依iService官方網站頁面指示申請  
+      ![iservice_signup](/img/iservice_sign_up.png)
+         - 若發生註冊問題，請洽iService客服 
+      - 試營運期間請待通過徵選後，依服務啟用通知信件內之網址登入使用
+### 收費方式
+13. TAIWAN AI RAP 的服務如何計價？
+      - 試營運服務提供期間（2025/04/30~2025/09/30）皆不收費。
+      - 詳細計價資訊預計於2025年6月份公告於官方網站。
+
+### 帳號相關問題
+14. 一個公司／單位可以有多個 iService 帳號共同使用服務嗎？  
+      - 可以。請將貴單位欲使用服務的 iService 帳號新增至您的計畫中，即可共同使用服務。
+
 
 

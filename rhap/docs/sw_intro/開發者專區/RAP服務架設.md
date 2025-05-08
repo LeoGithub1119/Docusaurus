@@ -22,10 +22,10 @@
 
 3. 映像檔選擇 (public)hydra、(public)medusa、(public)hummingbird
 
-      ![image](/img/imageselect.png)
+      ![image](https://gitlab.td.nchc.org.tw/genai-project/docs/-/wikis/uploads/55a885ae0941b06095ee9abe5b5e89f5/image.png)
 
     > 服務對照表
-    > | 基本設定 | All-In-One 一站式集成推論服務<br />(hydra) | LLM推論 API Server 服務<br />(medusa) | 輕量化推論前端服務<br />(hummingbird) |
+    > | 基本設定 | Hydra　| Medusa | Hummingbird |
     > | :--------: | :--------: | :--------: | :--------: |
     > | v (CPU) | ✗ | ✗ | ✓ |
     > | vgv (GPU) | ✓ | ✓ | ✗ |
@@ -34,76 +34,59 @@
 
 4. hydra 基本設定選擇 1 張 GPU 以上。選拉 vgv 之後，選擇你要的型號。
 
-      ![image](/img/gpu.png)
+      ![image](https://gitlab.td.nchc.org.tw/genai-project/docs/-/wikis/uploads/d04af38b873b1231144c975c724bdf32/image.png)
 
 5. 選擇相依虛擬網路介面，自動配置浮動IP，建立安全性群組。
 
-      ![image](/img/secure.png)
+      ![image](https://gitlab.td.nchc.org.tw/genai-project/docs/-/wikis/uploads/5d92bdbaaa7cf4ec8b378fb8e20de3ce/image.png)
 
 6. 點擊 -> 下一步：鑰匙對 -> 下一步：環境變數 -> 下一步：初始化指令。
 
-:::info
-:tada: 關於鑰匙對、環境變數、初始化指令設定等相關資訊，請至 TWCC 相關文件。
-:::
-    [連結](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-create-zh)
+關於鑰匙對、環境變數、初始化指令設定等相關資訊，請至 [TWCC 相關文件](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-create-zh)。
+
 
 
 7. 點擊建立，完成虛擬運算個體個建立。
 
-      ![image](/img/buildclick.png)
+      ![image](https://gitlab.td.nchc.org.tw/genai-project/docs/-/wikis/uploads/f79e88c39792f5ef569d59dc4a35bba1/image.png)
 
     完成建立後，資訊會出現在虛擬運算個體管理內，如圖所示
 
-      ![image](/img/vcsmanage.png)
+      ![image](https://gitlab.td.nchc.org.tw/genai-project/docs/-/wikis/uploads/fcd062a45d70830adf3736951800bd85/image.png)
 
-:::warning
-:zap:若不使用虛擬運算時，請選「停止」，否則會計算用量。
+若不使用虛擬運算時，請選「停止」，否則會計算用量。
 
 按「停止」後，畫面狀態會呈現 『Stopping』，顯示為 『Stopped』 才停止計費。
-:::
 
-
-
-
-
-      ![image](/img/stopping.png)
 
 ## 連線設定，開啟 port 80
 
 1. 查詢對應虛擬運算的安全性群組。路徑：虛擬運算 -> 選擇虛擬運算個體 -> 虛擬網路介面 -> 安全性群組
 
-      ![image](/img/network.png)
+      ![image](https://gitlab.td.nchc.org.tw/genai-project/docs/-/wikis/uploads/6439b74a3e247ad91112b26d0dd15737/image.png)
 
 2. 前往安全性群組設定。路徑：聯網與資安 -> 安全性群組
 
-    ![image](/img/securemgnt.png)
+    ![image](https://gitlab.td.nchc.org.tw/genai-project/docs/-/wikis/uploads/e52386d866176c2bb301e9ce8cfbbb31/image.png)
 
 3. 安全性群組管理 -> 點擊列表中對照的資訊 -> 進入到安全性群組規則管理 -> 選擇 `+建立`
 
-    ![image](/img/securemgntid.png)
+    ![image](https://gitlab.td.nchc.org.tw/genai-project/docs/-/wikis/uploads/5a0caab163706a3d640e23780ee6f7e2/image.png)
 
-    ![image](/img/securemgntbuild.png)
+    ![image](https://gitlab.td.nchc.org.tw/genai-project/docs/-/wikis/uploads/7c8d73ddb0af3d1380386beb00d035d3/image.png)
 
 4. 基本資訊 -> 請輸入以下資料後，點擊下一步:檢閱+建立 -> 建立。即完成設定。
 
-    ![image](/img/completesetting.png)
+    ![image](https://gitlab.td.nchc.org.tw/genai-project/docs/-/wikis/uploads/4cb27883714a6c641e52c19294df2291/image.png)
 
-      ![image](/img/show80.png)
+      ![image](https://gitlab.td.nchc.org.tw/genai-project/docs/-/wikis/uploads/c891ef61ffa0338b29cd7689817391cc/image.png)
 
 ## 瀏覽器連線 
 
 以上設定完成之後，可透過以下方式連線。
 
-1. 前往虛擬運算個體管理即可看到對應的『公用 IP』，`http://xxx.xxx.xxx.xxx`
+1. 前往虛擬運算個體管理即可看到對應的『公用 IP』，`http://xxx.xxx.xxx.xxx.sslip.io/`
 
-    ![image](/img/pip.png)
+    ![image](https://gitlab.td.nchc.org.tw/genai-project/docs/-/wikis/uploads/e80276b5909208d1e1fa4db151ec092a/image.png)
 
-2. 至瀏覽器輸入虛擬運算的『公用 IP』`http://xxx.xxx.xxx.xxx`，畫面呈現如示：靈活高效的 AI 服務運算農場
-
-    以 `客製化流程設計前台` 為例，包含：
-    - Tier 1：前端網頁平台 (AnythingLLM / Open WebUI) 
-    - Tier 2：API 代理伺服器 (LiteLLM)、資料庫網頁 (Adminer) 
-    - Tier 3：LLM 模型工具 (Ollama)
-
-
-    ![image](/img/Hydra_home.png)
+2. 至瀏覽器輸入虛擬運算的『公用 IP』`http://xxx.xxx.xxx.xxx.sslip.io/`，即可開始使用。

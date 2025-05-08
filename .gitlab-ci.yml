@@ -7,11 +7,12 @@ pages:
   stage: deploy
   script:
   - cd rhap
+  - cp .env.page .env
   - yarn install
   - yarn build
   - mv ./build ../public
   artifacts:
     paths:
     - public
-  only:
-    - master
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
