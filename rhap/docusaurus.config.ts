@@ -64,9 +64,9 @@ const config: Config = {
     footer: {
       style: 'dark',
       links: [
-        { title: 'Docs', items: [{ label: 'RHAP 大型語言模型高效能 AI 平台', to: 'service_intro/home' }] },
+        { title: 'Docs', items: [{ label: 'RHAP 大型語言模型高效能 AI 平台', to: '/service_intro/home' }] },
         { title: 'Community', items: [{ label: '國網中心', href: 'https://www.nchc.org.tw/' }] },
-        { title: 'More', items: [{ label: '日誌', to: 'blog' }] },
+        { title: 'More', items: [{ label: '日誌', to: '/blog' }] },
       ],
       copyright: `版權所有 © ${new Date().getFullYear()} NCHC All Rights Reserved`,
     },
