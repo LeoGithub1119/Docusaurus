@@ -31,7 +31,7 @@
 
 ## API 使用說明
 
-取得 API入口 金鑰後，使用者便可利用 `API入口` 存取「多模型API服務」提供的各類模型。詳細的 API 使用方法將會在[API功能介紹](#API功能介紹)中介紹，包括使用範例、請求格式、回應結構等，方便使用者快速上手。
+取得 API入口 金鑰後，使用者便可利用 `API入口` 存取「多模型API服務」提供的各類模型。詳細的 API 使用方法將會在[API功能介紹](#api功能介紹)中介紹，包括使用範例、請求格式、回應結構等，方便使用者快速上手。
 
 ## 其他功能
 
@@ -44,7 +44,7 @@
 - **帳號安全**：請妥善保管 iService 登入資訊及 API入口 金鑰，確保帳號和 API入口 使用的安全性。
 - **使用規範**：請依照 Lightweight Portal 上的使用規範及說明文件，正確使用 API入口 資源。如有使用限制或流量規範，請參考相關說明。
 
-# API功能介紹
+## API功能介紹
 本章節介紹四個主要 API 功能，包含`Models`、 `Completions`、`Chat Completions` 和 `Embeddings`，說明各 API 格式的基本結構和用途。
 
 ## 目錄
@@ -80,38 +80,29 @@ curl -X 'GET' "https://portal.genai.nchc.org.tw/api/v1/models" \
 ## Completions
 
 ### 概述
-`Completions` API 用於生成完成給定提示的文本，適合用於內容生成、回答問題等需要簡單文本生成的應用。
+`Completions` API 用於根據輸入的提示文本（`prompt`）生成一段連貫文字，適用於單輪內容生成、摘要、問答、續寫等場景。
 
 ### 請求格式
-**Endpoint**: `/v1/chat/completions`
+**Endpoint**: `/v1/completions`
 
 **HTTP 方法**: `POST`
 
 **範例請求**:
 ```bash
-curl -X POST "https://portal.genai.nchc.org.tw/api/v1/chat/completions" \
+curl -X POST "https://portal.genai.nchc.org.tw/api/v1/completions" \
 -H "x-api-key: <您的API KEY>" \
 -H "Content-Type: application/json" \
 -d '{
-    "model": "Llama3-TAIDE-LX-8B-Chat-Alpha1",
-    "messages": [
-        {
-            "role": "system",
-            "content": "You are a helpful assistant. 你是一個樂於助人的助手。"
-        },
-        {
-            "role": "user",
-            "content": "請寫一篇小說"
-        }
-    ],
-    "max_tokens": 20,
-    "temperature": 0
+  "model": "Llama3-TAIDE-LX-8B-Instruct-Alpha1",
+  "prompt": "請寫一篇以未來城市為背景的短篇小說：",
+  "max_tokens": 200,
+  "temperature": 0.7
 }'
 ```
-- **model**：指定使用的模型名稱。
+- **model**：指定使用的模型名稱，例如 `Llama3-TAIDE-LX-8B-Instruct-Alpha1`。
 - **prompt**：作為輸入的提示文本，模型將根據此文本生成回應。
-- **temperature** (可選)：控制回應的隨機性。
-- **max_tokens** (可選)：生成回應的最大字數。
+- **temperature** (可選)：控制生成內容的隨機性，範圍為 0（穩定）到 1（創意）。
+- **max_tokens** (可選)：生成回應的最大長度（以 token 為單位）。
 
 ### 回應格式
 - **choices**：包含生成的回應列表，每個回應包含 `text` 和 `finish_reason` 屬性。
