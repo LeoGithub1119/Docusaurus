@@ -7,6 +7,32 @@ import Head from '@docusaurus/Head';
   <title>Home | NCHC RAP</title>
 </Head>
 
+<div style={{
+  display: 'flex',
+  justifyContent: 'flex-start',
+  margin: '1rem 0'
+}}>
+  <a
+    href="https://ndrive.niar.org.tw/navigate/a/#/s/4675120E612747ABB1B31AE2CCE9D7F26BL?type=previewPageCover"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{
+      backgroundColor: '#e0f0ff',
+      color: '#005fa3',
+      padding: '0.5rem 1rem',
+      borderRadius: '0.4rem',
+      textDecoration: 'none',
+      fontSize: '1.5rem',
+      fontWeight: 600,
+      boxShadow: '0 2px 10px rgba(0,0,0,0.08)',
+      display: 'inline-block'
+    }}
+  >
+    📺 點我觀看說明會影片
+  </a>
+</div>
+
+
 ## **服務介紹**  
 
 TAIWAN AI RAP為財團法人國家實驗研究院國家高速網路與計算中心（以下簡稱國網中心）推出之生成式AI應用開發平台，結合了國網中心高效能運算、高速網路、機敏資料儲存環境，整合了生成式 AI 應用開發所需的全方位資源，涵蓋基礎層算力、模型層、開發工具及部署環境等。
