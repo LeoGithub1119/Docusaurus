@@ -7,30 +7,7 @@ import Head from '@docusaurus/Head';
   <title>Home | NCHC RAP</title>
 </Head>
 
-<div style={{
-  display: 'flex',
-  justifyContent: 'flex-start',
-  margin: '1rem 0'
-}}>
-  <a
-    href="https://ndrive.niar.org.tw/navigate/a/#/s/4675120E612747ABB1B31AE2CCE9D7F26BL?type=previewPageCover"
-    target="_blank"
-    rel="noopener noreferrer"
-    style={{
-      backgroundColor: '#e0f0ff',
-      color: '#005fa3',
-      padding: '0.5rem 1rem',
-      borderRadius: '0.4rem',
-      textDecoration: 'none',
-      fontSize: '1.5rem',
-      fontWeight: 600,
-      boxShadow: '0 2px 10px rgba(0,0,0,0.08)',
-      display: 'inline-block'
-    }}
-  >
-    📺 點我觀看說明會影片
-  </a>
-</div>
+
 
 
 ## **服務介紹**  
