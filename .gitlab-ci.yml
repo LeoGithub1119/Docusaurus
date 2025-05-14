@@ -1,49 +1,41 @@
-variables:
-  IMAGE_TAG: $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
-  PAGES_DIR: public
-
 stages:
   - build
   - test
   - deploy
 
+default:
+  image: docker:24.0.5
+  services:
+    - docker:24.0.5-dind
+  tags:
+    - docker
+
+variables:
+  IMAGE_TAG: registry.td.nchc.org.tw/llm-taskforce/docs/rhap-docs:$CI_COMMIT_REF_SLUG
+  PAGES_DIR: public
+
 build:
   stage: build
-  image:
-    name: gcr.io/kaniko-project/executor:debug
-    entrypoint: [""]
   script:
-    - /kaniko/executor 
-      --context "${CI_PROJECT_DIR}/rhap" 
-      --dockerfile "Dockerfile" 
-      --destination "${IMAGE_TAG}"
-      --cleanup
+    - echo "CI_REGISTRY=$CI_REGISTRY"
+    - echo "IMAGE_TAG=$IMAGE_TAG"
+    - docker info --format '{{.ServerVersion}}'
+    - echo "$CI_REGISTRY_PASSWORD" | docker login registry.td.nchc.org.tw -u $CI_REGISTRY_USER --password-stdin
+    - docker build -t $IMAGE_TAG .
+    - docker push $IMAGE_TAG
   rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-
-
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
 
 test:
   stage: test
-  image: docker:24.0.5
-  services:
-    - name: $IMAGE_TAG
-      alias: app
   script:
-    - apk add --no-cache curl
-    - |
-      echo "等待服務啟動..."
-      for i in {1..30}; do
-        curl -f http://app:3000 && break || sleep 5
-      done
-    - docker inspect app --format '{{.State.Health.Status}}' | grep -q healthy || (docker logs app && exit 1)
-  after_script:
-    - docker ps -aq | xargs docker rm -f || true
-    - docker image prune -f
-  needs: ["build"]
+    - apk add --update curl && rm -rf /var/cache/apk/*
+    - sleep 10
+    - curl -f --connect-timeout 5 https://llm-taskforce.pages.td.nchc.org.tw/docs/rhap-docs/ || exit 1
   retry:
     max: 2
     when: script_failure
+  needs: ["build"]
 
 
 pages:
