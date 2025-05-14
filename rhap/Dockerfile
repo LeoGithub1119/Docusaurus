@@ -15,7 +15,7 @@ COPY package.json package-lock.json ./
 RUN npm ci --omit=dev
 
 # 複製原始碼並建構
-COPY rhap/ .
+COPY . .
 RUN npm run build
 
 # ========== 階段 2：生產環境映像 ==========
