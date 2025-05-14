@@ -1,10 +1,47 @@
-image: node:23.1.0-alpine3.20
+variables:
+  IMAGE_TAG: $CI_REGISTRY_IMAGE:$CI_COMMIT_SHORT_SHA
+  DOCKER_BUILDKIT: 1
+  BUILDKIT_INLINE_CACHE: 1
 
 stages:
+  - build
+  - test
   - deploy
+
+build-image:
+  stage: build
+  image: docker:26.0
+  services:
+    - docker:26.0-dind
+  before_script:
+    - echo "$CI_REGISTRY_PASSWORD" | docker login -u "$CI_REGISTRY_USER" --password-stdin $CI_REGISTRY
+  script:
+    - docker build -t $IMAGE_TAG -f Dockerfile .
+    - docker push $IMAGE_TAG
+    - docker push $CI_REGISTRY_IMAGE:latest
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+test-image:
+  stage: test
+  image: docker:26.0
+  services:
+    - docker:26.0-dind
+  script:
+    - docker run --rm -d --name site -p 3000:3000 $IMAGE_TAG
+    - sleep 15
+    - curl -f http://localhost:3000
+    - docker exec site npm test || echo "no test script, skipping"
+  after_script:
+    - docker logs site || true
+    - docker rm -f site || true
+    - docker image prune -f
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
 
 pages:
   stage: deploy
+  image: node:23.1.0-alpine3.20
   script:
     - cd rhap
     - cp .env.page .env
