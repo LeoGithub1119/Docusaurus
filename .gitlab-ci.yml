@@ -13,13 +13,14 @@ build:
     name: gcr.io/kaniko-project/executor:debug
     entrypoint: [""]
   script:
-    - /kaniko/executor
-      --context "${CI_PROJECT_DIR}"
-      --dockerfile "${CI_PROJECT_DIR}/Dockerfile"
+    - /kaniko/executor 
+      --context "${CI_PROJECT_DIR}/rhap" 
+      --dockerfile "Dockerfile" 
       --destination "${IMAGE_TAG}"
       --cleanup
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
 
 
 test:
