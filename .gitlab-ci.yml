@@ -28,12 +28,12 @@ build:
 
 test:
   stage: test
+  image: curlimages/curl:latest
   script:
-    - apk add --update curl && rm -rf /var/cache/apk/*
-    - sleep 10
+    - sleep 30
     - curl -f --connect-timeout 5 https://llm-taskforce.pages.td.nchc.org.tw/docs/rhap-docs/ || exit 1
   retry:
-    max: 2
+    max: 3
     when: script_failure
   needs: ["build"]
 
