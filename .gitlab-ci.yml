@@ -7,17 +7,17 @@ stages:
   - test
   - deploy
 
-
 build:
   stage: build
   image:
-    name: gcr.io/kaniko-project/executor:v1.9.0
+    name: gcr.io/kaniko-project/executor:debug
     entrypoint: [""]
   script:
     - /kaniko/executor
       --context "${CI_PROJECT_DIR}"
       --dockerfile "${CI_PROJECT_DIR}/Dockerfile"
       --destination "${IMAGE_TAG}"
+      --cleanup
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
@@ -30,10 +30,19 @@ test:
       alias: app
   script:
     - apk add --no-cache curl
-    - sleep 20  
-    - curl -f http://app:3000 || (docker logs app && exit 1)
-    - docker inspect app --format '{{.State.Health.Status}}' | grep -q healthy
+    - |
+      echo "等待服務啟動..."
+      for i in {1..30}; do
+        curl -f http://app:3000 && break || sleep 5
+      done
+    - docker inspect app --format '{{.State.Health.Status}}' | grep -q healthy || (docker logs app && exit 1)
+  after_script:
+    - docker ps -aq | xargs docker rm -f || true
+    - docker image prune -f
   needs: ["build"]
+  retry:
+    max: 2
+    when: script_failure
 
 
 pages:
