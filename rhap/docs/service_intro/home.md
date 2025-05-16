@@ -49,7 +49,8 @@ import ReactPlayer from 'react-player';
 >
   <strong style={{fontSize: '1.2rem', display: 'block', marginBottom: '0.6em'}}>說明會影片</strong>
   <p style={{color: '#444', margin: '0.7em 0 1.2em 0'}}>
-    官方說明會影片，歡迎點擊下方縮圖在新視窗觀看。
+    官方說明會影片，歡迎點擊下方連結在新視窗觀看。
+    [watch video](https://www.youtube.com/watch?v=A7rm8MTr-z8)
   </p>
   <a
     href="https://www.youtube.com/watch?v=A7rm8MTr-z8"
