@@ -2,32 +2,11 @@
 title: "國網中心TAIWAN AI RAP 生成式AI應用開發服務"
 ---
 import Head from '@docusaurus/Head';
+import ReactPlayer from 'react-player';
 
 <Head>
   <title>Home | NCHC RAP</title>
 </Head>
-
-
-<!-- <div class="video-wrapper">
-  <iframe
-    src="https://www.youtube.com/embed/A7rm8MTr-z8"        
-    title="影片標題"
-    frameborder="0"
-    allowfullscreen
-  ></iframe>
-</div> -->                                              <!--iframe-->
-
-
-
-import ReactPlayer from 'react-player';
-
-<ReactPlayer
-  url="https://www.youtube.com/watch?v=A7rm8MTr-z8"
-  controls
-  width="100%"
-  height="360px"
-  style={{ maxWidth: '600px', margin: '0 auto', borderRadius: '12px', boxShadow: '0 4px 16px rgba(0,0,0,0.12)' }}
-/>
 
 
 <!-- <div style={{
@@ -40,8 +19,14 @@ import ReactPlayer from 'react-player';
   textAlign: 'center'
 }}>
   <strong style={{fontSize: '1.2rem'}}>說明會影片</strong>
-  <p style={{color: '#444', margin: '0.7em 0 1.2em 0'}}>這是本次服務的官方說明會影片，歡迎點擊上方播放。</p>
-  {/* 這裡放 video 或 ReactPlayer */}
+  <p style={{color: '#444', margin: '0.7em 0 1.2em 0'}}>這是本次服務的官方說明會影片，歡迎點擊下方播放。</p>
+  <ReactPlayer
+  url="https://www.youtube.com/watch?v=A7rm8MTr-z8"
+  controls
+  width="100%"
+  height="360px"
+  style={{ maxWidth: '600px', margin: '0 auto', borderRadius: '12px', boxShadow: '0 4px 16px rgba(0,0,0,0.12)' }}
+/>
 </div> -->
 
 
@@ -49,6 +34,45 @@ import ReactPlayer from 'react-player';
   <img src="https://img.youtube.com/vi/A7rm8MTr-z8/0.jpg" alt="影片標題" />
 </a> -->
 
+
+
+<div
+  style={{
+    maxWidth: '420px',
+    margin: '2rem auto',
+    background: '#fff',
+    borderRadius: '16px',
+    boxShadow: '0 6px 24px rgba(0,0,0,0.10)',
+    padding: '1.2rem 1rem 1.5rem 1rem',
+    textAlign: 'center'
+  }}
+>
+  <strong style={{fontSize: '1.2rem', display: 'block', marginBottom: '0.6em'}}>說明會影片</strong>
+  <p style={{color: '#444', margin: '0.7em 0 1.2em 0'}}>
+    官方說明會影片，歡迎點擊下方縮圖在新視窗觀看。
+  </p>
+  <a
+    href="https://www.youtube.com/watch?v=A7rm8MTr-z8"
+    className="video-thumb"
+    target="_blank"
+    rel="noopener noreferrer"
+    title="在新視窗觀看說明會影片"
+    style={{display: 'inline-block'}}
+  >
+    <img
+      src="https://img.youtube.com/vi/A7rm8MTr-z8/0.jpg"
+      alt="說明會影片縮圖"
+      style={{
+        borderRadius: '10px',
+        boxShadow: '0 2px 10px rgba(0, 0, 0, 0.3)',
+        transition: 'transform 0.3s ease',
+        width: '100%',
+        maxWidth: '350px',
+        cursor: 'pointer'
+      }}
+    />
+  </a>
+</div>
 
 
 
