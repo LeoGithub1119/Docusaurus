@@ -8,18 +8,30 @@ import Head from '@docusaurus/Head';
 </Head>
 
 
-<!-- <a href="https://www.youtube.com/watch?v=A7rm8MTr-z8" class="video-thumb" target="_blank" rel="noopener noreferrer">
-  <img src="https://img.youtube.com/vi/A7rm8MTr-z8/0.jpg" alt="影片標題" />
-</a> -->
-
 <!-- <div class="video-wrapper">
+  <iframe
+    src="https://www.youtube.com/embed/A7rm8MTr-z8"        
+    title="影片標題"
+    frameborder="0"
+    allowfullscreen
+  ></iframe>
+</div> -->                                              <!--iframe-->
+
+
+<script>
+  if (window.top !== window.self && window.parent !== window.top) &#123
+    document.getElementById('video-wrapper').innerHTML =
+      '<a href="https://www.youtube.com/watch?v=A7rm8MTr-z8" target="_blank">請點此觀看影片</a>';
+  &#125
+</script>
+<div id="video-wrapper">
   <iframe
     src="https://www.youtube.com/embed/A7rm8MTr-z8"
     title="影片標題"
     frameborder="0"
     allowfullscreen
   ></iframe>
-</div> -->
+</div>
 
 
 ## **服務介紹**  
