@@ -29,6 +29,25 @@
 在這個頁面中，您將會看到計劃中的 API入口 金鑰的詳情，其中包含名稱、使用的頻率限制、當前使用量、可用上限、有效時間及建立時間等資訊，並且可以針對各金鑰進行管理操作。
 ![alt text](/img/keyinfo.png)    
 
+## API入口 金鑰建立
+1. 使用iService帳號登入後，選擇計畫
+2. 前往API入口，選擇建立  
+![alt text](/img/API_sw_intro_2.png)
+3. 選擇新增  
+![alt text](/img/API_sw_intro_3.png)
+4. 填寫金鑰名稱後選擇模型，模型可選擇多個  
+![alt text](/img/API_sw_intro_4.png)
+5. 若有預算限制可在下方進階設定中做設定，也可設定金鑰的有效時間
+![alt text](/img/API_sw_intro_5.png)
+6. 設定完成後按下儲存，*金鑰請妥善保存*  
+![alt text](/img/API_sw_intro_6.png)
+7. 建立完成後可在API入口查看金鑰和模型  
+![alt text](/img/API_sw_intro_7.png)
+8. 下方卷軸可以拉動查看金鑰資訊  
+卷軸拉到最後可以對金鑰做查看、修改或刪除  
+![alt text](/img/API_sw_intro_8.png)
+
+
 ## API 使用說明
 
 取得 API入口 金鑰後，使用者便可利用 `API入口` 存取「多模型API服務」提供的各類模型。詳細的 API 使用方法將會在[API功能介紹](#api功能介紹)中介紹，包括使用範例、請求格式、回應結構等，方便使用者快速上手。

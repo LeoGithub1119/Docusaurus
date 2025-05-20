@@ -1,7 +1,28 @@
 <div className="Hummingbird"></div>
 
-## Hummingbird
+# Hummingbird服務設定說明
+1. 選擇服務系統，並建立服務  
+![alt text](/img/Hydra_sw_intro_1.png)  
+2. 選擇Hummingbird服務後開始配置  
+![alt text](/img/Hummingbird_sw_intro_2.png)
+3. 左側是設置，右側是察看您所設置的資訊和模型費用  
+![alt text](/img/Hummingbird_sw_intro_3.png)
+4. 填寫名稱和點選所需服務  
+![alt text](/img/Hydra_sw_intro_4.png)
+5.  點選公有模型，類型、URL都可下拉做選擇  
+填寫API金鑰，填寫完後需點擊測試，測試成功後右下會顯示連線成功  
+![alt text](/img/Hydra_sw_intro_6.png)
+6. 進階設定若無特殊需求可以不用設定  
+設定完成後可在右側查看設定  
+![alt text](/img/Hydra_sw_intro_7.png)
+7. 啟用服務後可在服務列表查看  
+服務詳情裡可以查看當前狀況  
+![alt text](/img/Hummingbird_sw_intro_7.png)
+8. 服務架設起來後在FQDN網址下方出現網址，點進去就可以開始使用了  
+![alt text](/img/Hummingbird_sw_intro_8.png)
 
+
+<!--
 Hummingbird 是一套專為輕量級 AI 應用打造的服務選項，採用簡化的一層式架構，**僅由前端平台（Tier 1）組成**，可快速部署並支援互動式推論體驗，適合需要低部署成本、高彈性客製化的使用情境。
 
 ###  前端平台（Tier 1）：輕量部署的互動介面
@@ -22,8 +43,6 @@ Hummingbird 專注於簡單易用的使用者介面，整合多種 LLM 前端互
 ✅ **彈性串接模型服務**：支援本地或遠端模型，讓開發者可依資源條件調整推論來源  
 ✅ **適合教育、展示與客製化導入**：可快速整合至網站或內部系統，作為問答、客服或知識查詢介面  
 ✅ **開源友好、模組彈性**：平台組件多為開源技術，可依任務調整功能模組與權限配置  
-
-<!--
 # Hummingbird
 本工具為客製化流程設計前台可啟用的服務選項之一，僅由前端平台Tier-1組成。以下為Hummingbird的架構介紹。
 
