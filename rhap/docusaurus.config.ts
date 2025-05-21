@@ -7,7 +7,7 @@ import path from 'path';
 dotenv.config();
 
 const config: Config = {
-  title: 'NCHC Resilient High-Performance AI Platform',
+  title: 'NCHC Resilient AI Platform',
   tagline: '大型語言模型高效能 AI 平台',
   favicon: 'img/NCHC_LOGO.png',
   url: process.env.URL || 'http://localhost:3000',
@@ -57,6 +57,7 @@ const config: Config = {
         // { type: 'docSidebar', sidebarId: 'service_intro_sidebar', position: 'left', label: '服務介紹' },
         // { type: 'docSidebar', sidebarId: 'sw_intro_sidebar', position: 'left', label: '軟體介紹' },
         // { type: 'docSidebar', sidebarId: 'faq_intro_sidebar', position: 'left', label: '常見問題' },
+        // { type: 'docSidebar', sidebarId: 'api_sidebar', position: 'left', label: 'API 文件' },
         // { href: 'https://gitlab.com/nchc-genai/hydra', label: ' ', position: 'right', className: 'custom-navbar-logo-gitlab' },
         // { type: 'localeDropdown', position: 'right' },
       ],
