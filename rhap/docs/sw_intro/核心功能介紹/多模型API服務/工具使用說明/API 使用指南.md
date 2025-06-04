@@ -190,7 +190,7 @@ curl -X POST "https://portal.genai.nchc.org.tw/api/v1/embeddings" \
 -H "x-api-key: <您的API KEY>" \
 -H "Content-Type: application/json" \
 -d '{
-    "model": "chatfire/bge-m3:q8_0",
+    "model": "Snowflake/snowflake-arctic-embed-l-v2.0",
     "input": "你好"
 }'
 ```
