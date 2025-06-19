@@ -1,5 +1,45 @@
 # LLM 訓練服務使用說明
 
+<div
+  style={{
+    maxWidth: '420px',
+    margin: '2rem auto',
+    background: '#fff',
+    borderRadius: '16px',
+    boxShadow: '0 6px 24px rgba(0,0,0,0.10)',
+    padding: '1.2rem 1rem 1.5rem 1rem',
+    textAlign: 'center'
+  }}
+>
+  <strong style={{fontSize: '1.2rem', display: 'block', marginBottom: '0.6em'}}>說明影片</strong>
+  <p style={{color: '#444', margin: '0.7em 0 1.2em 0'}}>
+    歡迎點擊右側連結至新分頁觀看。
+    [watch video](https://www.youtube.com/watch?v=ACiNJ8qNZmE)
+  </p>
+  <a
+    href="https://www.youtube.com/watch?v=ACiNJ8qNZmE"
+    className="video-thumb"
+    target="_blank"
+    rel="noopener noreferrer"
+    title="在新視窗觀看影片"
+    style={{display: 'inline-block'}}
+  >
+    <img
+      src="https://img.youtube.com/vi/ACiNJ8qNZmE/0.jpg"
+      alt="說明會影片縮圖"
+      style={{
+        borderRadius: '10px',
+        boxShadow: '0 2px 10px rgba(0, 0, 0, 0.3)',
+        transition: 'transform 0.3s ease',
+        width: '100%',
+        maxWidth: '350px',
+        cursor: 'pointer'
+      }}
+    />
+  </a>
+</div>
+
+
 ## 概述
 本專案流程提供模型微調訓練服務，使用者可自行選擇基礎模型(base model)，並且自行提供訓練資料，進行特定任務/能力微調。
 

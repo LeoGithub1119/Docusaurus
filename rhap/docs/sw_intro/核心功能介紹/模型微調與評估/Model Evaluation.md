@@ -1,5 +1,46 @@
 # 模型評分服務使用說明
 
+<div
+  style={{
+    maxWidth: '420px',
+    margin: '2rem auto',
+    background: '#fff',
+    borderRadius: '16px',
+    boxShadow: '0 6px 24px rgba(0,0,0,0.10)',
+    padding: '1.2rem 1rem 1.5rem 1rem',
+    textAlign: 'center'
+  }}
+>
+  <strong style={{fontSize: '1.2rem', display: 'block', marginBottom: '0.6em'}}>說明影片</strong>
+  <p style={{color: '#444', margin: '0.7em 0 1.2em 0'}}>
+    歡迎點擊右側連結至新分頁觀看。
+    [watch video](https://www.youtube.com/watch?v=j4MRHx6AqX0)
+  </p>
+  <a
+    href="https://www.youtube.com/watch?v=j4MRHx6AqX0"
+    className="video-thumb"
+    target="_blank"
+    rel="noopener noreferrer"
+    title="在新視窗觀看影片"
+    style={{display: 'inline-block'}}
+  >
+    <img
+      src="https://img.youtube.com/vi/j4MRHx6AqX0/0.jpg"
+      alt="說明會影片縮圖"
+      style={{
+        borderRadius: '10px',
+        boxShadow: '0 2px 10px rgba(0, 0, 0, 0.3)',
+        transition: 'transform 0.3s ease',
+        width: '100%',
+        maxWidth: '350px',
+        cursor: 'pointer'
+      }}
+    />
+  </a>
+</div>
+
+
+
 ## 概述
 
 本專案流程為評估語言模型執行五大任務(英翻中、論文、書信、摘要、中翻英)或四大任務(公文、新聞稿、民眾陳情、模擬問答)的能力。評估方式為，使用另一語言模型作為裁判，針對模型生成的內容進行評分。  

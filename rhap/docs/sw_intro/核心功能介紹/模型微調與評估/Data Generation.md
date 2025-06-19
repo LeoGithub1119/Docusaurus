@@ -1,5 +1,47 @@
 # 資料自動化(Data Automation)服務使用說明
 
+<div
+  style={{
+    maxWidth: '420px',
+    margin: '2rem auto',
+    background: '#fff',
+    borderRadius: '16px',
+    boxShadow: '0 6px 24px rgba(0,0,0,0.10)',
+    padding: '1.2rem 1rem 1.5rem 1rem',
+    textAlign: 'center'
+  }}
+>
+  <strong style={{fontSize: '1.2rem', display: 'block', marginBottom: '0.6em'}}>說明影片</strong>
+  <p style={{color: '#444', margin: '0.7em 0 1.2em 0'}}>
+    歡迎點擊右側連結至新分頁觀看。
+    [watch video](https://www.youtube.com/watch?v=emqIkRrxkbU)
+  </p>
+  <a
+    href="https://www.youtube.com/watch?v=emqIkRrxkbU"
+    className="video-thumb"
+    target="_blank"
+    rel="noopener noreferrer"
+    title="在新視窗觀看影片"
+    style={{display: 'inline-block'}}
+  >
+    <img
+      src="https://img.youtube.com/vi/emqIkRrxkbU/0.jpg"
+      alt="說明會影片縮圖"
+      style={{
+        borderRadius: '10px',
+        boxShadow: '0 2px 10px rgba(0, 0, 0, 0.3)',
+        transition: 'transform 0.3s ease',
+        width: '100%',
+        maxWidth: '350px',
+        cursor: 'pointer'
+      }}
+    />
+  </a>
+</div>
+
+
+
+
 ## 概述
 本專案流程提供自動化**資料生成**與**資料品質評估**服務。
 
