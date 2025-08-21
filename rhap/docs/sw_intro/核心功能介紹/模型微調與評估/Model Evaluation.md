@@ -132,7 +132,7 @@
 | `NUM_ROWS` | 字串 | 要評估的樣本數量（正整數，最多 100 個） | `10` |
 
 - `GEN_RESULT_PATH` 請至前一步驟 *GIT_GEN_RESULT_DIR* 的遠端倉庫複製完整檔案路徑，複製方式可參考下圖
-  ![alt text](img/copy-path-to-jsonl.png)
+  ![alt text](/img/copypathtojsonl.png)
 - 若 JUDGE_MODEL_SOURCE 為 MEDUSA 或 OPENAI 時，會自動帶入，若為 OPENAI-COMPATIABLE，則需要自行輸入 URL (如: https://portal.genai.nchc.org.tw/api/v1)
 
 
@@ -231,22 +231,22 @@
 ```
 
 ## 常見問題
-**Q: 為什麼流程開始沒多久就失敗？**<br>
-**A**: 請檢查是否有填入你自己的`GIT_REPO_URL`，並且務必填入正確的`GIT_REPO_TOKEN`。最後請確認`GIT_REPORT_DIR`存在你的專案。<br>
+**Q: 為什麼流程開始沒多久就失敗？**<br />
+**A**: 請檢查是否有填入你自己的`GIT_REPO_URL`，並且務必填入正確的`GIT_REPO_TOKEN`。最後請確認`GIT_REPORT_DIR`存在你的專案。<br />
 
-**Q: 已經創建空的目錄，但 git 無法追縱空目錄**<br>
-**A**: 請在空白目錄裡建立一個佔位檔案 `.gitkeep`<br>
+**Q: 已經創建空的目錄，但 git 無法追縱空目錄**<br />
+**A**: 請在空白目錄裡建立一個佔位檔案 `.gitkeep`<br />
 
-**Q: 為什麼我的 Report 裡某些項目的分數是 null？**<br>
-**A**: 由於本專案使用語言模型進行評分任務，語言模型的輸出有一定隨機性。根據模型的能力不同，有些模型輸出無法符合提示要求地輸出格式，因此造成解析失敗。解析失敗的項目會以 null 填入，並且在後續計算平均分數時自動排除。選擇能力較好的模型進行評分可以有效排除此疑慮。<br>
+**Q: 為什麼我的 Report 裡某些項目的分數是 null？**<br />
+**A**: 由於本專案使用語言模型進行評分任務，語言模型的輸出有一定隨機性。根據模型的能力不同，有些模型輸出無法符合提示要求地輸出格式，因此造成解析失敗。解析失敗的項目會以 null 填入，並且在後續計算平均分數時自動排除。選擇能力較好的模型進行評分可以有效排除此疑慮。<br />
 
-**Q: `EVAL_ITER` 要設多少？**<br>
+**Q: `EVAL_ITER` 要設多少？**<br />
 **A**: 由於語言模型輸出有一定的隨機性，為求評分的可靠性，可選擇重複評分。最終結果為去除離群值後取平均。`EVAL_ITER` 越大，得到的結果越可靠，但耗時越長，模型調用次數越高。請自行權衡效益及成本。
 
-**Q: 我應該怎麼解讀輸出結果？**<br>
+**Q: 我應該怎麼解讀輸出結果？**<br />
 **A**: (5大任務)裁判模型只會算出一個總分，評估模型生成的回應。
 
-**A**: (4大任務)裁判模型會從兩個面向對模型輸出進行評估： MatchPoint(文本匹配度)和 TextFormat(文本格式)。前者著重模型是否針對使用者的 Prompt 切題回應、是否誤植 Prompt 提到的關鍵字(如：專有名詞)；後者注重模型生成的文本是否符合任務文類要求的格式、文體。<br>
+**A**: (4大任務)裁判模型會從兩個面向對模型輸出進行評估： MatchPoint(文本匹配度)和 TextFormat(文本格式)。前者著重模型是否針對使用者的 Prompt 切題回應、是否誤植 Prompt 提到的關鍵字(如：專有名詞)；後者注重模型生成的文本是否符合任務文類要求的格式、文體。<br />
 - `overall_report.csv`裡所呈現的四大任務分數為綜合考量兩面向後的平均分數(權重相同)，如果你在設置參數時 `EVAL_ITER` 大於 1，分數會進行去除離群值後再取平均，以得到更嚴謹的評分結果。
 - 每個任務資料夾內有詳細的評估結果(.json)，記錄題庫內每一題的問題、參考答案、`GEN_MODEL`生成的文本、`JUDGE_MODEL`的給分意見、MatchPoint & TextFormat 詳細分數。要注意的是，如果你在設置參數時 `EVAL_ITER` 大於 1，僅取第一次的詳細評估結果輸出。
 ## 常見錯誤訊息
@@ -254,7 +254,7 @@
 ### GIT_REPO_TOKEEN issue
 
 - 錯誤的 token (shell 128 issue)
-  ![alt text](img/gitlab-token-issue.png)
+  ![alt text](/img/gitlab-token-issue.png)
 
 - token 的權限不足 (需要 gitlab Maintainer 或 Owner)
-  ![alt text](img/gitlab-token-not-allowed.png)
+  ![alt text](/img/gitlab-token-not-allowed.png)

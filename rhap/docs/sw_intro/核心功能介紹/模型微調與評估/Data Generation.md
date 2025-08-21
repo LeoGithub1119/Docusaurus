@@ -48,14 +48,14 @@
 <details>
 <summary> 資料生成 </summary>
 
-根據使用者上傳的範例資料，利用語言模型生成更多的資料，隨後通過資料精煉與去重複等技術處理，最終產出一批高品質的資料供訓練使用。<br>我們提供五種資料生成流程選擇：
+根據使用者上傳的範例資料，利用語言模型生成更多的資料，隨後通過資料精煉與去重複等技術處理，最終產出一批高品質的資料供訓練使用。<br />我們提供五種資料生成流程選擇：
 1. 資料擴增：任務名稱：`datagen-aug`
 2. 資料精煉 (國網中心)：任務名稱：`datagen-distill-nchc`
 3. 資料精煉 (工研院)：任務名稱：`datagen-distill-itri`
 4. 資料擴增+精煉 (國網中心)：任務名稱：`datagen-aug-distill-nchc`
 5. 資料擴增+精煉 (工研院)：任務名稱：`datagen-aug-distill-itri`
 
-<br>
+<br />
 
 **資料生成專案執行位置**： https://jenkins.genai.nchc.org.tw/job/01-data-automation/job/custom-run/
 </details>
@@ -63,7 +63,7 @@
 <details>
 <summary> 資料品質評估 </summary>
 
-針對使用者提供的訓練資料進行品質評估，評估面向包含：錯別字、混淆度、多樣性與重複性。<br><br>
+針對使用者提供的訓練資料進行品質評估，評估面向包含：錯別字、混淆度、多樣性與重複性。<br /><br />
 **資料品質評估專案執行位置**： https://jenkins.genai.nchc.org.tw/job/01-data-automation/job/custom-run/job/data-quality/
 </details>
 
@@ -135,8 +135,8 @@
 <details>
 <summary>資料生成</summary>
 
-如果你選擇執行包含 **資料精煉(國網中心)** 的任務，會針對資料精煉需提供語言模型：資料精煉模型 `DISTILLATION_MODEL`<br>
-<br>
+如果你選擇執行包含 **資料精煉(國網中心)** 的任務，會針對資料精煉需提供語言模型：資料精煉模型 `DISTILLATION_MODEL`<br />
+<br />
 你可以使用以下2種 API 取得模型服務：
 
 1. **Medusa API**
@@ -169,7 +169,7 @@
 | 名稱  | 類型    | 說明    |
 |-------------------|----------------|-------------------------------------------------------|
 | `GEN_MODEL`         | 字串           |『必填』生成資料的模型，預設`Llama-3.3-70B-Instruct`。可選 Medusa 或其他公開模型(gpt-4o-mini, gpt-4o)
-| `GEN_API_URL`       | 字串           | 『必填』提供 `GEN_MODEL` 模型服務的 URL<br>範例：Medusa: https://portal.genai.nchc.org.tw/v1 ； OpenAI: https://api.openai.com/v1
+| `GEN_API_URL`       | 字串           | 『必填』提供 `GEN_MODEL` 模型服務的 URL<br />範例：Medusa: https://portal.genai.nchc.org.tw/v1 ； OpenAI: https://api.openai.com/v1
 | `GEN_API_KEY`       | 密碼           | 『必填』使用 `GEN_API_URL` 的 API KEY |
 
 #### 共通流程參數
@@ -196,19 +196,19 @@
 | 名稱  | 類型    | 說明    |
 |-------------------|----------------|-------------------------------------------------------|
 | `DISTILLATION_MODEL`         | 字串           | 資料精煉的模型，預設`Llama-3.3-70B-Instruct`。可選 Medusa 或其他公開模型(gpt-4o-mini, gpt-4o)
-| `DISTILLATION_API_URL`       | 字串           | 提供 `DISTILLATION_MODEL` 模型服務的 URL<br>範例：Medusa: https://portal.genai.nchc.org.tw/v1 ； OpenAI: https://api.openai.com/v1 |
+| `DISTILLATION_API_URL`       | 字串           | 提供 `DISTILLATION_MODEL` 模型服務的 URL<br />範例：Medusa: https://portal.genai.nchc.org.tw/v1 ； OpenAI: https://api.openai.com/v1 |
 | `DISTILLATION_API_KEY`       | 密碼           | 使用 `DISTILLATION_API_URL` 的 API KEY |
-| `DO_DEDUP`    | 下拉式選單     | True/False，預設 False<br>是否執行資料去重複    |
-| `SIMILARITY_THRESHOLD`  | 數值 | ≤1 的數值，預設 0.99 <br>相似度門檻值，相似度高於該值視為重複資料      |
-| `DO_DISTILLATION` | 下拉選單   | True/False，預設 False<br>是否執行資料精煉  |
+| `DO_DEDUP`    | 下拉式選單     | True/False，預設 False<br />是否執行資料去重複    |
+| `SIMILARITY_THRESHOLD`  | 數值 | ≤1 的數值，預設 0.99 <br />相似度門檻值，相似度高於該值視為重複資料      |
+| `DO_DISTILLATION` | 下拉選單   | True/False，預設 False<br />是否執行資料精煉  |
 
 
 #### 流程中具有資料精煉(工研院)(`datagen-distill-itri`、`datagen-aug-distill-itri`)
 | 名稱  | 類型    | 說明    |
 |-------------------|----------------|-------------------------------------------------------|
-| `DO_DEDUP`    | 下拉式選單     | True/False，預設 False<br>是否執行資料去重複    |
-| `SIMILARITY_THRESHOLD`  | 數值 | ≤1 的數值，預設 0.99 <br>相似度門檻值，相似度高於該值視為重複資料      |
-| `DO_DISTILLATION` | 下拉選單   | True/False，預設 False<br>是否執行資料精煉  |
+| `DO_DEDUP`    | 下拉式選單     | True/False，預設 False<br />是否執行資料去重複    |
+| `SIMILARITY_THRESHOLD`  | 數值 | ≤1 的數值，預設 0.99 <br />相似度門檻值，相似度高於該值視為重複資料      |
+| `DO_DISTILLATION` | 下拉選單   | True/False，預設 False<br />是否執行資料精煉  |
 | `DEBATE_TIMES`    | 下拉選單   | `DO_DISTILLATION` 資料精煉時的辯論次數(1~5)              |
 </details>
 
