@@ -43,7 +43,7 @@
 ## 概述
 本專案流程提供模型微調訓練服務，使用者可自行選擇基礎模型(base model)，並且自行提供訓練資料，進行特定任務/能力微調。
 
-專案執行位置: https://jenkins.genai.nchc.org.tw/job/02-llm%20training/
+專案執行位置: https://jenkins.genai.nchc.org.tw/job/02-llm-training/job/run-all/job/02-llm-training/
 
 ## 前置需求
 ### GitLab 專案 (Repository)

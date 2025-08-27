@@ -45,15 +45,28 @@
 ## 概述
 本專案流程提供自動化**資料生成**與**資料品質評估**服務。
 
+專案執行位置： https://jenkins.genai.nchc.org.tw/job/01-data-automation/custom-run/
+- 專案結構:
+  ```bash
+  01-data-automation
+  └── custom-run
+      └──data-quality # 資料品質評估
+      └──datagen-aug # 只進行資料生成，不進行資料精煉
+      └──datagen-aug-distill-itri # 資料生成與精煉(使用工研院精煉技術)
+      └──datagen-aug-distill-nchc # 資料生成與精煉(使用國網中心精煉技術)
+      └──datagen-distill-itri # 只進行資料精煉(使用工研院精煉技術)
+      └──datagen-distill-nchc # 只進行資料精煉(使用國網中心精煉技術)             
+  ```
+
 <details>
 <summary> 資料生成 </summary>
 
 根據使用者上傳的範例資料，利用語言模型生成更多的資料，隨後通過資料精煉與去重複等技術處理，最終產出一批高品質的資料供訓練使用。<br />我們提供五種資料生成流程選擇：
-1. 資料擴增：任務名稱：`datagen-aug`
+1. 資料生成：任務名稱：`datagen-aug`
 2. 資料精煉 (國網中心)：任務名稱：`datagen-distill-nchc`
 3. 資料精煉 (工研院)：任務名稱：`datagen-distill-itri`
-4. 資料擴增+精煉 (國網中心)：任務名稱：`datagen-aug-distill-nchc`
-5. 資料擴增+精煉 (工研院)：任務名稱：`datagen-aug-distill-itri`
+4. 資料生成+精煉 (國網中心)：任務名稱：`datagen-aug-distill-nchc`
+5. 資料生成+精煉 (工研院)：任務名稱：`datagen-aug-distill-itri`
 
 <br />
 
@@ -185,7 +198,7 @@
 | `SAMPLE` | 正整數 | 預設 0，從最終產生的資料中取樣多少筆資料，0 為保留所有資料 |
 | `SYSTEM_MSG`  | 字串           | 系統提示詞。預設為不使用系統提示詞           |
 
-#### 流程中具有資料擴增(`datagen-aug`、`datagen-aug-distill-nchc`、`datagen-aug-distill-itri`)
+#### 流程中具有資料生成(`datagen-aug`、`datagen-aug-distill-nchc`、`datagen-aug-distill-itri`)
 | 名稱  | 類型    | 說明    |
 |-------------------|----------------|-------------------------------------------------------|
 | `DEFAULT_COUNT` | 下拉選單 | 每一筆範例資料生成的資料筆數(1~5) |
