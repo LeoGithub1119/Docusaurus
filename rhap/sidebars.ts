@@ -21,6 +21,7 @@ const sidebars: SidebarsConfig = {
           label: '客製化流程設計前台',
           collapsed: false,
           items: [
+            'sw_intro/核心功能介紹/客製化流程設計前台/UnieAI Copilot',
             'sw_intro/核心功能介紹/客製化流程設計前台/Hydra',
             'sw_intro/核心功能介紹/客製化流程設計前台/Hummingbird',
             {
@@ -55,9 +56,12 @@ const sidebars: SidebarsConfig = {
           label: '模型微調與評估',
           collapsed: false,
           items: [
-            'sw_intro/核心功能介紹/模型微調與評估/Data Generation',
+            // 'sw_intro/核心功能介紹/模型微調與評估/Data Generation',
             'sw_intro/核心功能介紹/模型微調與評估/Model Evaluation',
             'sw_intro/核心功能介紹/模型微調與評估/Model SFT',
+            // 'sw_intro/核心功能介紹/模型微調與評估/LLM訓練服務使用說明',
+            // 'sw_intro/核心功能介紹/模型微調與評估/模型評分服務使用說明',
+            'sw_intro/核心功能介紹/模型微調與評估/資料自動化服務使用說明',
           ],
         },
         // {
